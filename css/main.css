@@ -1,0 +1,23 @@
+/* YES mobile version*/
+body {
+  width: 480px;
+  margin: 0 2%;
+}
+nav li {
+  display: block;
+}
+
+header {
+  background-image: url('../images/top-bkgrnd.jpg');
+}
+
+
+/* NOT mobile version */
+/* when it's BIGGER than 480px, do all this stuff */
+@media screen and (min-width: 480px) {
+  /*nav items all inline*/
+  nav li {
+    display: inline-block;
+  }
+}
+
