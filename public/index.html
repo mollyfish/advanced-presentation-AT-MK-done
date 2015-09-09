@@ -18,32 +18,31 @@
     <!-- menu -->
     <!-- header tags around nav? -->
     <nav>
-      <ul>
-        <li><a href="#">Home.</a></li>
-        <li><a href="#">Services.</a></li>
-        <li><a href="#">Portfolio.</a></li>
-        <li><a href="#">About.</a></li>
-        <li><a href="#">Team.</a></li>
-        <li><a href="#">Contact.</a></li>
+      <ul class="flex-menu-list">
+        <li class="flex-menu-items"><a href="#home">Home.</a></li>
+        <li class="flex-menu-items"><a href="#">Services.</a></li>
+        <li class="flex-menu-items"><a href="#">Portfolio.</a></li>
+        <li class="flex-menu-items"><a href="#">About.</a></li>
+        <li class="flex-menu-items"><a href="#">Team.</a></li>
+        <li class="flex-menu-items"><a href="#">Contact.</a></li>
       </ul>
     </nav>
 
     <!-- header -->
-    <header>
-      <img src="images/top-logo.gif" alt="Company Teardrop Logo" width="82" height="82">
-      <h1>Hi there! We're Avengers, creative design agency<br>
-        we build awesome mobile and websites
+    <header class="flex-text-block">
+      <!-- <img src="images/top-logo.gif" alt="Company Teardrop Logo" width="82" height="82"> -->
+      <h1 class="flex-text"><span class="standin">T</span><br>Hi there! We're Avengers, creative design agency. We build awesome mobile and websites.
       </h1>
     </header>
 
     <!-- services  -->
-    <article>
+    <article class="services">
       <h1>SERVICES</h1>
       <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-      <section class="brush">
+      <p>Lorem Ipsum is simply dummy text of the printiand typesetting industry. Lorem Ipsum has been the industry's standadummy text ever since the 1500s, when an unknown printer took a gallof type and scrambled it to make a type specimen book.</p>
+      <p>Lorem Ipsum is simply dummy text of the printiand typesetting industry. Lorem Ipsum has been the industry's standadummy text ever since the 1500s, when an unknown printer took a gallof type and scrambled it to make a type specimen book.</p>
+      
+      <section class="strengths">
         <h2>UI & UX DESIGN</h2>
         <figure>
           <img src="images/brush.gif" alt="Paintbrush icon" width="131" height="130">
@@ -51,7 +50,7 @@
         </figure>
       </section>
 
-      <section>
+      <section class="strengths">
         <h2>LABORATORY</h2>
         <figure>
           <img src="images/erhlenmeyer.gif" alt="Science flask icon" width="131" height="130">
@@ -59,7 +58,7 @@
         </figure>
       </section>
 
-      <section>
+      <section class="strengths">
         <h2>DEVELOPMENT</h2>
         <figure>
           <img src="images/gear.gif" alt="Mechanical gear icon" width="131" height="130">
@@ -67,39 +66,40 @@
         </figure>
       </section>
 
-      <h2>PRICING TABLES</h2>
+      <h3>PRICING TABLES</h3>
       <table>
         <tbody>
           <tr>
-            <td class="darkorange">BASIC</td>
+            <th>BASIC</th>
           </tr>
           <tr>
-            <td class="price"><strong>$5.99</strong><span> / MONTH</span></td>
+            <td class="price"><strong>$5.99</strong> / MONTH</td>
           </tr>
           <tr>
-            <td class="data">3 Projects</td>
+            <td>3 Projects</td>
           </tr>
           <tr>
-            <td class="data">2 Users</td>
+            <td>2 Users</td>
           </tr>
           <tr>
-            <td class="data">1 Gb user</td>
+            <td>1 Gb user</td>
           </tr>
           <tr>
-            <td class="data">1 Calendar</td>
+            <td>1 Calendar</td>
           </tr>
           <tr>
-            <td class="button"><span>SIGN UP</span></td>
+            <td class="signup"><button>SIGN UP</button></td>
           </tr>
         </tbody>
       </table>
 
       <table>
+        <tbody>
         <tr>
-          <td>STANDARD</td>
+          <th>STANDARD</th>
         </tr>
         <tr>
-          <td>$10.99 / MONTH</td>
+          <td class="price"><strong>$10.99</strong> / MONTH</td>
         </tr>
         <tr>
           <td>7 Projects</td>
@@ -114,16 +114,18 @@
           <td>5 Calendar</td>
         </tr>
         <tr>
-          <td><button>SIGN UP</button></td>
+          <td class="signup"><button>SIGN UP</button></td>
         </tr>
+      </tbody>
       </table>
 
       <table>
+        <tbody>
         <tr>
-          <td>PROFESSIONAL</td>
+          <th>PROFESSIONAL</th>
         </tr>
         <tr>
-          <td>$25.99 / MONTH</td>
+          <td class="price"><strong>$25.99</strong> / MONTH</td>
         </tr>
         <tr>
           <td>15 Projects</td>
@@ -138,16 +140,18 @@
           <td>25 Calendar</td>
         </tr>
         <tr>
-          <td><button>SIGN UP</button></td>
+          <td class="signup"><button>SIGN UP</button></td>
         </tr>
+      </tbody>
       </table>
 
       <table>
+        <tbody>
         <tr>
-          <td>PREMIUM</td>
+          <th>PREMIUM</th>
         </tr>
         <tr>
-          <td>$49.99 / MONTH</td>
+          <td class="price"><strong>$49.99</strong> / MONTH</td>
         </tr>
         <tr>
           <td>UNLIMITED Projects</td>
@@ -162,14 +166,15 @@
           <td>UNLIMITED Calendar</td>
         </tr>
         <tr>
-          <td><button>SIGN UP</button></td>
+          <td class="signup"><button>SIGN UP</button></td>
         </tr>
+      </tbody>
       </table>
 
     </article>
 
     <!-- portfolio  -->
-    <article>
+    <article class="portfolio">
       <h1>PORTFOLIO</h1>
       <img src="images/portfolio.jpg" alt="Iphone held in Times Square" width="940" height="336">
       <!-- dots under big image??? -->
