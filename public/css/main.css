@@ -1,86 +1,198 @@
 /* YES mobile version*/
+.standin {
+  font-size: 80px;
+}
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+}
 body {
-  margin: 0 2%;
+  margin: 0 auto;
+}
+/* all H1 tags except header */
+article h1, .services h3 {
+  position: relative;
+  font-size: 160%;
+  overflow: hidden;
+  text-align: center;
+}
+article h1:before, article h1:after, .services h3:before, .services h3:after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 50%;
+  height: 1px;
+  content: '\a0';
+  background-color: #fff;
+}
+article h1:before, .services h3:before {
+  margin-left: -50%;
+  text-align: right;
+}
+.flex-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: stretch;
+}
+/* Navigation bar */
+nav {
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+nav ul {
+  list-style-type: none;
+
 }
 nav li {
-  display: block;
+  text-align: center;
 }
-
+nav a {
+  text-decoration: none;
+  color: rgb(124,131,135);
+}
+nav [href="#home"] {
+  color: rgb(0,0,0);
+}
+.flex-menu-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+}       
+.flex-menu-items {
+  width: 100px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100px;
+  padding: 10px;
+}
+/* Header content */
 header {
   background-image: url('../images/top-bkgrnd.jpg');
+  width: 100%;
+  height: 15em;
+  text-align: center;
+}
+
+header .flex-text-block {
+  display: flex;
+  justify-content: center;
+}   
+header .flex-text {
+  padding: 15% 10px 0 10px;
+}
+/* Services */
+.services {
+  background-color: #fd6632;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: 100;
+}
+.services h1 {
+  padding: 0 3px; 
+}
+.services h2 {
+  font-size: 130%;
+  padding-bottom: 3px;
+}
+.services h3 {
+  font-size: 130%;
+  margin-bottom: 15px;
+}
+.services p {
+  margin: 20px 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.strengths {
+  background-color: #fd6632;
+  color: white;
+  font-family: Helvetica;
+  padding: 10px;
+  text-align: center;
+}
+.strengths figure {
+  padding: 10px;
+}
+.strengths figcaption {
+  font-size: 80%;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  width: 80%;
+  margin: 10px auto;
+}
+/*Pricing tables */
+table {
+  text-align: center;
+  background-color: #fff;
+  display: inline-block;
+  margin: 10px;
+}
+th {
+  background-color: #7f3319;
+  padding: 10px;
+}
+.price {
+  color: #fd6632;
+}
+td {
+  color: #414141;
+  padding: 10px;
+  border-top: 1px solid #fd6632;
+  font-size: 65%;
+}
+td strong {
+  font-size: 150%;
+}
+.signup {
+  background-color: #be4c25;
+  padding: 15px 50px;
+  border-top: 1px solid #fd6632;
+}
+button {
+  border: none;
+  background-color: #fd6632;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.70em;
+}
+button:hover {
+  cursor: pointer;
 }
 
 /* NOT mobile version */
 /* when it's BIGGER than 480px, do all this stuff */
 @media screen and (min-width: 480px) {
-  /*nav items all inline*/
-  nav li {
-    display: inline-block;
+  nav ul {
+    margin: 0 auto;
+    width: 80%;
   }
 }
+
+/*use in DESKTOP LAYOUT*/
+/*.services .flex-text-block {
+  display: flex;
+  justify-content: center;
+}
+.services .flex-text-head {
+  margin: auto;
+  height: 50%;
+}
+.services .flex-text {
+  margin: auto;
+  height: 50%;
+} */
 
 /*New stuff by Alina 9/8 Tues */
 
 /*Services section */
 
 /*UI design section*/
-.brush {
-  background-color: #fd6632;
-  color: white;
-  font-family: Helvetica;
-  padding: 10px;
-  text-align: center;
-  width: 25%;
-}
-.brush figure {
-  padding: 10px;
-}
-.brush figcaption {
-  font-size: 0.8em;
-  line-height: 2em;
-  opacity: 0.8;
-}
 
-/*Pricing tables */
-table {
-  display: block;
-  text-align: center;
-  font-family: Helvetica;
-}
-.darkorange {
-  background-color: #7f3319;
-  color: white;
-  padding: 10px;
-  font-size: 1em;
-  padding-left: 60px;
-  padding-right: 60px;
-  font-weight: 100;
-}
-.price {
-  color: #fd6632;
-  padding: 10px;
-  border-top: 1px solid #fd6632;
-  font-size: 0.8em;
-}
-.price span {
-  font-size: 0.6em;
-}
-.data {
-  color: #414141;
-  padding: 10px;
-  border-top: 1px solid #fd6632;
-  font-size: 0.6em;
-}
-.button {
-  background-color: #be4c25;
-  border: 0;
-  padding: 15px;
-  border-top: 1px solid #fd6632;
 
-}
-.button span {
-  background-color: #fd6632;
-  color: white;
-  padding: 5px 10px;
-  font-size: 0.70em;
-}
+
