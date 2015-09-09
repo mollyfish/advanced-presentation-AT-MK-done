@@ -11,23 +11,15 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 // everything in the public directory will be available from the root of our directory
-
-app.get('/about', function(req, res) {//translates to the URL localhost/3000/greet
+app.get('/index.html', function(req, res) {//translates to the URL localhost/3000/greet
   //req is request and res is response
-  res.status(200).sendFile(__dirname + '/public/about.html');
+  res.status(200).sendFile(__dirname + '/public/index.html');
   //only call ONE .send
 });
 
-app.get('/secret', function(req, res) {//translates to the URL localhost/3000/greet
-  //req is request and res is response
-  console.log('The truth is, I\'m a dog person.');
-  res.status(200).send('<h1>The truth is, I\'m a dog person.</h1>');
-  //only call ONE .send
-});
-
-app.get('/*', function(req, res) {
-  res.status(404).sendFile(__dirname + '/public/404.html');
-});
+// app.get('/*', function(req, res) {
+  // res.status(404).sendFile(__dirname + '/index.html');
+// });
 
 app.listen(app.get('port'), function(){ //environmental variable process.env pulls the port from the command line, if it doesn't exist it will go to 3000.  in the command line we can now say "PORT=5000 node server" and the server will pick up on the change.  SWEET
 
