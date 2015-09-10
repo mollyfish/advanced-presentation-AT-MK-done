@@ -361,11 +361,11 @@ button:hover {
 .slider-button-R {
   float: right;
 }
-figure ul {
+.social-icons {
   list-style-type: none;
   margin: 20px 0 15px 0;
 }
-figure li {
+.social-icons li {
   display: inline;
 }
 
@@ -444,6 +444,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 /*Footer*/
+footer {
+  text-align: center;
+  padding-top: 3em;
+}
 /*.clearfix {
  zoom: 1;
 }
