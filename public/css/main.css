@@ -388,8 +388,9 @@ button:hover {
 /*Form*/
 .contact form {
   /*max-width: 400px;*/
-  float: left;
+  /*float: left;*/
   width: 100%;
+  display: inline-block;
 }
 .contact form input, .contact form textarea {
   background-color: rgba(126, 50, 24, 0.8);
@@ -405,32 +406,33 @@ button:hover {
 .messageinput {
   height: 10em;
 }
-.contactform {
-  float: left;
-}
-.contactform button {
+.contact form button {
   padding: 10px 40px;
   float: right;
   color: #fd6632;
   background-color: white;
   margin-bottom: 10px;
-
 }
 
 /*Small map contact info */
 .contactinfo {
   /*float: left;*/
-  max-width: 400px;
+  /*max-width: 400px;*/
   margin-top: 10px;
+  /*display: inline-block;*/
+  /*position: relative;*/
+}
+.contactinfo figure {
+  display: block;
   position: relative;
 }
-.contactinfo figcaption {
+.contactinfo ul {
   background-color: rgba(77,77,77,0.8);
   position: absolute;
   top: 0;
   left: 0;
 }
-.contactinfo figcaption p {
+.contactinfo li {
   margin-top: 20px;
   padding-left: 10px;
   display: inline-block;
