@@ -372,29 +372,26 @@ button:hover {
 
 /*Contact*/
 .contact {
-  margin: 10px auto;
+  /*margin: 10px auto;*/
   padding: 10px;
-  color: white;
+  color: #fff;
   font-weight: 100;
-  background:
+  /*background to show map thru orange*/
+  background: 
     linear-gradient(
       rgba(253, 102, 50, 0.92),
       rgba(253, 102, 50, 0.92)
     ),
     url('../images/bkgrnd-map.png');
 }
-/*.contact h1 {
-  color: white;
-}
-.contact p {
 
-}
-*/
 /*Form*/
-.contactform {
-  max-width: 400px;
+.contact form {
+  /*max-width: 400px;*/
+  float: left;
+  width: 100%;
 }
-.contactform input, .contactform textarea {
+.contact form input, .contact form textarea {
   background-color: rgba(126, 50, 24, 0.8);
   border: none;
   display: block;
@@ -402,11 +399,14 @@ button:hover {
   padding: 15px;
   width: 93%;
 }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+.contact form input::-webkit-input-placeholder, .contact form textarea::-webkit-input-placeholder {
   color: white;
 }
 .messageinput {
   height: 10em;
+}
+.contactform {
+  float: left;
 }
 .contactform button {
   padding: 10px 40px;
@@ -419,7 +419,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 /*Small map contact info */
 .contactinfo {
-  clear: both;
+  /*float: left;*/
   max-width: 400px;
   margin-top: 10px;
   position: relative;
@@ -443,12 +443,69 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   left: 0;
 }
 
+
+/*.contact-flex {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: stretch;
+}
+.contact-flex-1 {
+  width: <property unused>
+  height: <property unused>
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 98%;
+} 
+.contact-flex-2 {
+  width: <property unused>
+  height: <property unused>
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+.contact-flex-3 {
+  width: <property unused>
+  height: <property unused>
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}*/
+
+
 /*Footer*/
 footer {
   text-align: center;
   padding-top: 3em;
+  position: relative;
+  /*bottom: -400px; */
 }
-/*.clearfix {
+
+/*.footer-flex {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: stretch;
+}   
+.footer-flex-1 {
+  height: null;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+.footer-flex-2 {
+  height: null;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}*/
+  
+
+.clearfix {
  zoom: 1;
 }
 .clearfix:before, .clearfix:after {
@@ -459,7 +516,7 @@ footer {
 }
 .clearfix:after {
  clear: both;
-}*/
+}
 
 
 /* NOT mobile version */
