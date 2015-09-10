@@ -25,6 +25,8 @@
 
 .icon-droplet:before {
 	content: "\e601";
+}
+.icon-droplet {
 	margin-bottom: .3em;
 	display: inline-block;
 	width: 1.5em;
@@ -101,9 +103,27 @@ is being used for the background change on hover */
 }
 .icon-go-right:before {
 	content: "\e608";
+	display: block;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	font-size: 400%;
+	font-weight: 600;
+	color: #fff;
+	/*background-color: #fd6632;*/
+	background-color: rgb(124,131,135);
 }
 .icon-go-left:before {
 	content: "\e609";
+	display: block;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	font-size: 400%;
+	font-weight: 600;
+	color: #fff;
+	/*background-color: #fd6632;*/
+	background-color: rgb(124,131,135);
 }
 .icon-envelope:before {
 	content: "\e602";
