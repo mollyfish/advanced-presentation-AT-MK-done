@@ -23,18 +23,6 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-quill:before {
-	content: "\e600";
-	margin-bottom: .3em;
-	display: inline-block;
-	width: 2em;
-	height: 2em;
-	border-radius: 50%;
-	background-color: #fff;
-	font-size: 400%;
-	color: #fd6632;
-	line-height: 2;
-}
 .icon-droplet:before {
 	content: "\e601";
 	margin-bottom: .3em;
@@ -47,6 +35,43 @@
 	color: #fff;
 	line-height: 1.5;
 }
+.icon-quill:before, .icon-flask:before, .icon-gear:before  {
+	content: "\e600";
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	background-color: #fff;
+	font-size: 400%;
+	color: #fd6632;
+	line-height: 2;
+}
+.icon-flask:before {
+	content: "\e606";
+}
+.icon-gear:before {
+	content: "\e605";
+}
+.portfolio figure a.icon-see-more:after { /* changed to :after b/c :before 
+is being used for the background change on hover */
+	content: "\e607";
+	display: inline-block;
+	position: absolute;
+  top: calc(50% - 1em);
+  left: calc(50% - 1em);
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	background-color: #fd6632;
+	font-size: 200%;
+	color: #fff;
+	line-height: 2;
+	opacity: 0;
+}
+.portfolio figure a.icon-see-more:hover:after {
+  opacity: 1;
+}
+
 .icon-envelope:before {
 	content: "\e602";
 }
@@ -55,15 +80,6 @@
 }
 .icon-mobile:before {
 	content: "\e604";
-}
-.icon-gear:before {
-	content: "\e605";
-}
-.icon-flask:before {
-	content: "\e606";
-}
-.icon-see-more:before {
-	content: "\e607";
 }
 .icon-go-right:before {
 	content: "\e608";

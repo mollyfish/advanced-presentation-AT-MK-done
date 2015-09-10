@@ -215,22 +215,17 @@ button:hover {
   height: 220px;
   position: relative;
 }
-.portfolio figure a:after {
-  content: "+";
+.portfolio figure a:before { /* creates area for fadeout */
+  content: "";
   position: absolute;
   display: inline-block;
   top: 0;
   left: 0;
   height: 220px;
-  width: 300px;
-  opacity: 0;
-  font-size: 2em;
-  line-height: 220px;
-  color: #fd6632;
-  background-color: rgba(0,0,0,0.5);
+  width: 300px; 
 }
-.portfolio figure a:hover:after {
-  opacity: 1;
+.portfolio figure a:hover:before { /* black fadeout over link img on hover */
+  background-color: rgba(0,0,0,0.5);
 }
 
 /* About */
