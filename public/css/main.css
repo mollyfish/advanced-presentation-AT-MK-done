@@ -355,6 +355,50 @@ figure li {
   display: inline;
 }
 
+
+/*Contact*/
+.contact {
+  margin: 10px;
+  /*background:
+    linear-gradient(
+      rgba(250, 99, 27, 0.45),
+      rgba(250, 99, 27, 0.45)
+    ),
+    url('../images/bkgrnd-map.png');*/
+}
+
+/*Form*/
+.contactform {
+  max-width: 400px;
+}
+.contactform input, .contactform textarea {
+  background-color: rgba(126, 50, 24, 0.8);
+  border: none;
+  display: block;
+  margin: 10px 0;
+  padding: 15px;
+  width: 93%;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: white;
+}
+.messageinput {
+  height: 10em;
+}
+.contactform button {
+  padding: 10px 40px;
+  float: right;
+/*  color: #fd6632;
+  background-color: white;
+*/}
+
+/*Small map contact info */
+.contact figure {
+  clear: both;
+}
+
+
+
 /* NOT mobile version */
 /* when it's BIGGER than 480px, do all this stuff */
 @media screen and (min-width: 480px) {
