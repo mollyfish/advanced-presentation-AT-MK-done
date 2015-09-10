@@ -240,32 +240,45 @@ button:hover {
 
 
 /*Contact*/
-
-/*.contact {
-  background:
+.contact {
+  margin: 10px;
+  /*background:
     linear-gradient(
       rgba(250, 99, 27, 0.45),
       rgba(250, 99, 27, 0.45)
     ),
-    url('../images/bkgrnd-map.png');
+    url('../images/bkgrnd-map.png');*/
 }
-*/
 
 /*Form*/
-form {
-  margin: 0 auto;
+.contactform {
+  max-width: 400px;
 }
-input {
+.contactform input, .contactform textarea {
   background-color: rgba(126, 50, 24, 0.8);
   border: none;
-  padding: 10px 0;
   display: block;
   margin: 10px 0;
+  padding: 15px;
+  width: 93%;
 }
-input::-webkit-input-placeholder {
- color: white;
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: white;
 }
+.messageinput {
+  height: 10em;
+}
+.contactform button {
+  padding: 10px 40px;
+  float: right;
+/*  color: #fd6632;
+  background-color: white;
+*/}
 
+/*Small map contact info */
+.contact figure {
+  clear: both;
+}
 
 
 
