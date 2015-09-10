@@ -64,8 +64,8 @@ nav li {
   display: inline-block;
   float: left;
   width: 8em;
-  padding: 1em;
-  margin: 1em calc(25% - 4em); 
+  padding: .5em;
+  margin: .5em calc(25% - 4em); 
   border: 2px solid rgba(0,0,0,0.2);
   border-radius: 5px;
 }
@@ -100,16 +100,19 @@ nav a:hover {
 header {
   clear: left;
   background-image: url('../images/top-bkgrnd.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 15em;
+  height: 10em;
   text-align: center;
+  padding-bottom: 20px;
 }
 header .flex-text-block {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
 }
 header .flex-text {
-  padding: 15% 10px 0 10px;
+  padding: 1em .5em;
 }
 
 /* Services */
@@ -119,13 +122,14 @@ header .flex-text {
   text-align: center;
   padding: 20px 10px;
   font-weight: 100;
+  /*margin-top: 10px;*/
 }
 .services h2, .services h3 {
   font-size: 130%;
   margin-bottom: 3px;
   letter-spacing: 0.05em;
 }
-.services p, .contact p {
+.services p {
   margin: 20px 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -330,7 +334,12 @@ button:hover {
   padding: 5px 0 20px 0;
   letter-spacing: 0.05em;
 }
-.team p, .team figcaption {
+.team p {
+  margin: 20px 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.team figcaption {
   width: 80%;
   margin: 0 auto;
   line-height: 1.5;
@@ -386,6 +395,12 @@ button:hover {
 }
 
 /*Form*/
+.contact p {
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
 .contact form {
   /*max-width: 400px;*/
   /*float: left;*/
@@ -396,9 +411,9 @@ button:hover {
   background-color: rgba(126, 50, 24, 0.8);
   border: none;
   display: block;
-  margin: 10px 0;
   padding: 15px;
-  width: 93%;
+  width: 90%;
+  margin: 10px auto;
 }
 .contact form input::-webkit-input-placeholder, .contact form textarea::-webkit-input-placeholder {
   color: white;
@@ -415,34 +430,35 @@ button:hover {
 }
 
 /*Small map contact info */
-.contactinfo {
+.contactmap {
   /*float: left;*/
   /*max-width: 400px;*/
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   /*display: inline-block;*/
   /*position: relative;*/
 }
-.contactinfo figure {
+.contactmap figure {
   display: block;
   position: relative;
 }
-.contactinfo ul {
+.contactmap ul {
   background-color: rgba(77,77,77,0.8);
   position: absolute;
   top: 0;
   left: 0;
+  padding-bottom: 20px; 
 }
-.contactinfo li {
+.contactmap li {
   margin-top: 20px;
   padding-left: 10px;
   display: inline-block;
   font-size: 80%;
 }
-.contactinfo img {
+.contactmap img {
   width: 100%;
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 0;
+  left: 0;*/
 }
 
 
@@ -480,9 +496,15 @@ button:hover {
 /*Footer*/
 footer {
   text-align: center;
-  padding-top: 3em;
-  position: relative;
+  padding: 3em 0;
+  /*position: relative;*/
   /*bottom: -400px; */
+}
+footer a {
+  color: #fd6632;
+}
+footer a:hover {
+  color: rgb(124,131,135);
 }
 
 /*.footer-flex {
