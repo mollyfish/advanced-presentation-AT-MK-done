@@ -54,7 +54,7 @@
 .icon-gear:before {
 	content: "\e605";
 }
-.portfolio figure a.icon-see-more:after { /* changed to :after b/c :before 
+.portfolio figure a.icon-see-more:after { /* changed to :after b/c :before
 is being used for the background change on hover */
 	content: "\e607";
 	display: inline-block;
@@ -127,10 +127,16 @@ is being used for the background change on hover */
 }
 .icon-envelope:before {
 	content: "\e602";
+	padding-right: 10px;
+	display: inline-block;
 }
 .icon-pushpin:before {
 	content: "\e603";
+	padding-right: 10px;
+	display: inline-block;
 }
 .icon-mobile:before {
 	content: "\e604";
+	padding-right: 10px;
+	display: inline-block;
 }
