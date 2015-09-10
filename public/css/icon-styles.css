@@ -71,7 +71,40 @@ is being used for the background change on hover */
 .portfolio figure a.icon-see-more:hover:after {
   opacity: 1;
 }
-
+.icon-facebook:before, .icon-twitter:before, .icon-dribbble:before, .icon-linkedin:before, .icon-google-plus:before {
+	content: "\e60b";
+	background-color: #3B5998;
+	color: #fff;
+	height: 1.4em;
+	width: 1.4em;
+	line-height: 23px;
+	padding: 3px;
+}
+.icon-twitter:before {
+	content: "\e60c";
+	background-color: #00aced;
+}
+.icon-dribbble:before {
+	content: "\e60d";
+	background-color: #ea4c89;
+}
+.icon-linkedin:before {
+	content: "\e60e";
+	background-color: #007bb6;
+}
+.icon-google-plus:before {
+	content: "\e60a";
+	background-color: #ecbb0a;
+}
+.icon-facebook:hover:before, .icon-twitter:hover:before, .icon-dribbble:hover:before, .icon-linkedin:hover:before, .icon-google-plus:hover:before {
+	background-color: #fd6632;
+}
+.icon-go-right:before {
+	content: "\e608";
+}
+.icon-go-left:before {
+	content: "\e609";
+}
 .icon-envelope:before {
 	content: "\e602";
 }
@@ -80,25 +113,4 @@ is being used for the background change on hover */
 }
 .icon-mobile:before {
 	content: "\e604";
-}
-.icon-go-right:before {
-	content: "\e608";
-}
-.icon-go-left:before {
-	content: "\e609";
-}
-.icon-google-plus:before {
-	content: "\e60a";
-}
-.icon-facebook:before {
-	content: "\e60b";
-}
-.icon-twitter:before {
-	content: "\e60c";
-}
-.icon-dribbble:before {
-	content: "\e60d";
-}
-.icon-linkedin:before {
-	content: "\e60e";
 }

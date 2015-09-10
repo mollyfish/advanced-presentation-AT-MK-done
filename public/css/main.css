@@ -12,6 +12,9 @@ body {
 article {
   clear: left;
 }
+a {
+  text-decoration: none;
+}
 /* all H1 tags except header */
 article h1, .services h3 {
   position: relative;
@@ -227,6 +230,7 @@ button:hover {
 .portfolio figure a:hover:before { /* black fadeout over link img on hover */
   background-color: rgba(0,0,0,0.5);
 }
+
 
 /* About */
 .about {
