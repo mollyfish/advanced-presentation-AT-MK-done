@@ -111,7 +111,7 @@ header .flex-text {
   margin-bottom: 3px;
   letter-spacing: 0.05em;
 }
-.services p {
+.services p, .contact p {
   margin: 20px 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -231,7 +231,7 @@ button:hover {
   top: 0;
   left: 0;
   height: 220px;
-  width: 300px; 
+  width: 300px;
 }
 .portfolio figure a:hover:before { /* black fadeout over link img on hover */
   background-color: rgba(0,0,0,0.5);
@@ -306,7 +306,7 @@ button:hover {
 }
 .team h3 {
   font-weight: bold;
-  
+
   color: #000;
   letter-spacing: 0.08em;
   margin-top: 30px;
@@ -331,7 +331,7 @@ button:hover {
 }
 .clients h3 {
   margin-top: 20px;
-  padding: 0; 
+  padding: 0;
 }
 .clients figcaption {
   width: 100%;
@@ -358,15 +358,24 @@ figure li {
 
 /*Contact*/
 .contact {
-  margin: 10px;
-  /*background:
+  margin: 10px auto;
+  padding: 10px;
+  color: white;
+  font-weight: 100;
+  background:
     linear-gradient(
-      rgba(250, 99, 27, 0.45),
-      rgba(250, 99, 27, 0.45)
+      rgba(253, 102, 50, 0.92),
+      rgba(253, 102, 50, 0.92)
     ),
-    url('../images/bkgrnd-map.png');*/
+    url('../images/bkgrnd-map.png');
 }
+/*.contact h1 {
+  color: white;
+}
+.contact p {
 
+}
+*/
 /*Form*/
 .contactform {
   max-width: 400px;
@@ -388,15 +397,51 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 .contactform button {
   padding: 10px 40px;
   float: right;
-/*  color: #fd6632;
+  color: #fd6632;
   background-color: white;
-*/}
+  margin-bottom: 10px;
 
-/*Small map contact info */
-.contact figure {
-  clear: both;
 }
 
+/*Small map contact info */
+.contactinfo {
+  clear: both;
+  max-width: 400px;
+  margin-top: 10px;
+  position: relative;
+}
+.contactinfo figcaption {
+  background-color: rgba(77,77,77,0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contactinfo figcaption p {
+  margin-top: 20px;
+  padding-left: 10px;
+  display: inline-block;
+  font-size: 80%;
+}
+.contactinfo img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*Footer*/
+/*.clearfix {
+ zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+ content: "\0020";
+ display: block;
+ height: 0;
+ overflow: hidden;
+}
+.clearfix:after {
+ clear: both;
+}*/
 
 
 /* NOT mobile version */
