@@ -69,7 +69,7 @@ nav a:hover {
   justify-content: center;
   align-content: flex-start;
   align-items: flex-start;
-}       
+}
 .flex-menu-items {
   width: 100px;
   flex-grow: 1;
@@ -87,7 +87,7 @@ header {
 header .flex-text-block {
   display: flex;
   justify-content: center;
-}   
+}
 header .flex-text {
   padding: 15% 10px 0 10px;
 }
@@ -199,7 +199,7 @@ button:hover {
   color: #fff;
 }
 .portfolio h4 {
-  font-weight: bold; 
+  font-weight: bold;
   color: #000;
   padding-bottom: 0.5em;
 }
@@ -237,6 +237,37 @@ button:hover {
 .about {
   background-color: #2a2a2e;
 }
+
+
+/*Contact*/
+
+/*.contact {
+  background:
+    linear-gradient(
+      rgba(250, 99, 27, 0.45),
+      rgba(250, 99, 27, 0.45)
+    ),
+    url('../images/bkgrnd-map.png');
+}
+*/
+
+/*Form*/
+form {
+  margin: 0 auto;
+}
+input {
+  background-color: rgba(126, 50, 24, 0.8);
+  border: none;
+  padding: 10px 0;
+  display: block;
+  margin: 10px 0;
+}
+input::-webkit-input-placeholder {
+ color: white;
+}
+
+
+
 
 /* NOT mobile version */
 /* when it's BIGGER than 480px, do all this stuff */
