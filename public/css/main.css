@@ -12,17 +12,18 @@ body {
 article {
   clear: left;
 }
-
+a {
+  text-decoration: none;
+}
 /* all H1 tags except header */
-/*Horizontal Line Next to Header Text */
-article h1, .services h3, .about h2 {
+article h1, .services h3, .about h2, .clients h2 {
   position: relative;
   font-size: 160%;
   overflow: hidden;
   text-align: center;
   letter-spacing: 0.1em;
 }
-article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after {
+article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .clients h2:before, .clients h2:after {
   position: absolute;
   top: 51%;
   overflow: hidden;
@@ -31,10 +32,10 @@ article h1:before, article h1:after, .services h3:before, .services h3:after, .a
   content: '\a0';
   background-color: #fff;
 }
-.portfolio h1:before, .portfolio h1:after {
+.portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .clients h2:before, .clients h2:after {
   background-color: #000;
 }
-article h1:before, .services h3:before, .about h2:before {
+article h1:before, .services h3:before, .about h2:before, .team h1:before, .clients h2:before {
   margin-left: -50%;
   text-align: right;
 }
@@ -223,23 +224,19 @@ button:hover {
   height: 220px;
   position: relative;
 }
-.portfolio figure a:after {
-  content: "+";
+.portfolio figure a:before { /* creates area for fadeout */
+  content: "";
   position: absolute;
   display: inline-block;
   top: 0;
   left: 0;
   height: 220px;
-  width: 300px;
-  opacity: 0;
-  font-size: 2em;
-  line-height: 220px;
-  color: #fd6632;
+  width: 300px; 
+}
+.portfolio figure a:hover:before { /* black fadeout over link img on hover */
   background-color: rgba(0,0,0,0.5);
 }
-.portfolio figure a:hover:after {
-  opacity: 1;
-}
+
 
 /* About */
 .about {
@@ -290,6 +287,73 @@ button:hover {
 }
 
 
+
+/* Team */
+.team {
+  padding: 10px;
+  text-align: center;
+  color: rgb(124,131,135);
+}
+.team h1 {
+  color: #000;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.team h2 {
+  font-size: 130%;
+  color: #000;
+  margin: 20px 40px;
+}
+.team h3 {
+  font-weight: bold;
+  
+  color: #000;
+  letter-spacing: 0.08em;
+  margin-top: 30px;
+}
+.team h4 {
+  font-size: 75%;
+  padding: 5px 0 20px 0;
+  letter-spacing: 0.05em;
+}
+.team p, .team figcaption {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 100;
+}
+.clients figure {
+  border: 1px solid rgb(124,131,135);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 10px;
+}
+.clients h3 {
+  margin-top: 20px;
+  padding: 0; 
+}
+.clients figcaption {
+  width: 100%;
+}
+.slider-button-L, .slider-button-R {
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+}
+.slider-button-L {
+  float: left;
+}
+.slider-button-R {
+  float: right;
+}
+figure ul {
+  list-style-type: none;
+  margin: 20px 0 15px 0;
+}
+figure li {
+  display: inline;
+}
 
 /* NOT mobile version */
 /* when it's BIGGER than 480px, do all this stuff */
