@@ -107,11 +107,7 @@ header {
   text-align: center;
   padding-bottom: 20px;
 }
-header .flex-text-block {
-  display: flex;
-  /*justify-content: center;*/
-}
-header .flex-text {
+header h1 {
   padding: 1em .5em;
 }
 
