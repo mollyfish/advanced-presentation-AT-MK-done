@@ -63,7 +63,7 @@ nav li {
   float: left;
   width: 8em;
   padding: .5em;
-  margin: .5em calc(25% - 4em); 
+  margin: .5em calc(25% - 4em);
   border: 2px solid rgba(0,0,0,0.2);
   border-radius: 5px;
 }
@@ -110,7 +110,6 @@ header h1 {
   background-color: #fd6632;
   color: white;
   font-family: Helvetica;
-  /*padding: 10px;*/
   text-align: center;
 }
 .strengths figure {
@@ -339,7 +338,7 @@ button:hover {
   color: #fff;
   font-weight: 100;
   /*below is background to show map thru orange*/
-  background: 
+  background:
     linear-gradient(
       rgba(253, 102, 50, 0.92),
       rgba(253, 102, 50, 0.92)
@@ -390,7 +389,7 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  padding-bottom: 1em; 
+  padding-bottom: 1em;
 }
 .contactmap li {
   margin-top: 1.5em;
@@ -463,7 +462,7 @@ footer a:hover {
 }
 /*&&&&&&&&&&&&&&&&&&&&&&&&
 
-NOT mobile version 
+NOT mobile version
 
 &&&&&&&&&&&&&&&&&&&&&&&&&*/
 /* when it's BIGGER than 480px, do all this stuff */
@@ -486,7 +485,59 @@ NOT mobile version
   }
   .portfolio nav {
   border: none;
-}
+  }
+
+
+
+  /*Services Section Desktop */
+  .services {
+    padding-top: 3em;
+  }
+  /*Services Paragraph Flex*/
+  .services-flex {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: stretch;
+  }
+  .service-flex-1 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 98%;
+  }
+ .service-flex-2 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 48%;
+    padding-right: 2em;
+  }
+ .service-flex-3 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 48%;
+  }
+  .strengths-section {
+    margin: 3em auto;
+  }
+  .strengths {
+    display: inline-block;
+    width: 32%;
+  }
+  .price-tables {
+    margin: 3em auto;
+  }
+  .price-tables h3 {
+    margin-bottom: 3em;
+  }
+
+
+} /* End of Media Query*/
+
+
+
+
 .portfolio li {
   width: 18em;
   /*margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);*/
@@ -507,7 +558,7 @@ nav li {
   float: none;
   display: inline-block;
   padding: .5em;
-  margin: .5em .2em; 
+  margin: .5em .2em;
   border: none;
   border-radius: 0;
 }
