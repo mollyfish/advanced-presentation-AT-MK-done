@@ -170,11 +170,12 @@ button:hover {
   margin: 20px calc(50% - 470px);
 }
 .portfolio nav {
+  width: 80%;
   border: none;
 }
 .portfolio li {
   width: 18em;
-  margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);
+  /*margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);*/
 }
 .portfolio li:last-child {
   margin-bottom: 1em;
@@ -333,12 +334,11 @@ button:hover {
 .social-icons li {
   display: inline;
 }
-/*Contact*/
+/* Contact */
 .contact {
-  /*padding: 10px;*/
   color: #fff;
   font-weight: 100;
-  /*background to show map thru orange*/
+  /*below is background to show map thru orange*/
   background: 
     linear-gradient(
       rgba(253, 102, 50, 0.92),
@@ -346,10 +346,9 @@ button:hover {
     ),
     url('../images/bkgrnd-map.png');
 }
-/*Form*/
 .contact p {
   text-align: center;
-  margin: 20px 0;
+  margin: 2em 0 1em 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -358,29 +357,32 @@ button:hover {
   display: inline-block;
 }
 .contact form input, .contact form textarea {
+  box-sizing: border-box;
   background-color: rgba(126, 50, 24, 0.8);
   border: none;
   display: block;
-  padding: 15px;
-  width: 90%;
-  margin: 10px auto;
+  padding: 1.5em;
+  width: 100%;
+  margin: 1em auto;
+}
+.contact form input:first-child {
+  margin-top: 0;
 }
 .contact form input::-webkit-input-placeholder, .contact form textarea::-webkit-input-placeholder {
-  color: white;
+  color: #fff;
 }
 .messageinput {
   height: 10em;
 }
 .contact form button {
-  padding: 10px 40px;
-  float: right;
+  width: 100%;
+  padding: 1em 0;
   color: #fd6632;
   background-color: white;
-  margin-bottom: 10px;
+  margin-bottom: 2em;
 }
 /*Small map*/
 .contactmap figure {
-  display: block;
   position: relative;
 }
 .contactmap ul {
@@ -388,16 +390,65 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  padding-bottom: 20px; 
+  padding-bottom: 1em; 
 }
 .contactmap li {
-  margin-top: 20px;
-  padding-left: 10px;
+  margin-top: 1.5em;
+  padding-left: 0.8em;
   display: inline-block;
   font-size: 80%;
 }
 .contactmap img {
   width: 100%;
+}
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+@media screen and (min-width: 50em) {
+  .contactform {
+    width: calc(50% - 0.5em);
+    float: left;
+    margin: 1em 0.5em 0 0;
+  }
+  .contact {
+    position: relative;
+  }
+  .contact p {
+    margin: 2em 4% 1em 4%;
+  }
+  .contact form button {
+    padding: 1em 4em;
+    width: 40%;
+    float: right;
+  }
+  /*Small map*/
+  .contactmap {
+    margin: 1em 0 0 0.5em;
+    width: calc(50% - 0.5em);
+    float: left;
+  }
+  .contactmap figure {
+    position: relative;
+    /*margin-left: 1em;*/
+    /*float: right;*/
+  }
+  .contactmap ul {
+    background-color: rgba(77,77,77,0.8);
+    position: absolute;
+    top: 0;
+    /*left: calc(50% - 1em);*/
+    padding-bottom: 1em;
+    /*margin-left: -1em; */
+  }
+  .contactmap li {
+    margin-top: 20px;
+    padding-left: 10px;
+    display: inline-block;
+    font-size: 80%;
+  }
+  .contactmap img {
+    /*width: 50%;*/
+    /*margin-left: 1em;*/
+  }
 }
 /*Footer*/
 footer {
@@ -419,6 +470,8 @@ NOT mobile version
 @media screen and (min-width: 50em) {
   body {
     /*background-color: Tomato;*/
+    max-width: 80em;
+    margin: 0 auto;
   }
   .portfolio {
     max-width: 60em;
@@ -436,7 +489,7 @@ NOT mobile version
 }
 .portfolio li {
   width: 18em;
-  margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);
+  /*margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);*/
 }
 .portfolio li:last-child {
   margin-bottom: 1em;
