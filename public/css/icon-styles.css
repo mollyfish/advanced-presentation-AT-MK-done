@@ -110,7 +110,6 @@ is being used for the background change on hover */
 	font-size: 400%;
 	font-weight: 600;
 	color: #fff;
-	/*background-color: #fd6632;*/
 	background-color: rgb(124,131,135);
 }
 .icon-go-left:before {
@@ -122,8 +121,12 @@ is being used for the background change on hover */
 	font-size: 400%;
 	font-weight: 600;
 	color: #fff;
-	/*background-color: #fd6632;*/
 	background-color: rgb(124,131,135);
+}
+@media screen and (min-width: 50em) {
+	.icon-go-right:before, .icon-go-left:before {
+		background-color: #fd6632;
+	}
 }
 .icon-envelope:before {
 	content: "\e602";
