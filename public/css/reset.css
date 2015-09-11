@@ -44,6 +44,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-img {
+img, nav, figure {
   max-width: 100%;
 }
