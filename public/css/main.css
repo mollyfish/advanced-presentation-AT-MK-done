@@ -1,22 +1,18 @@
 /* YES mobile version*/
-.standin {
-  font-size: 80px;
-}
 html {
   font-family: Helvetica, sans-serif;
   font-size: 1em;
 }
 body {
-  /*margin: 0 auto;*/
   width: 100%;
 }
 article {
   clear: left;
+  padding: 2em;
 }
 a {
   text-decoration: none;
 }
-/* all H1 tags except header */
 article h1, .services h3, .about h2, .clients h2 {
   position: relative;
   font-size: 160%;
@@ -24,6 +20,22 @@ article h1, .services h3, .about h2, .clients h2 {
   text-align: center;
   letter-spacing: 0.1em;
 }
+/*section {
+  padding: 3em;
+}*/
+.clearfix {
+ zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+ content: "\0020";
+ display: block;
+ height: 0;
+ overflow: hidden;
+}
+.clearfix:after {
+ clear: both;
+}
+/* Styles for the mock header strikethrough */
 article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .clients h2:before, .clients h2:after {
   position: absolute;
   top: 51%;
@@ -40,23 +52,9 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   margin-left: -50%;
   text-align: right;
 }
-
-/*.flex-container {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: stretch;
-}*/
-
 /* Navigation bar */
-nav {
-  /*border-bottom: 2px solid rgba(0,0,0,0.2);*/
-}
 nav ul {
   list-style-type: none;
-
 }
 nav li {
   box-sizing: border-box;
@@ -70,32 +68,12 @@ nav li {
   border-radius: 5px;
 }
 nav a {
-  
   text-decoration: none;
   color: rgb(124,131,135);
-  
-  
-  
 }
 nav a:hover {
   color: rgb(0,0,0);
 }
-/*.flex-menu-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: flex-start;
-}
-.flex-menu-items {
-  width: 100px;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 100px;
-  padding: 10px;
-}*/
-
 /* Header content */
 header {
   clear: left;
@@ -107,22 +85,16 @@ header {
   text-align: center;
   padding-bottom: 20px;
 }
-header .flex-text-block {
-  display: flex;
-  /*justify-content: center;*/
-}
-header .flex-text {
+header h1 {
   padding: 1em .5em;
 }
-
 /* Services */
 .services {
   background-color: #fd6632;
   color: #fff;
   text-align: center;
-  padding: 20px 10px;
+  /*padding: 20px 10px;*/
   font-weight: 100;
-  /*margin-top: 10px;*/
 }
 .services h2, .services h3 {
   font-size: 130%;
@@ -138,11 +110,11 @@ header .flex-text {
   background-color: #fd6632;
   color: white;
   font-family: Helvetica;
-  padding: 10px;
+  /*padding: 10px;*/
   text-align: center;
 }
 .strengths figure {
-  padding: 10px;
+  /*padding: 10px;*/
 }
 .strengths figcaption {
   font-size: 80%;
@@ -151,7 +123,6 @@ header .flex-text {
   width: 80%;
   margin: 10px auto;
 }
-
 /*Pricing tables */
 table {
   text-align: center;
@@ -190,33 +161,23 @@ button {
 button:hover {
   cursor: pointer;
 }
-
 /* Portfolio */
 .portfolio {
   text-align: center;
-  padding: 20px 10px;
   color: rgb(124,131,135);
 }
 .portfolio > img {
-  margin: 20px calc(50% - 190px);
+  margin: 20px calc(50% - 470px);
 }
 .portfolio nav {
   border: none;
 }
-.portfolio .flex-menu-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: flex-start;
+.portfolio li {
+  width: 18em;
+  margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);
 }
-.portfolio .flex-menu-items {
-  width: 120px;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 100px;
-  padding: 0.8em;
+.portfolio li:last-child {
+  margin-bottom: 1em;
 }
 .portfolio nav a {
   padding: 0.5em;
@@ -232,6 +193,7 @@ button:hover {
 }
 .portfolio figure {
   margin: 20px calc(50% - 150px);
+  /*display: inline-block;*/
 }
 .portfolio figcaption {
   margin-top: 10px;
@@ -254,14 +216,12 @@ button:hover {
 .portfolio figure a:hover:before { /* black fadeout over link img on hover */
   background-color: rgba(0,0,0,0.5);
 }
-
-
 /* About */
 .about {
   background-color: #2a2a2e;
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  /*padding: 20px 10px;*/
   font-weight: 100;
 }
 .about h2 {
@@ -303,12 +263,9 @@ button:hover {
 .about button {
   padding: 10px 40px;
 }
-
-
-
 /* Team */
 .team {
-  padding: 10px;
+  /*padding: 10px;*/
   text-align: center;
   color: rgb(124,131,135);
 }
@@ -324,7 +281,6 @@ button:hover {
 }
 .team h3 {
   font-weight: bold;
-
   color: #000;
   letter-spacing: 0.08em;
   margin-top: 30px;
@@ -377,12 +333,9 @@ button:hover {
 .social-icons li {
   display: inline;
 }
-
-
 /*Contact*/
 .contact {
-  /*margin: 10px auto;*/
-  padding: 10px;
+  /*padding: 10px;*/
   color: #fff;
   font-weight: 100;
   /*background to show map thru orange*/
@@ -393,7 +346,6 @@ button:hover {
     ),
     url('../images/bkgrnd-map.png');
 }
-
 /*Form*/
 .contact p {
   text-align: center;
@@ -402,8 +354,6 @@ button:hover {
   letter-spacing: 0.02em;
 }
 .contact form {
-  /*max-width: 400px;*/
-  /*float: left;*/
   width: 100%;
   display: inline-block;
 }
@@ -428,15 +378,7 @@ button:hover {
   background-color: white;
   margin-bottom: 10px;
 }
-
-/*Small map contact info */
-.contactmap {
-  /*float: left;*/
-  /*max-width: 400px;*/
-  /*margin-top: 10px;*/
-  /*display: inline-block;*/
-  /*position: relative;*/
-}
+/*Small map*/
 .contactmap figure {
   display: block;
   position: relative;
@@ -456,49 +398,11 @@ button:hover {
 }
 .contactmap img {
   width: 100%;
-  /*position: absolute;
-  top: 0;
-  left: 0;*/
 }
-
-
-/*.contact-flex {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: stretch;
-}
-.contact-flex-1 {
-  width: <property unused>
-  height: <property unused>
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 98%;
-} 
-.contact-flex-2 {
-  width: <property unused>
-  height: <property unused>
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 200px;
-}
-.contact-flex-3 {
-  width: <property unused>
-  height: <property unused>
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 200px;
-}*/
-
-
 /*Footer*/
 footer {
   text-align: center;
   padding: 3em 0;
-  /*position: relative;*/
-  /*bottom: -400px; */
 }
 footer a {
   color: #fd6632;
@@ -506,51 +410,68 @@ footer a {
 footer a:hover {
   color: rgb(124,131,135);
 }
+/*&&&&&&&&&&&&&&&&&&&&&&&&
 
-/*.footer-flex {
-  display:flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: stretch;
-}   
-.footer-flex-1 {
-  height: null;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 200px;
-}
-.footer-flex-2 {
-  height: null;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 200px;
-}*/
-  
+NOT mobile version 
 
-.clearfix {
- zoom: 1;
-}
-.clearfix:before, .clearfix:after {
- content: "\0020";
- display: block;
- height: 0;
- overflow: hidden;
-}
-.clearfix:after {
- clear: both;
-}
-
-
-/* NOT mobile version */
+&&&&&&&&&&&&&&&&&&&&&&&&&*/
 /* when it's BIGGER than 480px, do all this stuff */
-/*@media screen and (min-width: 720px) {
-  nav ul {
-    margin: 0 auto;
-    width: 80%;
+@media screen and (min-width: 50em) {
+  body {
+    /*background-color: Tomato;*/
   }
-}*/
+  .portfolio {
+    max-width: 60em;
+    margin: 0 auto;
+  }
+  .portfolio figure {
+    margin: .5em;
+    display: inline-block;
+  }
+  .portfolio nav li {
+    display: inline-block;
+  }
+  .portfolio nav {
+  border: none;
+}
+.portfolio li {
+  width: 18em;
+  margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);
+}
+.portfolio li:last-child {
+  margin-bottom: 1em;
+}
+.portfolio nav a {
+  padding: 0.5em;
+}
+.portfolio nav a:hover {
+  background-color: #fd6632;
+  color: #fff;
+}
+nav li {
+  box-sizing: border-box;
+  text-align: center;
+  float: none;
+  display: inline-block;
+  padding: .5em;
+  margin: .5em .2em; 
+  border: none;
+  border-radius: 0;
+}
+nav ul {
+  width: 60em;
+  margin: 0 calc(50% - 30em);
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(124,131,135);
+}
+.portfolio nav a:hover {
+  color: rgb(0,0,0);
+  background-color: #fd6632;
+}
+}
 
 /*use in DESKTOP LAYOUT*/
 /*.services .flex-text-block {
