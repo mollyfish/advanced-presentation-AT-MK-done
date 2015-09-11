@@ -67,7 +67,59 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   margin-left: -50%;
   text-align: right;
 }
-/* Navigation bar */
+
+/*Top Navigation Bar */
+.top-nav {
+  padding: auto 0;
+}
+.top-nav ul {
+  list-style-type: none;
+}
+.top-nav li {
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: .5em;
+  font-weight: 300;
+}
+.top-nav a {
+  text-decoration: none;
+  color: rgb(124,131,135);
+}
+.top-nav a:hover {
+  color: rgb(0,0,0);
+}
+.flex-navbar {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 8em;
+}
+/* Nav DESKTOP */
+@media screen and (min-width: 50em) {
+  .top-nav {
+    padding-left: 10em;
+    padding-right: 10em;
+    border-bottom: 1px solid rgba(124,131,135,0.5);
+  }
+  .top-nav li {
+    border: none;
+  }
+  .flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
+    flex-basis: 4em;
+  }
+
+}
+
+
+
+
 
 /* Header content */
 header {
@@ -75,14 +127,42 @@ header {
   background-image: url('../images/top-bkgrnd.jpg');
   background-position: top;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 10em;
+  height: 15em;
   text-align: center;
   padding-bottom: 20px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+
+}
+.headertext {
+  width: 90%;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
 }
 header h1 {
   padding: 1em .5em;
 }
+.underline {
+  border-bottom: 1px solid #fd6632;
+}
+
+/* Header DESKTOP */
+@media screen and (min-width: 50em) {
+  header {
+    height: 25em;
+  }
+  .headertext {
+    max-width: 28em;
+    font-size: 1.5em;
+  }
+}
+
+
 /* Services */
 .services {
   background-color: #fd6632;
@@ -583,17 +663,15 @@ NOT mobile version
 
 &&&&&&&&&&&&&&&&&&&&&&&&&*/
 /* when it's BIGGER than 480px, do all this stuff */
+
 @media screen and (min-width: 50em) {
-  
-
-
-
   /*Services Section Desktop */
-  .services {
+  .services, .about {
     padding-top: 3em;
+    padding-bottom: 3em;
   }
   /*Services Paragraph Flex*/
-  .services-flex {
+  .flex-paragraphs {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -601,18 +679,18 @@ NOT mobile version
     align-content: flex-start;
     align-items: stretch;
   }
-  .service-flex-1 {
+  .flex-paragraph-1 {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 98%;
   }
- .service-flex-2 {
+ .flex-paragraph-2 {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 48%;
-    padding-right: 2em;
+    padding-right: 1em;
   }
- .service-flex-3 {
+ .flex-paragraph-3 {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 48%;
@@ -624,19 +702,20 @@ NOT mobile version
     display: inline-block;
     width: 32%;
   }
-  .price-tables {
-    margin: 3em auto;
-  }
   .price-tables h3 {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
+} /* End of Services Section Desktop*/
 
-
-} /* End of Media Query*/
-
-
-
-
+/*About Section Desktop */
+@media screen and (min-width: 50em) {
+  .about .flex-paragraphs {
+    padding: 1em 0 3em 0;
+  }
+  .progressbars {
+     padding: 1em 0;
+  }
+} /*End of About Section Desktop*/
 
 
 /*use in DESKTOP LAYOUT*/
