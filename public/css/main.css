@@ -554,15 +554,16 @@ NOT mobile version
   .portfolio nav {
   border: none;
   }
+}
 
-
-
+@media screen and (min-width: 50em) {
   /*Services Section Desktop */
-  .services {
+  .services, .about {
     padding-top: 3em;
+    padding-bottom: 3em;
   }
   /*Services Paragraph Flex*/
-  .services-flex {
+  .flex-paragraphs {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -570,18 +571,18 @@ NOT mobile version
     align-content: flex-start;
     align-items: stretch;
   }
-  .service-flex-1 {
+  .flex-paragraph-1 {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 98%;
   }
- .service-flex-2 {
+ .flex-paragraph-2 {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 48%;
-    padding-right: 2em;
+    padding-right: 1em;
   }
- .service-flex-3 {
+ .flex-paragraph-3 {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 48%;
@@ -593,57 +594,22 @@ NOT mobile version
     display: inline-block;
     width: 32%;
   }
-  .price-tables {
-    margin: 3em auto;
-  }
   .price-tables h3 {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
+} /* End of Services Section Desktop*/
+
+/*About Section Desktop */
+@media screen and (min-width: 50em) {
+  .about .flex-paragraphs {
+    padding: 1em 0 3em 0;
+  }
+  .progressbars {
+     padding: 1em 0;
+  }
+} /*End of About Section Desktop*/
 
 
-} /* End of Media Query*/
-
-
-
-
-.portfolio li {
-  width: 18em;
-  /*margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);*/
-}
-.portfolio li:last-child {
-  margin-bottom: 1em;
-}
-.portfolio nav a {
-  padding: 0.5em;
-}
-.portfolio nav a:hover {
-  background-color: #fd6632;
-  color: #fff;
-}
-nav li {
-  box-sizing: border-box;
-  text-align: center;
-  float: none;
-  display: inline-block;
-  padding: .5em;
-  margin: .5em .2em;
-  border: none;
-  border-radius: 0;
-}
-nav ul {
-  width: 60em;
-  margin: 0 calc(50% - 30em);
-  display: flex;
-}
-nav a {
-  text-decoration: none;
-  color: rgb(124,131,135);
-}
-.portfolio nav a:hover {
-  color: rgb(0,0,0);
-  background-color: #fd6632;
-}
-}
 
 /*use in DESKTOP LAYOUT*/
 /*.services .flex-text-block {
