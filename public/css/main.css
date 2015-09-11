@@ -175,7 +175,11 @@ button {
 button:hover {
   cursor: pointer;
 }
-/* Portfolio */
+/*&&&&&&&&&&&&&&&& 
+
+    Portfolio
+
+&&&&&&&&&&&&&&&&&&*/
 .portfolio {
   text-align: center;
   color: rgb(124,131,135);
@@ -189,7 +193,6 @@ button:hover {
 }
 .portfolio li {
   width: 18em;
-  /*margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);*/
 }
 .portfolio li:last-child {
   margin-bottom: 1em;
@@ -208,7 +211,6 @@ button:hover {
 }
 .portfolio figure {
   margin: 20px calc(50% - 150px);
-  /*display: inline-block;*/
 }
 .portfolio figcaption {
   margin-top: 10px;
@@ -219,7 +221,8 @@ button:hover {
   height: 220px;
   position: relative;
 }
-.portfolio figure a:before { /* creates area for fadeout */
+/* creates hover area for fadeout */
+.portfolio figure a:before { 
   content: "";
   position: absolute;
   display: inline-block;
@@ -228,10 +231,27 @@ button:hover {
   height: 220px;
   width: 300px;
 }
-.portfolio figure a:hover:before { /* black fadeout over link img on hover */
+/* black fadeout over portfolio link img on hover */
+.portfolio figure a:hover:before { 
   background-color: rgba(0,0,0,0.5);
 }
-/* About */
+@media screen and (min-width: 50em) {
+  .portfolio figure {
+    width: 28%;
+    float: left;
+    margin: 0.2em 1%;
+    padding: 0.5em;
+  }
+  .portfolio figure img {
+    /*padding: 0.5em;*/
+  }
+}
+
+/*&&&&&&&&&&&&&&&&&
+
+     About 
+
+&&&&&&&&&&&&&&&&&*/
 .about {
   background-color: #2a2a2e;
   color: white;
@@ -540,20 +560,7 @@ NOT mobile version
 &&&&&&&&&&&&&&&&&&&&&&&&&*/
 /* when it's BIGGER than 480px, do all this stuff */
 @media screen and (min-width: 50em) {
-  .portfolio {
-    max-width: 60em;
-    margin: 0 auto;
-  }
-  .portfolio figure {
-    margin: .5em;
-    display: inline-block;
-  }
-  .portfolio nav li {
-    display: inline-block;
-  }
-  .portfolio nav {
-  border: none;
-  }
+  
 
 
 
@@ -606,44 +613,7 @@ NOT mobile version
 
 
 
-.portfolio li {
-  width: 18em;
-  /*margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);*/
-}
-.portfolio li:last-child {
-  margin-bottom: 1em;
-}
-.portfolio nav a {
-  padding: 0.5em;
-}
-.portfolio nav a:hover {
-  background-color: #fd6632;
-  color: #fff;
-}
-nav li {
-  box-sizing: border-box;
-  text-align: center;
-  float: none;
-  display: inline-block;
-  padding: .5em;
-  margin: .5em .2em;
-  border: none;
-  border-radius: 0;
-}
-nav ul {
-  width: 60em;
-  margin: 0 calc(50% - 30em);
-  display: flex;
-}
-nav a {
-  text-decoration: none;
-  color: rgb(124,131,135);
-}
-.portfolio nav a:hover {
-  color: rgb(0,0,0);
-  background-color: #fd6632;
-}
-}
+
 
 /*use in DESKTOP LAYOUT*/
 /*.services .flex-text-block {
