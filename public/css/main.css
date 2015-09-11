@@ -129,6 +129,8 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
 
 
 
+
+
 /* Header content */
 header {
   clear: left;
@@ -172,8 +174,6 @@ header h1 {
     font-size: 1.5em;
   }
 }
-
-
 /* Services */
 .services {
   background-color: #fd6632;
@@ -387,7 +387,6 @@ button:hover {
   background-color: #2a2a2e;
   color: white;
   text-align: center;
-  /*padding: 20px 10px;*/
   font-weight: 100;
 }
 .about h2 {
@@ -749,28 +748,4 @@ NOT mobile version
   .progressbars {
      padding: 1em 0;
   }
-} /*End of About Section Desktop*/
-
-
-/*use in DESKTOP LAYOUT*/
-/*.services .flex-text-block {
-  display: flex;
-  justify-content: center;
-}
-.services .flex-text-head {
-  margin: auto;
-  height: 50%;
-}
-.services .flex-text {
-  margin: auto;
-  height: 50%;
-} */
-
-/*New stuff by Alina 9/8 Tues */
-
-/*Services section */
-
-/*UI design section*/
-
-
-
+} 
