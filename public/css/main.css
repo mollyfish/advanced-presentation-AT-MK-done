@@ -68,30 +68,6 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   text-align: right;
 }
 
-/* Navigation bar */
-
-/*nav ul {
-  list-style-type: none;
-}
-nav li {
-  box-sizing: border-box;
-  text-align: center;
-  display: inline-block;
-  float: left;
-  width: 8em;
-  padding: .5em;
-  margin: .5em calc(25% - 4em);
-  border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 5px;
-}
-nav a {
-  text-decoration: none;
-  color: rgb(124,131,135);
-}
-nav a:hover {
-  color: rgb(0,0,0);
-}*/
-
 /*Top Navigation Bar */
 .top-nav {
   padding: auto 0;
@@ -112,7 +88,6 @@ nav a:hover {
 .top-nav a:hover {
   color: rgb(0,0,0);
 }
-
 .flex-navbar {
   display:flex;
   flex-direction: row;
@@ -121,43 +96,11 @@ nav a:hover {
   align-content: flex-start;
   align-items: flex-start;
 }
-
-.flex-nav-1 {
+.flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 8em;
 }
-
-.flex-nav-2 {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 8em;
-}
-
-.flex-nav-3 {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 8em;
-}
-.flex-nav-4 {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 8em;
-}
-
-.flex-nav-5 {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 8em;
-}
-
-.flex-nav-6 {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 8em;
-}
-
-
 /* Nav DESKTOP */
 @media screen and (min-width: 50em) {
   .top-nav {
@@ -173,6 +116,7 @@ nav a:hover {
   }
 
 }
+
 
 
 
@@ -291,7 +235,11 @@ button {
 button:hover {
   cursor: pointer;
 }
-/* Portfolio */
+/*&&&&&&&&&&&&&&&& 
+
+    Portfolio
+
+&&&&&&&&&&&&&&&&&&*/
 .portfolio {
   text-align: center;
   color: rgb(124,131,135);
@@ -299,23 +247,25 @@ button:hover {
 .portfolio > img {
   margin: 20px calc(50% - 470px);
 }
-.portfolio nav {
-  width: 80%;
-  border: none;
+.secondary-nav ul {
+  list-style-type: none;
+  width: 100%;
 }
-.portfolio li {
-  width: 18em;
-  /*margin: 0.1em calc(50% - 9em) .1em calc(50% - 9em);*/
+.secondary-nav li {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  padding: .5em;
+  margin: 0.5em auto;
+  border: 2px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
-.portfolio li:last-child {
-  margin-bottom: 1em;
+.secondary-nav a {
+  text-decoration: none;
+  color: rgb(124,131,135);
 }
-.portfolio nav a {
-  padding: 0.5em;
-}
-.portfolio nav a:hover {
-  background-color: #fd6632;
-  color: #fff;
+.secondary-nav a:hover {
+  color: rgb(0,0,0);
 }
 .portfolio h4 {
   font-weight: bold;
@@ -324,7 +274,6 @@ button:hover {
 }
 .portfolio figure {
   margin: 20px calc(50% - 150px);
-  /*display: inline-block;*/
 }
 .portfolio figcaption {
   margin-top: 10px;
@@ -335,7 +284,8 @@ button:hover {
   height: 220px;
   position: relative;
 }
-.portfolio figure a:before { /* creates area for fadeout */
+/* creates hover area for fadeout */
+.portfolio figure a:before { 
   content: "";
   position: absolute;
   display: inline-block;
@@ -344,10 +294,68 @@ button:hover {
   height: 220px;
   width: 300px;
 }
-.portfolio figure a:hover:before { /* black fadeout over link img on hover */
+/* black fadeout over portfolio link img on hover */
+.portfolio figure a:hover:before { 
   background-color: rgba(0,0,0,0.5);
 }
-/* About */
+@media screen and (min-width: 50em) {
+  .portfolio figure {
+    margin: 0;
+  }
+  .secondary-nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .secondary-nav li {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0; 
+  }
+  .secondary-nav a {
+    display: inline-block;
+    padding: 0.5em;
+  }
+  .secondary-nav a:hover {
+    color: rgb(0,0,0);
+    background-color: #fd6632;
+  }
+  .flex-secnav {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: stretch;
+  }
+  .flex-secnav-item-1, .flex-secnav-item-2, .flex-secnav-item-3, .flex-secnav-item-4, .flex-secnav-item-5 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 200px;
+  }
+  .thumbnail {
+    padding: 1em 0.5em;
+  }
+  .gallery-flex {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 1em;
+  }
+  .gallery-item-flex-1, .gallery-item-flex-2, .gallery-item-flex-3, .gallery-item-flex-4, .gallery-item-flex-5, .gallery-item-flex-6, .gallery-item-flex-7, .gallery-item-flex-8, .gallery-item-flex-9 {
+    width: 300px;
+    height: 250px;
+  }
+
+}
+/*&&&&&&&&&&&&&&&&&
+
+     About 
+
+&&&&&&&&&&&&&&&&&*/
 .about {
   background-color: #2a2a2e;
   color: white;
@@ -655,22 +663,6 @@ NOT mobile version
 
 &&&&&&&&&&&&&&&&&&&&&&&&&*/
 /* when it's BIGGER than 480px, do all this stuff */
-@media screen and (min-width: 50em) {
-  .portfolio {
-    max-width: 60em;
-    margin: 0 auto;
-  }
-  .portfolio figure {
-    margin: .5em;
-    display: inline-block;
-  }
-  .portfolio nav li {
-    display: inline-block;
-  }
-  .portfolio nav {
-  border: none;
-  }
-}
 
 @media screen and (min-width: 50em) {
   /*Services Section Desktop */
@@ -724,7 +716,6 @@ NOT mobile version
      padding: 1em 0;
   }
 } /*End of About Section Desktop*/
-
 
 
 /*use in DESKTOP LAYOUT*/
