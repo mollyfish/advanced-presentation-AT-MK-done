@@ -1,4 +1,4 @@
-/*&&&&&&&&&&&&&&&&&&&&&&&&&& 
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     General styles
 
@@ -14,6 +14,10 @@ article {
   clear: left;
   padding: 2em;
 }
+p {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
 a {
   text-decoration: none;
 }
@@ -23,6 +27,23 @@ article h1, .services h3, .about h2, .clients h2 {
   overflow: hidden;
   text-align: center;
   letter-spacing: 0.1em;
+}
+.flex-container {
+  /*adapted from flexboxin5.com*/
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.nav ul {
+  list-style-type: none;
+}
+.nav a {
+  color: rgb(124,131,135);
+}
+.nav a:hover {
+  color: rgb(0,0,0);
 }
 /* General styles desktop layout */
 @media screen and (min-width: 50em) {
@@ -35,7 +56,7 @@ article h1, .services h3, .about h2, .clients h2 {
     padding: 2em 8%;
   }
 }
-/*&&&&&&&&&&&&&&&&&&&&&&&&&& 
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     Mock strikethrough styles
 
@@ -56,7 +77,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   margin-left: -50%;
   text-align: right;
 }
-/*&&&&&&&&&&&&&&&&&&&&&&&&&& 
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     Top navigation bar
 
@@ -64,29 +85,14 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
 .top-nav {
   padding: auto 0;
 }
-.top-nav ul {
-  list-style-type: none;
-}
 .top-nav li {
   text-align: center;
   border: 1px solid rgba(0,0,0,0.2);
   padding: .5em;
   font-weight: 300;
 }
-.top-nav a {
-  text-decoration: none;
-  color: rgb(124,131,135);
-}
-.top-nav a:hover {
-  color: rgb(0,0,0);
-}
 /* flex nav wrapper - adapted from flexboxin5.com */
 .flex-navbar {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -118,7 +124,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
     flex-basis: 4em;
   }
 }
-/*&&&&&&&&&&&&&&&& 
+/*&&&&&&&&&&&&&&&&
 
     Header
 
@@ -131,12 +137,6 @@ header {
   height: 15em;
   text-align: center;
   padding-bottom: 1em;
-  /* adapted from flexboxin5.com */
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   -webkit-align-items: center;
           align-items: center;
   -webkit-justify-content: center;
@@ -175,7 +175,7 @@ header h1 {
     font-size: 1.5em;
   }
 }
-/*&&&&&&&&&&&&&&&& 
+/*&&&&&&&&&&&&&&&&
 
     Services article
 
@@ -193,8 +193,25 @@ header h1 {
 }
 .services p {
   margin: 2em 0 1em 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+}
+ /* Services article flex paragraphs */
+.flex-paragraphs {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: stretch;
+}
+.flex-paragraph-1 {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 98%;
+}
+.flex-paragraph-2, .flex-paragraph-3 {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 48%;
+  padding-right: 1em;
 }
 .strengths {
   background-color: #fd6632;
@@ -273,32 +290,9 @@ button:hover {
   .price-tables h3 {
     margin-bottom: 0.5em;
   }
-  /* Services article flex paragraphs */
-  .flex-paragraphs {
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: stretch;
-  }
-  .flex-paragraph-1 {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 98%;
-  }
-  .flex-paragraph-2, .flex-paragraph-3 {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 48%;
-    padding-right: 1em;
-  }
+
 }
-/*&&&&&&&&&&&&&&&& 
+/*&&&&&&&&&&&&&&&&
 
     Portfolio article
 
@@ -323,13 +317,6 @@ button:hover {
   border: 2px solid rgba(0,0,0,0.2);
   border-radius: 0.5em;
 }
-.secondary-nav a {
-  text-decoration: none;
-  color: rgb(124,131,135);
-}
-.secondary-nav a:hover {
-  color: rgb(0,0,0);
-}
 .portfolio h4 {
   font-weight: bold;
   color: #000;
@@ -348,7 +335,7 @@ button:hover {
   position: relative;
 }
 /* defines hover area for fadeout */
-.portfolio figure a:before { 
+.portfolio figure a:before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -358,12 +345,12 @@ button:hover {
   width: 300px;
 }
 /* black fadeout over portfolio link img on hover */
-.portfolio figure a:hover:before { 
+.portfolio figure a:hover:before {
   background-color: rgba(0,0,0,0.5);
 }
 /* changed to :after b/c :before is being used for
  the background change on hover */
-.portfolio figure a.icon-see-more:after { 
+.portfolio figure a.icon-see-more:after {
   display: inline-block;
   position: absolute;
   top: calc(50% - 1em);
@@ -393,7 +380,7 @@ button:hover {
     padding: 0;
     margin: 0;
     border: none;
-    border-radius: 0; 
+    border-radius: 0;
   }
   .secondary-nav a {
     display: inline-block;
@@ -467,9 +454,6 @@ button:hover {
   text-align: center;
   font-weight: 100;
 }
-.about {
-    
-  }
 .about h2 {
   font-size: 130%;
   margin-bottom: 1em;
@@ -480,8 +464,6 @@ button:hover {
 }
 .about p {
   margin: 1em 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 .about figure {
   padding: 1em auto;
@@ -524,7 +506,7 @@ progress::-webkit-progress-bar {
   .progressbars {
      padding: 1em 0;
   }
-} 
+}
 /*$$$$$$$$$$$$$$$$$$
 
     Team article
@@ -557,8 +539,6 @@ $$$$$$$$$$$$$$$$$$$*/
 }
 .team p {
   margin: 1.5em 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 .team figcaption {
   width: 80%;
@@ -670,6 +650,8 @@ $$$$$$$$$$$$$$$$$$$*/
   }
   .clients p {
     margin-top: 1em;
+    line-height: none;
+    letter-spacing: none;
   }
   .clients figure {
     border: none;
@@ -718,8 +700,6 @@ $$$$$$$$$$$$$$$$$$$*/
 .contact p {
   text-align: center;
   margin: 2em 0 1em 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 /* Contact form */
 .contact form {
@@ -738,7 +718,7 @@ $$$$$$$$$$$$$$$$$$$*/
 .contact form input:first-child {
   margin-top: 0;
 }
-.contact form input::-webkit-input-placeholder, 
+.contact form input::-webkit-input-placeholder,
 .contact form textarea::-webkit-input-placeholder {
   color: #fff;
 }
@@ -751,6 +731,7 @@ $$$$$$$$$$$$$$$$$$$*/
   color: #fd6632;
   background-color: white;
   margin-bottom: 2em;
+  font-size: 0.7em;
 }
 /* Location map */
 .contactmap figure {
@@ -791,7 +772,6 @@ $$$$$$$$$$$$$$$$$$$*/
     margin: 2em 4% 1em 4%;
   }
   .contact form button {
-    padding: 1em 4em;
     width: 40%;
     float: right;
   }
