@@ -1,4 +1,8 @@
-/* YES mobile version*/
+/*&&&&&&&&&&&&&&&&&&&&&&&&&& 
+
+    General styles
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 html {
   font-family: Helvetica, sans-serif;
   font-size: 1em;
@@ -6,24 +10,9 @@ html {
 body {
   width: 100%;
 }
-@media screen and (min-width: 50em) {
-  body {
-    /*background-color: Tomato;*/
-    max-width: 80em;
-    width: 90%;
-    margin: 0 auto;
-    /*background-color: lightblue;*/
-  }
-}
 article {
   clear: left;
   padding: 2em;
-}
-@media screen and (min-width: 50em) {
-  article {
-    /*clear: left;*/
-    padding: 2em 8%;
-  }
 }
 a {
   text-decoration: none;
@@ -35,22 +24,22 @@ article h1, .services h3, .about h2, .clients h2 {
   text-align: center;
   letter-spacing: 0.1em;
 }
-/*section {
-  padding: 3em;
-}*/
-.clearfix {
- zoom: 1;
+/* General styles desktop layout */
+@media screen and (min-width: 50em) {
+  body {
+    max-width: 80em;
+    width: 90%;
+    margin: 0 auto;
+  }
+  article {
+    padding: 2em 8%;
+  }
 }
-.clearfix:before, .clearfix:after {
- content: "\0020";
- display: block;
- height: 0;
- overflow: hidden;
-}
-.clearfix:after {
- clear: both;
-}
-/* Styles for the mock header strikethrough */
+/*&&&&&&&&&&&&&&&&&&&&&&&&&& 
+
+    Mock strikethrough styles
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .clients h2:before, .clients h2:after {
   position: absolute;
   top: 51%;
@@ -67,8 +56,11 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   margin-left: -50%;
   text-align: right;
 }
+/*&&&&&&&&&&&&&&&&&&&&&&&&&& 
 
-/*Top Navigation Bar */
+    Top navigation bar
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 .top-nav {
   padding: auto 0;
 }
@@ -88,6 +80,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
 .top-nav a:hover {
   color: rgb(0,0,0);
 }
+/* flex nav wrapper - adapted from flexboxin5.com */
 .flex-navbar {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -100,6 +93,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   align-content: flex-start;
   align-items: flex-start;
 }
+/* flex nav items - adapted from flexboxin5.com */
 .flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
   -webkit-flex-grow: 1;
   -webkit-flex-shrink: 0;
@@ -108,7 +102,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   flex-shrink: 0;
   flex-basis: 8em;
 }
-/* Nav DESKTOP */
+/* Nav desktop layout */
 @media screen and (min-width: 50em) {
   .top-nav {
     padding-left: 10em;
@@ -118,18 +112,17 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   .top-nav li {
     border: none;
   }
+  /* flex nav items - adapted from flexboxin5.com */
   .flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
     -webkit-flex-basis: 4em;
     flex-basis: 4em;
   }
-
 }
+/*&&&&&&&&&&&&&&&& 
 
+    Header
 
-
-
-
-/* Header content */
+&&&&&&&&&&&&&&&&&&*/
 header {
   clear: left;
   background-image: url('../images/top-bkgrnd.jpg');
@@ -137,7 +130,8 @@ header {
   background-repeat: no-repeat;
   height: 15em;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 1em;
+  /* adapted from flexboxin5.com */
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -147,7 +141,20 @@ header {
           align-items: center;
   -webkit-justify-content: center;
           justify-content: center;
-
+}
+.icon-droplet {
+  margin-bottom: .3em;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: #fd6632;
+  font-size: 320%;
+  color: #fff;
+  line-height: 1.5;
+}
+header h1 {
+  padding: 1em .5em;
 }
 .headertext {
   width: 90%;
@@ -155,14 +162,10 @@ header {
   line-height: 1.5em;
   letter-spacing: 0.05em;
 }
-header h1 {
-  padding: 1em .5em;
-}
 .underline {
   border-bottom: 1px solid #fd6632;
 }
-
-/* Header DESKTOP */
+/* Header desktop layout */
 @media screen and (min-width: 50em) {
   header {
     height: 25em;
@@ -172,9 +175,11 @@ header h1 {
     font-size: 1.5em;
   }
 }
+/*&&&&&&&&&&&&&&&& 
 
+    Services article
 
-/* Services */
+&&&&&&&&&&&&&&&&&&*/
 .services {
   background-color: #fd6632;
   color: #fff;
@@ -183,11 +188,11 @@ header h1 {
 }
 .services h2, .services h3 {
   font-size: 130%;
-  margin-bottom: 3px;
+  margin-bottom: .5em;
   letter-spacing: 0.05em;
 }
 .services p {
-  margin: 20px 0;
+  margin: 2em 0 1em 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -202,49 +207,100 @@ header h1 {
   line-height: 1.5;
   letter-spacing: 0.02em;
   width: 80%;
-  margin: 10px auto;
+  margin: 1em auto 2.5em auto;
+}
+.icon-quill:before, .icon-flask:before, .icon-gear:before  {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 400%;
+  color: #fd6632;
+  line-height: 2;
 }
 /*Pricing tables */
 table {
   text-align: center;
   background-color: #fff;
   display: inline-block;
-  margin: 10px;
+  margin: 1em;
 }
-th {
+caption {
   background-color: #7f3319;
-  padding: 10px;
+  padding: 1em;
+}
+th, td {
+  color: #414141;
+  padding: 1em;
+  border-top: 1px solid #fd6632;
+  font-size: 65%;
+}
+th strong {
+  font-size: 150%;
 }
 .price {
   color: #fd6632;
 }
-td {
-  color: #414141;
-  padding: 10px;
-  border-top: 1px solid #fd6632;
-  font-size: 65%;
-}
-td strong {
-  font-size: 150%;
-}
 .signup {
   background-color: #be4c25;
-  padding: 15px 50px;
+  padding: 1.5em 5em;
   border-top: 1px solid #fd6632;
 }
 button {
   border: none;
   background-color: #fd6632;
   color: white;
-  padding: 5px 10px;
-  font-size: 0.70em;
+  padding: 1em 1.5em;
+  font-size: 100%;
 }
 button:hover {
   cursor: pointer;
 }
+/* Services article desktop layout */
+@media screen and (min-width: 50em) {
+  .services {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .selling-points {
+    margin: 2em auto;
+  }
+  .strengths {
+    display: inline-block;
+    width: 32%;
+  }
+  .price-tables h3 {
+    margin-bottom: 0.5em;
+  }
+  /* Services article flex paragraphs */
+  .flex-paragraphs {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: stretch;
+  }
+  .flex-paragraph-1 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 98%;
+  }
+  .flex-paragraph-2, .flex-paragraph-3 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 48%;
+    padding-right: 1em;
+  }
+}
 /*&&&&&&&&&&&&&&&& 
 
-    Portfolio
+    Portfolio article
 
 &&&&&&&&&&&&&&&&&&*/
 .portfolio {
@@ -252,7 +308,7 @@ button:hover {
   color: rgb(124,131,135);
 }
 .portfolio > img {
-  margin: 20px calc(50% - 470px);
+  margin: 1em calc(50% - 470px); /* 470 is half the img width */
 }
 .secondary-nav ul {
   list-style-type: none;
@@ -265,7 +321,7 @@ button:hover {
   padding: .5em;
   margin: 0.5em auto;
   border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 0.5em;
 }
 .secondary-nav a {
   text-decoration: none;
@@ -280,34 +336,54 @@ button:hover {
   padding-bottom: 0.5em;
 }
 .portfolio figure {
-  margin: 20px calc(50% - 150px);
+  margin: 2em calc(50% - 150px); /* 150px is half the img width */
 }
 .portfolio figcaption {
-  margin-top: 10px;
+  margin-top: 1em;
 }
 .portfolio figure a {
   display: inline-block;
-  width: 300px;
+  width: 300px;  /* dimensions of img */
   height: 220px;
   position: relative;
 }
-/* creates hover area for fadeout */
+/* defines hover area for fadeout */
 .portfolio figure a:before { 
   content: "";
   position: absolute;
   display: inline-block;
   top: 0;
   left: 0;
-  height: 220px;
+  height: 220px;  /* dimensions of img */
   width: 300px;
 }
 /* black fadeout over portfolio link img on hover */
 .portfolio figure a:hover:before { 
   background-color: rgba(0,0,0,0.5);
 }
+/* changed to :after b/c :before is being used for
+ the background change on hover */
+.portfolio figure a.icon-see-more:after { 
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 1em);
+  left: calc(50% - 1em);
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: #fd6632;
+  font-size: 200%;
+  color: #fff;
+  line-height: 2;
+  opacity: 0;
+}
+.portfolio figure a.icon-see-more:hover:after {
+  opacity: 1;
+}
+/* Portfolio article desktop layout */
 @media screen and (min-width: 50em) {
   .portfolio figure {
-    margin: 0;
+    margin: 0 0 1em 0;
   }
   .secondary-nav {
     width: 90%;
@@ -327,6 +403,7 @@ button:hover {
     color: rgb(0,0,0);
     background-color: #fd6632;
   }
+  /* secondary nav wrapper */
   .flex-secnav {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -339,24 +416,26 @@ button:hover {
     align-content: flex-start;
     align-items: stretch;
   }
+  /* secondary nav items */
   .flex-secnav-item-1, .flex-secnav-item-2, .flex-secnav-item-3, .flex-secnav-item-4, .flex-secnav-item-5 {
     -webkit-flex-grow: 1;
     -webkit-flex-shrink: 0;
-    -webkit-flex-basis: 200px;
+    -webkit-flex-basis: 20em;
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 200px;
+    flex-basis: 20em;
   }
   .thumbnail {
     padding: 1em 0.5em;
   }
+  /* portfolio gallery wrapper */
   .gallery-flex {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-flex-direction: row;
+    -webkit-flex-direction: row; /*safari also required these to have -webkit*/
     -webkit-flex-wrap: wrap;
     -webkit-justify-content: center;
     -webkit-align-content: flex-start;
@@ -368,99 +447,116 @@ button:hover {
     align-items: stretch;
     padding-bottom: 1em;
   }
+  /* portfolio gallery items */
   .gallery-item-flex-1, .gallery-item-flex-2, .gallery-item-flex-3, .gallery-item-flex-4, .gallery-item-flex-5, .gallery-item-flex-6, .gallery-item-flex-7, .gallery-item-flex-8, .gallery-item-flex-9 {
-    
     -webkit-flex-grow: 1;
     -webkit-flex-shrink: 0;
-    -webkit-flex-basis: 300px;
-    width: 300px;
+    -webkit-flex-basis: 300px;/* set to match img width of 300*/
+    width: 300px; /*img dimensions*/
     height: 250px;
   }
-
 }
 /*&&&&&&&&&&&&&&&&&
 
-     About 
+    About article
 
 &&&&&&&&&&&&&&&&&*/
 .about {
   background-color: #2a2a2e;
   color: white;
   text-align: center;
-  /*padding: 20px 10px;*/
   font-weight: 100;
 }
+.about {
+    
+  }
 .about h2 {
   font-size: 130%;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   letter-spacing: 0.05em;
 }
+.about h3 {
+  padding: 1em 0 1.5em 0;
+}
 .about p {
-  margin: 20px 0;
+  margin: 1em 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 .about figure {
-  padding: 10px auto;
+  padding: 1em auto;
 }
 .about figcaption {
   text-align: left;
+}
+.about button {
+  padding: 1em 3em;
 }
 progress {
   appearance: none;
   border: none;
   width: 100%;
-  height: 25px;
+  height: 1.5em;
   background: #3a3a3a;
   margin: 0 0 1.5em;
 }
-/*FIREFOX */
+/* for FIREFOX */
 progress::-moz-progress-bar {
   background: #fd6632;
 }
-/*SAFARI*/
+/* for SAFARI */
 progress::-webkit-progress-value {
   background: #fd6632;
 }
-/*background for SAFARI & CHROME*/
+/* background for SAFARI & CHROME */
 progress::-webkit-progress-bar {
   background-color: #3a3a3a;
 }
-.about h3 {
-  padding: 10px 0 20px 0;
-}
-.about button {
-  padding: 10px 40px;
-}
-/* Team */
+/* About article desktop layout */
+@media screen and (min-width: 50em) {
+  .about {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .about .flex-paragraphs {
+    padding: 1em 0 2em 0;
+  }
+  .progressbars {
+     padding: 1em 0;
+  }
+} 
+/*$$$$$$$$$$$$$$$$$$
+
+    Team article
+
+$$$$$$$$$$$$$$$$$$$*/
 .team {
-  /*padding: 10px;*/
   text-align: center;
   color: rgb(124,131,135);
 }
 .team h1 {
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   font-weight: normal;
 }
 .team h2 {
   font-size: 130%;
   color: #000;
-  margin: 20px 40px;
+  margin: 0em 3em 1em 3em;
 }
 .team h3 {
   font-weight: bold;
   color: #000;
   letter-spacing: 0.08em;
-  margin-top: 30px;
+  margin-top: 2em;
 }
 .team h4 {
   font-size: 75%;
-  padding: 5px 0 20px 0;
+  padding: 0.5em 0 1.5em 0;
   letter-spacing: 0.05em;
 }
 .team p {
-  margin: 20px 0;
+  margin: 1.5em 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -471,14 +567,15 @@ progress::-webkit-progress-bar {
   letter-spacing: 0.02em;
   font-weight: 100;
 }
+/* Clients slider */
 .clients {
   padding-top: 1.5em;
 }
 .clients figure {
   border: 1px solid rgb(124,131,135);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 0 10px;
+  border-radius: 1em;
+  padding: 1.5em;
+  margin: 0 0.5em;
 }
 .clients h3 {
   margin-top: 1em;
@@ -505,14 +602,55 @@ progress::-webkit-progress-bar {
 .slider-button-R {
   float: right;
 }
+.icon-go-right:before, .icon-go-left:before  {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  font-size: 300%;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(124,131,135);
+}
+@media screen and (min-width: 50em) {
+  .icon-go-right:before, .icon-go-left:before {
+    background-color: #fd6632;
+  }
+}
+/* Social media icons */
 .social-icons {
   list-style-type: none;
-  margin: 20px 0 15px 0;
+  margin: 1.5em 0 1em 0;
 }
 .social-icons li {
   display: inline;
 }
+.icon-facebook:before, .icon-twitter:before, .icon-dribbble:before, .icon-linkedin:before, .icon-google-plus:before {
+  background-color: #3B5998;
+  color: #fff;
+  height: 1.4em;
+  width: 1.4em;
+  line-height: 1.4em;
+  padding: 3px;
+}
+.icon-twitter:before {
+  background-color: #00aced;
+}
+.icon-dribbble:before {
+  background-color: #ea4c89;
+}
+.icon-linkedin:before {
+  background-color: #007bb6;
+}
+.icon-google-plus:before {
+  background-color: #ecbb0a;
+}
+.icon-facebook:hover:before, .icon-twitter:hover:before, .icon-dribbble:hover:before, .icon-linkedin:hover:before, .icon-google-plus:hover:before {
+  background-color: #fd6632;
+}
+/* Team article desktop layout */
 @media screen and (min-width: 50em) {
+  /* Team article */
   .team-member {
     box-sizing: border-box;
     float: left;
@@ -522,6 +660,7 @@ progress::-webkit-progress-bar {
   .team h3 {
     margin-top: 0;
   }
+  /* Clients slider */
   .clients {
     clear: both;
     text-align: left;
@@ -545,7 +684,7 @@ progress::-webkit-progress-bar {
     float: left;
     margin-left: 2em;
     margin-right: 1em;
-    width: calc(90% - 8em - 82px);
+    width: calc(90% - 8em - 82px); /*82px is the img dimension*/
   }
   .slider-button-L, .slider-button-R {
     border: none;
@@ -560,7 +699,11 @@ progress::-webkit-progress-bar {
     float: right;
   }
 }
-/* Contact */
+/*$$$$$$$$$$$$$$$$$$
+
+    Contact article
+
+$$$$$$$$$$$$$$$$$$$*/
 .contact {
   color: #fff;
   font-weight: 100;
@@ -578,6 +721,7 @@ progress::-webkit-progress-bar {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+/* Contact form */
 .contact form {
   width: 100%;
   display: inline-block;
@@ -594,7 +738,8 @@ progress::-webkit-progress-bar {
 .contact form input:first-child {
   margin-top: 0;
 }
-.contact form input::-webkit-input-placeholder, .contact form textarea::-webkit-input-placeholder {
+.contact form input::-webkit-input-placeholder, 
+.contact form textarea::-webkit-input-placeholder {
   color: #fff;
 }
 .messageinput {
@@ -607,7 +752,7 @@ progress::-webkit-progress-bar {
   background-color: white;
   margin-bottom: 2em;
 }
-/*Small map*/
+/* Location map */
 .contactmap figure {
   position: relative;
 }
@@ -627,9 +772,13 @@ progress::-webkit-progress-bar {
 .contactmap img {
   width: 100%;
 }
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+.icon-envelope:before, .icon-pushpin:before, .icon-mobile:before {
+  padding-right: 0.5em;
+  display: inline-block;
+}
+/* Contact article desktop layout */
 @media screen and (min-width: 50em) {
+  /* Contact form */
   .contactform {
     width: calc(50% - 0.5em);
     float: left;
@@ -646,7 +795,7 @@ progress::-webkit-progress-bar {
     width: 40%;
     float: right;
   }
-  /*Small map*/
+  /* Location map */
   .contactmap {
     margin: 1em 0 0 0.5em;
     width: calc(50% - 0.5em);
@@ -654,29 +803,25 @@ progress::-webkit-progress-bar {
   }
   .contactmap figure {
     position: relative;
-    /*margin-left: 1em;*/
-    /*float: right;*/
   }
   .contactmap ul {
     background-color: rgba(77,77,77,0.8);
     position: absolute;
     top: 0;
-    /*left: calc(50% - 1em);*/
     padding-bottom: 1em;
-    /*margin-left: -1em; */
   }
   .contactmap li {
-    margin-top: 20px;
-    padding-left: 10px;
+    margin-top: 1.5em;
+    padding-left: 0.5em;
     display: inline-block;
     font-size: 80%;
   }
-  .contactmap img {
-    /*width: 50%;*/
-    /*margin-left: 1em;*/
-  }
 }
-/*Footer*/
+/*$$$$$$$$$$$$$$$$$$
+
+    Footer
+
+$$$$$$$$$$$$$$$$$$$*/
 footer {
   text-align: center;
   padding: 3em 0;
@@ -687,90 +832,3 @@ footer a {
 footer a:hover {
   color: rgb(124,131,135);
 }
-/*&&&&&&&&&&&&&&&&&&&&&&&&
-
-NOT mobile version
-
-&&&&&&&&&&&&&&&&&&&&&&&&&*/
-/* when it's BIGGER than 480px, do all this stuff */
-
-@media screen and (min-width: 50em) {
-  /*Services Section Desktop */
-  .services, .about {
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
-  /*Services Paragraph Flex*/
-  .flex-paragraphs {
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: stretch;
-  }
-  .flex-paragraph-1 {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 98%;
-  }
- .flex-paragraph-2 {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 48%;
-    padding-right: 1em;
-  }
- .flex-paragraph-3 {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 48%;
-  }
-  .strengths-section {
-    margin: 3em auto;
-  }
-  .strengths {
-    display: inline-block;
-    width: 32%;
-  }
-  .price-tables h3 {
-    margin-bottom: 2em;
-  }
-} /* End of Services Section Desktop*/
-
-/*About Section Desktop */
-@media screen and (min-width: 50em) {
-  .about .flex-paragraphs {
-    padding: 1em 0 3em 0;
-  }
-  .progressbars {
-     padding: 1em 0;
-  }
-} /*End of About Section Desktop*/
-
-
-/*use in DESKTOP LAYOUT*/
-/*.services .flex-text-block {
-  display: flex;
-  justify-content: center;
-}
-.services .flex-text-head {
-  margin: auto;
-  height: 50%;
-}
-.services .flex-text {
-  margin: auto;
-  height: 50%;
-} */
-
-/*New stuff by Alina 9/8 Tues */
-
-/*Services section */
-
-/*UI design section*/
-
-
-
