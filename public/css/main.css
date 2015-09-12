@@ -206,14 +206,17 @@ header h1 {
 }
 .services h2, .services h3 {
   font-size: 1.777em;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
   letter-spacing: 0.05em;
+}
+.services h1 {
+  margin-bottom: 1em; 
 }
 .services h3 {
   margin: 0 10%;
 }
 .services p {
-  margin: 2em 0 1em 0;
+  margin: 0em 0 2em 0;
 }
  /* Services article flex paragraphs */
 .flex-paragraphs {
