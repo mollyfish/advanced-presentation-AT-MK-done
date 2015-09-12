@@ -731,6 +731,7 @@ $$$$$$$$$$$$$$$$$$$*/
   color: #fd6632;
   background-color: white;
   margin-bottom: 2em;
+  font-size: 0.7em;
 }
 /* Location map */
 .contactmap figure {
@@ -771,7 +772,6 @@ $$$$$$$$$$$$$$$$$$$*/
     margin: 2em 4% 1em 4%;
   }
   .contact form button {
-    padding: 1em 4em;
     width: 40%;
     float: right;
   }
