@@ -14,6 +14,10 @@ article {
   clear: left;
   padding: 2em;
 }
+p {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
 a {
   text-decoration: none;
 }
@@ -36,7 +40,6 @@ article h1, .services h3, .about h2, .clients h2 {
   list-style-type: none;
 }
 .nav a {
-  text-decoration: none;
   color: rgb(124,131,135);
 }
 .nav a:hover {
@@ -190,8 +193,6 @@ header h1 {
 }
 .services p {
   margin: 2em 0 1em 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
  /* Services article flex paragraphs */
 .flex-paragraphs {
@@ -463,8 +464,6 @@ button:hover {
 }
 .about p {
   margin: 1em 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 .about figure {
   padding: 1em auto;
@@ -540,8 +539,6 @@ $$$$$$$$$$$$$$$$$$$*/
 }
 .team p {
   margin: 1.5em 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 .team figcaption {
   width: 80%;
@@ -653,6 +650,8 @@ $$$$$$$$$$$$$$$$$$$*/
   }
   .clients p {
     margin-top: 1em;
+    line-height: none;
+    letter-spacing: none;
   }
   .clients figure {
     border: none;
@@ -701,8 +700,6 @@ $$$$$$$$$$$$$$$$$$$*/
 .contact p {
   text-align: center;
   margin: 2em 0 1em 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 /* Contact form */
 .contact form {
