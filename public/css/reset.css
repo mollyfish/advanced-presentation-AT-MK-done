@@ -47,3 +47,15 @@ table {
 img, nav, figure {
   max-width: 100%;
 }
+.clearfix {
+ zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+ content: "\0020";
+ display: block;
+ height: 0;
+ overflow: hidden;
+}
+.clearfix:after {
+ clear: both;
+}
