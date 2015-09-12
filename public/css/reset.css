@@ -44,6 +44,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* Mods */
 img, nav, figure {
   max-width: 100%;
 }
