@@ -201,6 +201,11 @@ header h1 {
 }
  /* Services article flex paragraphs */
 .flex-paragraphs {
+  -webkit-flex-direction: row; /* safari mobile needs -webkit- */
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -webkit-align-content: flex-start;
+  -webkit-align-items: stretch;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
