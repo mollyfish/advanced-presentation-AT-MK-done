@@ -311,11 +311,17 @@ header h1 {
   align-items: stretch;
 }
 .flex-paragraph-1 {
+  -webkit-flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -webkit-flex-basis: 98%;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 98%;
 }
 .flex-paragraph-2, .flex-paragraph-3 {
+  -webkit-flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -webkit-flex-basis: 48%;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 48%;
