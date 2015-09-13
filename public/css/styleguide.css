@@ -1,3 +1,32 @@
+/* notched edge */
+
+header {
+    position: relative;
+}
+
+header:after, header:before {
+    position: absolute;
+    content: "";
+    width: calc(50% - 105px);
+    height: 0;
+    border-bottom: 1.333em solid #fd6632;
+    border-left: 100px solid transparent;
+    left: calc(50% + 5px);
+    bottom: 0;
+}
+header:before {
+  border-left: none;
+    border-right: 100px solid transparent;
+    left: 0;
+}
+
+
+
+
+
+
+
+
 /* Team bios and client slider*/
 .team {
   padding: 10px;

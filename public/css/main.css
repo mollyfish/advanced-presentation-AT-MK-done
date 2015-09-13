@@ -12,7 +12,7 @@ body {
 }
 article {
   clear: left;
-  padding: 2em;
+  padding: 2em 2em 1em 2em;
 }
 p {
   line-height: 1.5;
@@ -92,6 +92,85 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
 }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+    Bottom-notch styles
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+.header-notch:after, .header-notch:before {
+  position: absolute;
+  content: "";
+  width: calc(50% - 88px);
+  height: 0;
+  border-bottom: 20px solid #fd6632;
+  border-left: 85px solid transparent;
+  left: calc(50% + 3px);
+  bottom: 0;
+}
+.header-notch:before {
+  border-left: none;
+  border-right: 85px solid transparent;
+  left: 0;
+}
+.orange-notch, .white-notch, .black-notch {
+  position: relative;
+  left: 50%;
+  bottom: 16px;
+}
+.orange-notch:before,
+.orange-notch:after, .white-notch:before,
+.white-notch:after, .black-notch:before,
+.black-notch:after {
+    position: absolute;
+    content: "";
+    left: calc(50% + 10px);
+    bottom: -41px;
+    width: 40px;
+    height: 100px;
+    background-color: #fd6632;
+    -moz-border-radius: 0 180px 50px 50px;
+    border-radius: 0 100px 50px 50px;
+    -webkit-transform: rotate(-75deg);
+       -moz-transform: rotate(-75deg);
+        -ms-transform: rotate(-75deg);
+         -o-transform: rotate(-75deg);
+            transform: rotate(-75deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.orange-notch:after, .white-notch:after, .black-notch:after {
+    left: calc(50% - 55px);
+    -moz-border-radius: 100px 0 50px 50px;
+    border-radius: 100px 0 50px 50px;
+    -webkit-transform: rotate(75deg);
+       -moz-transform: rotate(75deg);
+        -ms-transform: rotate(75deg);
+         -o-transform: rotate(75deg);
+            transform: rotate(75deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+}
+.white-notch:before, .white-notch:after {
+  background-color: #fff;
+  z-index: 1;
+}
+.black-notch:before, .black-notch:after {
+  background-color: #2a2a2e;
+}
+@media screen and (min-width: 50em) {
+  .orange-notch:before,
+  .orange-notch:after, .white-notch:before,
+  .white-notch:after, .black-notch:before,
+  .black-notch:after {
+    bottom: -38px;
+  }
+}
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&
+
     Top navigation bar
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
@@ -149,7 +228,9 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
 &&&&&&&&&&&&&&&&&&*/
 header {
   clear: left;
-  background-image: url('../images/top-bkgrnd.jpg');
+  position: relative;
+  background-image: url("../images/top-bkgrnd.jpg");
+  /* TA Dale said a relative path like this, inside our css file, was fine */
   background-position: top;
   background-repeat: no-repeat;
   height: 15em;
@@ -199,6 +280,7 @@ header h1 {
 
 &&&&&&&&&&&&&&&&&&*/
 .services {
+  position: relative;
   background-color: #fd6632;
   color: #fff;
   text-align: center;
@@ -328,6 +410,7 @@ th strong {
 .portfolio {
   text-align: center;
   color: rgb(124,131,135);
+  padding-top: 2.5em; 
 }
 .portfolio > img {
   margin: 1em calc(50% - 470px); /* 470 is half the img width */
@@ -351,7 +434,7 @@ th strong {
   padding-bottom: 0.5em;
 }
 .portfolio figure {
-  margin: 2em calc(50% - 150px); /* 150px is half the img width */
+  margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
 }
 .portfolio figcaption {
   margin-top: 1em;
@@ -481,6 +564,8 @@ th strong {
   color: white;
   text-align: center;
   font-weight: 100;
+  padding-bottom: 2.5em;
+  padding-top: 2.5em;
 }
 .about h2 {
   font-size: 1.777em;
@@ -543,6 +628,8 @@ $$$$$$$$$$$$$$$$$$$*/
 .team {
   text-align: center;
   color: rgb(124,131,135);
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
 .team h1 {
   color: #000;
@@ -718,6 +805,7 @@ $$$$$$$$$$$$$$$$$$$*/
 .contact {
   color: #fff;
   font-weight: 100;
+  padding-top: 2.5em;
   /*below is background to show map thru orange*/
   background:
     linear-gradient(
