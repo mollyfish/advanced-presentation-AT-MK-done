@@ -9,7 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-%placeholder {
+%icon-fonts {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -22,59 +22,18 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-$icons: (droplet '\e601') (quill '\e600');
+$icons: (droplet '\e601') (quill '\e600') (flask '\e606') (gear '\e605') (facebook '\e60b') (twitter '\e60c') (dribbble '\e60d') (linkedin '\e60e') (google-plus '\e60a') (go-right '\e608') (go-left '\e609') (envelope '\e602') (pushpin '\e603') (mobile '\e604');
 
 @each $icon in $icons {
-	.icon-#{nth($icon, 1)}:after {
+	.icon-#{nth($icon, 1)}:before {
 		content: nth($icon, 2);
-		@extend %placeholder;
+		@extend %icon-fonts;
 	}
 }
 
-// .icon-droplet:before {
-// 	content: "\e601";
-// }
-// .icon-quill:before {
-// 	content: "\e600";
-// }
-.icon-flask:before {
-	content: "\e606";
-}
-.icon-gear:before {
-	content: "\e605";
-}
 /* changed to :after b/c :before is being used for
  the background change on hover in main.css */
-.portfolio figure a.icon-see-more:after { 
+a.icon-see-more:after { 
 	content: "\e607";
-}
-.icon-facebook:before, .icon-twitter:before, .icon-dribbble:before, .icon-linkedin:before, .icon-google-plus:before {
-	content: "\e60b";
-}
-.icon-twitter:before {
-	content: "\e60c";
-}
-.icon-dribbble:before {
-	content: "\e60d";
-}
-.icon-linkedin:before {
-	content: "\e60e";
-}
-.icon-google-plus:before {
-	content: "\e60a";
-}
-.icon-go-right:before {
-	content: "\e608";
-}
-.icon-go-left:before {
-	content: "\e609";
-}
-.icon-envelope:before {
-	content: "\e602";
-}
-.icon-pushpin:before {
-	content: "\e603";
-}
-.icon-mobile:before {
-	content: "\e604";
+	@extend %icon-fonts;
 }

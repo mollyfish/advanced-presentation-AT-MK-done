@@ -242,13 +242,14 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
     }
   }
 }
-.icon-droplet {
+.icon-droplet:before {
   margin-bottom: .3em;
+  display: inline-block;
   border-radius: 50%;
   background-color: #fd6632;
   font-size: 3.157em;
   color: #fff;
-  padding: 0.2em 0.25em 0.1em 0.25em;
+  padding: 0.25em;
 }
 .underline {
   border-bottom: 1px solid #fd6632;
