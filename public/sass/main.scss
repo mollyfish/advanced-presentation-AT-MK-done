@@ -1,3 +1,7 @@
+@import "reset";
+
+@import "icon-styles";
+
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     General styles
@@ -240,12 +244,11 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 }
 .icon-droplet {
   margin-bottom: .3em;
-  display: inline-block;
   border-radius: 50%;
   background-color: #fd6632;
   font-size: 3.157em;
   color: #fff;
-  padding: 0.25em;
+  padding: 0.2em 0.25em 0.1em 0.25em;
 }
 .underline {
   border-bottom: 1px solid #fd6632;
@@ -401,8 +404,7 @@ th strong {
   }
   figure {
     margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
-    @media screen and (min-width: 50em) {
-    .portfolio figure 
+    @media screen and (min-width: 50em) { 
       margin: 0 0 1em 0;
     }
   }

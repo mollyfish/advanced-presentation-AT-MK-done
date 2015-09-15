@@ -9,7 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-[class^="icon-"], [class*=" icon-"] {
+%placeholder {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -21,12 +21,22 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-.icon-droplet:before {
-	content: "\e601";
+
+$icons: (droplet '\e601') (quill '\e600');
+
+@each $icon in $icons {
+	.icon-#{nth($icon, 1)}:after {
+		content: nth($icon, 2);
+		@extend %placeholder;
+	}
 }
-.icon-quill:before, .icon-flask:before, .icon-gear:before  {
-	content: "\e600";
-}
+
+// .icon-droplet:before {
+// 	content: "\e601";
+// }
+// .icon-quill:before {
+// 	content: "\e600";
+// }
 .icon-flask:before {
 	content: "\e606";
 }
