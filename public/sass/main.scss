@@ -5,10 +5,6 @@
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 html {
   font-family: Helvetica, sans-serif;
-  font-size: 1em;
-}
-body {
-  width: 100%;
 }
 article {
   clear: left;
@@ -16,7 +12,6 @@ article {
 }
 p {
   line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 a {
   text-decoration: none;
@@ -36,12 +31,10 @@ article h1, .services h3, .about h2, .clients-slider h2 {
   font-size: 1.777em;
   overflow: hidden;
   text-align: center;
-  letter-spacing: 0.1em;
 }
 .flex-container {
   /*adapted from flexboxin5.com*/
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -79,6 +72,7 @@ article h1:before, article h1:after, .services h3:before, .services h3:after, .a
   top: 51%;
   overflow: hidden;
   width: 50%;
+  margin-left: 60%;
   height: 1px;
   content: '\a0';
   background-color: #fff;
@@ -87,7 +81,7 @@ article h1:before, article h1:after, .services h3:before, .services h3:after, .a
   background-color: rgb(124,131,135);
 }
 article h1:before, .services h3:before, .about h2:before, .team h1:before, .team h2:before {
-  margin-left: -50%;
+  margin-left: -60%;
   text-align: right;
 }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -126,32 +120,22 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
     width: 40px;
     height: 100px;
     background-color: #fd6632;
-    -moz-border-radius: 0 180px 50px 50px;
     border-radius: 0 100px 50px 50px;
     -webkit-transform: rotate(-75deg);
-       -moz-transform: rotate(-75deg);
         -ms-transform: rotate(-75deg);
-         -o-transform: rotate(-75deg);
             transform: rotate(-75deg);
     -webkit-transform-origin: 0 100%;
-       -moz-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
-         -o-transform-origin: 0 100%;
             transform-origin: 0 100%;
 }
 .orange-notch:after, .white-notch:after, .black-notch:after {
     left: calc(50% - 55px);
-    -moz-border-radius: 100px 0 50px 50px;
     border-radius: 100px 0 50px 50px;
     -webkit-transform: rotate(75deg);
-       -moz-transform: rotate(75deg);
         -ms-transform: rotate(75deg);
-         -o-transform: rotate(75deg);
             transform: rotate(75deg);
     -webkit-transform-origin: 100% 100%;
-       -moz-transform-origin: 100% 100%;
         -ms-transform-origin: 100% 100%;
-         -o-transform-origin: 100% 100%;
             transform-origin: 100% 100%;
 }
 .white-notch:before, .white-notch:after {
@@ -186,7 +170,6 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 /* flex nav wrapper - adapted from flexboxin5.com */
 .flex-navbar {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -244,13 +227,11 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 .icon-droplet {
   margin-bottom: .3em;
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
   border-radius: 50%;
   background-color: #fd6632;
   font-size: 3.157em;
   color: #fff;
-  line-height: 1.5;
+  padding: 0.25em;
 }
 .header h1 {
   padding: 1em .5em;
@@ -258,8 +239,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 .headertext {
   width: 90%;
   font-weight: 300;
-  line-height: 1.5em;
-  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
 .underline {
   border-bottom: 1px solid #fd6632;
@@ -289,7 +269,6 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 .services h2, .services h3 {
   font-size: 1.777em;
   margin-bottom: 1em;
-  letter-spacing: 0.05em;
 }
 .services h1 {
   margin-bottom: 1em;
@@ -339,19 +318,16 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 .figure-stack figcaption {
   font-size: 0.75em;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   width: 80%;
   margin: 1em auto 2.5em auto;
 }
 .icon-quill:before, .icon-flask:before, .icon-gear:before  {
   display: inline-block;
-  width: 2em;
-  height: 2em;
   border-radius: 50%;
   background-color: #fff;
-  font-size: 3.157em;
+  font-size: 4em;
   color: #fd6632;
-  line-height: 2;
+  padding: 0.25em;
 }
 /*Pricing tables */
 table {
@@ -452,8 +428,8 @@ th strong {
   display: inline-block;
   top: 0;
   left: 0;
-  height: 220px;  /* dimensions of img */
-  width: 300px;
+  bottom: 0;
+  right: 0;
 }
 /* black fadeout over portfolio link img on hover */
 .portfolio figure a:hover:before {
@@ -464,16 +440,14 @@ th strong {
 .portfolio figure a.icon-see-more:after {
   display: inline-block;
   position: absolute;
-  top: calc(50% - 1em);
-  left: calc(50% - 1em);
-  width: 2em;
-  height: 2em;
+  top: calc(50% - 28px);
+  left: calc(50% - 28px);
   border-radius: 50%;
   background-color: #fd6632;
   font-size: 2.369em;
   color: #fff;
-  line-height: 2;
   opacity: 0;
+  padding: 0.25em;
 }
 .portfolio figure a.icon-see-more:hover:after {
   opacity: 1;
@@ -504,7 +478,6 @@ th strong {
   /* secondary nav wrapper */
   .flex-secnav {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -529,7 +502,6 @@ th strong {
   /* portfolio gallery wrapper */
   .gallery-flex {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -570,7 +542,6 @@ th strong {
 .about h2 {
   font-size: 1.777em;
   margin: 0 10% 1em 10%;
-  letter-spacing: 0.05em;
 }
 .about h3 {
   padding: 1em 0 1.5em 0;
@@ -644,13 +615,11 @@ $$$$$$$$$$$$$$$$$$$*/
 .team h3 {
   font-weight: bold;
   color: #000;
-  letter-spacing: 0.08em;
   margin-top: 2em;
 }
 .team h4 {
   font-size: 0.75em;
   padding: 0.5em 0 1.5em 0;
-  letter-spacing: 0.05em;
 }
 .team p {
   margin: 1.5em 0;
@@ -659,7 +628,6 @@ $$$$$$$$$$$$$$$$$$$*/
   width: 80%;
   margin: 0 auto;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   font-weight: 100;
 }
 /* Clients slider */
@@ -699,8 +667,6 @@ $$$$$$$$$$$$$$$$$$$*/
 }
 .icon-go-right:before, .icon-go-left:before  {
   display: block;
-  width: 1em;
-  height: 1em;
   border-radius: 50%;
   font-size: 1.777em;
   font-weight: 600;
@@ -724,10 +690,7 @@ $$$$$$$$$$$$$$$$$$$*/
 .icon-facebook:before, .icon-twitter:before, .icon-dribbble:before, .icon-linkedin:before, .icon-google-plus:before {
   background-color: #3B5998;
   color: #fff;
-  height: 1.4em;
-  width: 1.4em;
-  line-height: 1.4em;
-  padding: 3px;
+  padding: 0.25em 0.35em;
 }
 .icon-twitter:before {
   background-color: #00aced;
@@ -767,7 +730,6 @@ $$$$$$$$$$$$$$$$$$$*/
   .clients-slider p {
     margin-top: 1em;
     line-height: none;
-    letter-spacing: none;
   }
   .clients-slider figure {
     border: none;
@@ -823,7 +785,7 @@ $$$$$$$$$$$$$$$$$$$*/
   width: 100%;
   display: inline-block;
 }
-.contact form input, .contact form textarea {
+.contact input, .contact textarea {
   box-sizing: border-box;
   background-color: rgba(126, 50, 24, 0.8);
   border: none;
@@ -832,11 +794,11 @@ $$$$$$$$$$$$$$$$$$$*/
   width: 100%;
   margin: 1em auto;
 }
-.contact form input:first-child {
+.contact input:first-child {
   margin-top: 0;
 }
-.contact form input::-webkit-input-placeholder,
-.contact form textarea::-webkit-input-placeholder {
+.contact input::-webkit-input-placeholder,
+.contact textarea::-webkit-input-placeholder {
   color: #fff;
 }
 .messageinput {
