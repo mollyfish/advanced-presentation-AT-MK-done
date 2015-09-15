@@ -201,11 +201,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 8em;
-}
-/* Nav desktop layout */
-@media screen and (min-width: 50em) {
-  /* flex nav items - adapted from flexboxin5.com */
-  .flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
+  @media screen and (min-width: 50em) {
     -webkit-flex-basis: 4em;
     flex-basis: 4em;
   }
@@ -228,6 +224,19 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
           align-items: center;
   -webkit-justify-content: center;
           justify-content: center;
+  @media screen and (min-width: 50em) {
+    height: 25em;
+  }
+  h1 {
+    padding: 1em .5em;
+    width: 90%;
+    font-weight: 300;
+    line-height: 1.5;
+    @media screen and (min-width: 50em) {
+      max-width: 28em;
+      font-size: 1.618em;
+    }
+  }
 }
 .icon-droplet {
   margin-bottom: .3em;
@@ -238,27 +247,10 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
   color: #fff;
   padding: 0.25em;
 }
-.header h1 {
-  padding: 1em .5em;
-}
-.headertext {
-  width: 90%;
-  font-weight: 300;
-  line-height: 1.5;
-}
 .underline {
   border-bottom: 1px solid #fd6632;
 }
-/* Header desktop layout */
-@media screen and (min-width: 50em) {
-  .header {
-    height: 25em;
-  }
-  .headertext {
-    max-width: 28em;
-    font-size: 1.618em;
-  }
-}
+
 /*&&&&&&&&&&&&&&&&
 
     Services article
@@ -400,10 +392,42 @@ th strong {
   text-align: center;
   color: rgb(124,131,135);
   padding-top: 2.5em;
+  > img {
+    margin: 1em calc(50% - 470px); /* 470 is half the img width */
+  }
+  h4 {
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 0.5em;
+  }
+  figure {
+  margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
+  }
+  figcaption {
+    margin-top: 1em;
+  } 
+  figure a {
+    display: inline-block;
+    width: 300px;  /* dimensions of img */
+    height: 220px;
+    position: relative;
+    /* defines hover area for fadeout */
+    &:before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    /* black fadeout over portfolio link img on hover */
+    &:hover:before {
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
 }
-.portfolio > img {
-  margin: 1em calc(50% - 470px); /* 470 is half the img width */
-}
+
 .secondary-nav ul {
   list-style-type: none;
   width: 100%;
@@ -417,40 +441,15 @@ th strong {
   border: 2px solid rgba(0,0,0,0.2);
   border-radius: 0.5em;
 }
-.portfolio h4 {
-  font-weight: bold;
-  color: #000;
-  padding-bottom: 0.5em;
-}
-.portfolio figure {
-  margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
-}
-.portfolio figcaption {
-  margin-top: 1em;
-}
-.portfolio figure a {
-  display: inline-block;
-  width: 300px;  /* dimensions of img */
-  height: 220px;
-  position: relative;
-}
-/* defines hover area for fadeout */
-.portfolio figure a:before {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-/* black fadeout over portfolio link img on hover */
-.portfolio figure a:hover:before {
-  background-color: rgba(0,0,0,0.5);
-}
+
+
+
+
+
+
 /* changed to :after b/c :before is being used for
  the background change on hover */
-.portfolio figure a.icon-see-more:after {
+.icon-see-more:after {
   display: inline-block;
   position: absolute;
   top: calc(50% - 28px);
@@ -462,9 +461,10 @@ th strong {
   opacity: 0;
   padding: 0.25em;
 }
-.portfolio figure a.icon-see-more:hover:after {
+.icon-see-more:hover:after {
   opacity: 1;
 }
+
 /* Portfolio article desktop layout */
 @media screen and (min-width: 50em) {
   .portfolio figure {
