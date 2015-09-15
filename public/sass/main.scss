@@ -6,9 +6,27 @@
 html {
   font-family: Helvetica, sans-serif;
 }
+@media screen and (min-width: 50em) {
+  body {
+    max-width: 80em;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 article {
-  clear: left;
   padding: 2em 2em 1em 2em;
+  h1 {
+    position: relative;
+    font-size: 1.777em;
+    overflow: hidden;
+    text-align: center;
+  }
+  @media screen and (min-width: 50em) {
+    padding: 2em 8%;
+    h1 {
+      font-size: 2.369em;
+    }
+  }
 }
 p {
   line-height: 1.5;
@@ -22,15 +40,9 @@ button {
   color: white;
   padding: 1em 1.5em;
   font-size: 1em;
-}
-button:hover {
-  cursor: pointer;
-}
-article h1, .services h3, .about h2, .clients-slider h2 {
-  position: relative;
-  font-size: 1.777em;
-  overflow: hidden;
-  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .flex-container {
   /*adapted from flexboxin5.com*/
@@ -39,26 +51,20 @@ article h1, .services h3, .about h2, .clients-slider h2 {
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
-.nav ul {
-  list-style-type: none;
-}
-.nav a {
-  color: rgb(124,131,135);
-}
-.nav a:hover {
-  color: rgb(0,0,0);
+.nav {
+  ul {
+    list-style-type: none;
+  }
+  a {
+    color: rgb(124,131,135);
+    &:hover {
+      color: rgb(0,0,0);
+    }
+  }
 }
 /* General styles desktop layout */
 @media screen and (min-width: 50em) {
-  body {
-    max-width: 80em;
-    width: 90%;
-    margin: 0 auto;
-  }
-  article {
-    padding: 2em 8%;
-  }
-  article h1, .services h3, .about h2, .clients-slider h2 {
+  .services h3, .about h2, .clients-slider h2 {
     font-size: 2.369em;
   }
 }
@@ -160,12 +166,20 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 .top-nav {
   padding: auto 0;
-}
-.top-nav li {
-  text-align: center;
-  border: 1px solid rgba(0,0,0,0.2);
-  padding: .5em;
-  font-weight: 300;
+  li {
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: .5em;
+    font-weight: 300;
+  }
+  @media screen and (min-width: 50em) {
+    padding-left: 5em;
+    padding-right: 5em;
+    border-bottom: 1px solid rgba(124,131,135,0.5);
+    li {
+      border: none;
+    }
+  }
 }
 /* flex nav wrapper - adapted from flexboxin5.com */
 .flex-navbar {
@@ -190,14 +204,6 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 }
 /* Nav desktop layout */
 @media screen and (min-width: 50em) {
-  .top-nav {
-    padding-left: 10em;
-    padding-right: 10em;
-    border-bottom: 1px solid rgba(124,131,135,0.5);
-  }
-  .top-nav li {
-    border: none;
-  }
   /* flex nav items - adapted from flexboxin5.com */
   .flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
     -webkit-flex-basis: 4em;
@@ -210,7 +216,6 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
 
 &&&&&&&&&&&&&&&&&&*/
 .header {
-  clear: left;
   position: relative;
   background-image: url("../images/top-bkgrnd.jpg");
   /* TA Dale said a relative path like this, inside our css file, was fine */
@@ -266,15 +271,23 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
   text-align: center;
   font-weight: 100;
 }
-.services h2, .services h3 {
-  font-size: 1.777em;
-  margin-bottom: 1em;
-}
 .services h1 {
   margin-bottom: 1em;
 }
+.services h2 {
+  font-size: 1.777em;
+  margin-bottom: 1em;
+}
 .services h3 {
-  margin: 0 10%;
+  position: relative;
+  font-size: 1.777em;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.777em;
+  margin: 0 10% 1em 10%;
+  @media screen and (min-width: 50em) {
+    font-size: 2.369em;
+  }
 }
 .services p {
   margin: 0em 0 2em 0;
@@ -540,8 +553,14 @@ th strong {
   padding-top: 2.5em;
 }
 .about h2 {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
   font-size: 1.777em;
   margin: 0 10% 1em 10%;
+  @media screen and (min-width: 50em) {
+    font-size: 2.369em;
+  }
 }
 .about h3 {
   padding: 1em 0 1.5em 0;
@@ -634,11 +653,14 @@ $$$$$$$$$$$$$$$$$$$*/
 .clients-slider {
   padding-top: 1.5em;
 }
-.clients-slider figure {
-  border: 1px solid rgb(124,131,135);
-  border-radius: 1em;
-  padding: 1.5em;
-  margin: 0 0.5em;
+.clients-slider h2 {
+  position: relative;
+  font-size: 1.777em;
+  overflow: hidden;
+  text-align: center;
+  @media screen and (min-width: 50em) {
+    font-size: 2.369em;
+  }
 }
 .clients-slider h3 {
   margin-top: 1em;
@@ -650,6 +672,12 @@ $$$$$$$$$$$$$$$$$$$*/
   padding: 0;
   color: #000;
   line-height: 1;
+}
+.clients-slider figure {
+  border: 1px solid rgb(124,131,135);
+  border-radius: 1em;
+  padding: 1.5em;
+  margin: 0 0.5em;
 }
 .clients-slider figcaption {
   width: 100%;
