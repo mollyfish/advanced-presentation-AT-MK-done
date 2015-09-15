@@ -5,10 +5,6 @@
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 html {
   font-family: Helvetica, sans-serif;
-  font-size: 1em;
-}
-body {
-  width: 100%;
 }
 article {
   clear: left;
@@ -16,7 +12,6 @@ article {
 }
 p {
   line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 a {
   text-decoration: none;
@@ -31,17 +26,15 @@ button {
 button:hover {
   cursor: pointer;
 }
-article h1, .services h3, .about h2, .clients h2 {
+article h1, .services h3, .about h2, .clients-slider h2 {
   position: relative;
   font-size: 1.777em;
   overflow: hidden;
   text-align: center;
-  letter-spacing: 0.1em;
 }
 .flex-container {
   /*adapted from flexboxin5.com*/
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -65,7 +58,7 @@ article h1, .services h3, .about h2, .clients h2 {
   article {
     padding: 2em 8%;
   }
-  article h1, .services h3, .about h2, .clients h2 {
+  article h1, .services h3, .about h2, .clients-slider h2 {
     font-size: 2.369em;
   }
 }
@@ -74,20 +67,21 @@ article h1, .services h3, .about h2, .clients h2 {
     Mock strikethrough styles
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .clients h2:before, .clients h2:after {
+article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .team h2:before, .team h2:after {
   position: absolute;
   top: 51%;
   overflow: hidden;
   width: 50%;
+  margin-left: 60%;
   height: 1px;
   content: '\a0';
   background-color: #fff;
 }
-.portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .clients h2:before, .clients h2:after {
+.portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .team h2:before, .team h2:after {
   background-color: rgb(124,131,135);
 }
-article h1:before, .services h3:before, .about h2:before, .team h1:before, .clients h2:before {
-  margin-left: -50%;
+article h1:before, .services h3:before, .about h2:before, .team h1:before, .team h2:before {
+  margin-left: -60%;
   text-align: right;
 }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -126,32 +120,22 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
     width: 40px;
     height: 100px;
     background-color: #fd6632;
-    -moz-border-radius: 0 180px 50px 50px;
     border-radius: 0 100px 50px 50px;
     -webkit-transform: rotate(-75deg);
-       -moz-transform: rotate(-75deg);
         -ms-transform: rotate(-75deg);
-         -o-transform: rotate(-75deg);
             transform: rotate(-75deg);
     -webkit-transform-origin: 0 100%;
-       -moz-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
-         -o-transform-origin: 0 100%;
             transform-origin: 0 100%;
 }
 .orange-notch:after, .white-notch:after, .black-notch:after {
     left: calc(50% - 55px);
-    -moz-border-radius: 100px 0 50px 50px;
     border-radius: 100px 0 50px 50px;
     -webkit-transform: rotate(75deg);
-       -moz-transform: rotate(75deg);
         -ms-transform: rotate(75deg);
-         -o-transform: rotate(75deg);
             transform: rotate(75deg);
     -webkit-transform-origin: 100% 100%;
-       -moz-transform-origin: 100% 100%;
         -ms-transform-origin: 100% 100%;
-         -o-transform-origin: 100% 100%;
             transform-origin: 100% 100%;
 }
 .white-notch:before, .white-notch:after {
@@ -186,7 +170,6 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
 /* flex nav wrapper - adapted from flexboxin5.com */
 .flex-navbar {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -197,7 +180,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   -webkit-align-items: flex-start;
 }
 /* flex nav items - adapted from flexboxin5.com */
-.flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
+.flex-nav-item {
   -webkit-flex-grow: 1;
   -webkit-flex-shrink: 0;
   -webkit-flex-basis: 8em;
@@ -226,7 +209,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
     Header
 
 &&&&&&&&&&&&&&&&&&*/
-header {
+.header {
   clear: left;
   position: relative;
   background-image: url("../images/top-bkgrnd.jpg");
@@ -244,29 +227,26 @@ header {
 .icon-droplet {
   margin-bottom: .3em;
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
   border-radius: 50%;
   background-color: #fd6632;
   font-size: 3.157em;
   color: #fff;
-  line-height: 1.5;
+  padding: 0.25em;
 }
-header h1 {
+.header h1 {
   padding: 1em .5em;
 }
 .headertext {
   width: 90%;
   font-weight: 300;
-  line-height: 1.5em;
-  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
 .underline {
   border-bottom: 1px solid #fd6632;
 }
 /* Header desktop layout */
 @media screen and (min-width: 50em) {
-  header {
+  .header {
     height: 25em;
   }
   .headertext {
@@ -289,10 +269,9 @@ header h1 {
 .services h2, .services h3 {
   font-size: 1.777em;
   margin-bottom: 1em;
-  letter-spacing: 0.05em;
 }
 .services h1 {
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 .services h3 {
   margin: 0 10%;
@@ -330,28 +309,25 @@ header h1 {
   flex-basis: 48%;
   padding-right: 1em;
 }
-.strengths {
+.figure-stack {
   background-color: #fd6632;
   color: white;
   font-family: Helvetica;
   text-align: center;
 }
-.strengths figcaption {
+.figure-stack figcaption {
   font-size: 0.75em;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   width: 80%;
   margin: 1em auto 2.5em auto;
 }
 .icon-quill:before, .icon-flask:before, .icon-gear:before  {
   display: inline-block;
-  width: 2em;
-  height: 2em;
   border-radius: 50%;
   background-color: #fff;
-  font-size: 3.157em;
+  font-size: 4em;
   color: #fd6632;
-  line-height: 2;
+  padding: 0.25em;
 }
 /*Pricing tables */
 table {
@@ -387,17 +363,17 @@ th strong {
     padding-top: 3em;
     padding-bottom: 3em;
   }
-  .selling-points {
+  .figure-wrapper {
     margin: 2em auto;
   }
-  .strengths {
+  .figure-stack {
     display: inline-block;
     width: 32%;
   }
-  .strengths figcaption {
+  .figure-stack figcaption {
     font-size: 0.9em;
   }
-  .price-tables h3 {
+  .price-tables-wrapper h3 {
     margin-bottom: 0.5em;
   }
 
@@ -410,7 +386,7 @@ th strong {
 .portfolio {
   text-align: center;
   color: rgb(124,131,135);
-  padding-top: 2.5em; 
+  padding-top: 2.5em;
 }
 .portfolio > img {
   margin: 1em calc(50% - 470px); /* 470 is half the img width */
@@ -452,8 +428,8 @@ th strong {
   display: inline-block;
   top: 0;
   left: 0;
-  height: 220px;  /* dimensions of img */
-  width: 300px;
+  bottom: 0;
+  right: 0;
 }
 /* black fadeout over portfolio link img on hover */
 .portfolio figure a:hover:before {
@@ -464,16 +440,14 @@ th strong {
 .portfolio figure a.icon-see-more:after {
   display: inline-block;
   position: absolute;
-  top: calc(50% - 1em);
-  left: calc(50% - 1em);
-  width: 2em;
-  height: 2em;
+  top: calc(50% - 28px);
+  left: calc(50% - 28px);
   border-radius: 50%;
   background-color: #fd6632;
   font-size: 2.369em;
   color: #fff;
-  line-height: 2;
   opacity: 0;
+  padding: 0.25em;
 }
 .portfolio figure a.icon-see-more:hover:after {
   opacity: 1;
@@ -504,7 +478,6 @@ th strong {
   /* secondary nav wrapper */
   .flex-secnav {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -515,7 +488,7 @@ th strong {
     align-items: stretch;
   }
   /* secondary nav items */
-  .flex-secnav-item-1, .flex-secnav-item-2, .flex-secnav-item-3, .flex-secnav-item-4, .flex-secnav-item-5 {
+  .flex-secnav-item {
     -webkit-flex-grow: 1;
     -webkit-flex-shrink: 0;
     -webkit-flex-basis: 20em;
@@ -529,7 +502,6 @@ th strong {
   /* portfolio gallery wrapper */
   .gallery-flex {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -546,7 +518,7 @@ th strong {
     padding-bottom: 1em;
   }
   /* portfolio gallery items */
-  .gallery-item-flex-1, .gallery-item-flex-2, .gallery-item-flex-3, .gallery-item-flex-4, .gallery-item-flex-5, .gallery-item-flex-6, .gallery-item-flex-7, .gallery-item-flex-8, .gallery-item-flex-9 {
+  .gallery-flex-item {
     -webkit-flex-grow: 1;
     -webkit-flex-shrink: 0;
     -webkit-flex-basis: 300px;/* set to match img width of 300*/
@@ -570,7 +542,6 @@ th strong {
 .about h2 {
   font-size: 1.777em;
   margin: 0 10% 1em 10%;
-  letter-spacing: 0.05em;
 }
 .about h3 {
   padding: 1em 0 1.5em 0;
@@ -616,7 +587,7 @@ progress::-webkit-progress-bar {
   .about .flex-paragraphs {
     padding: 1em 0 2em 0;
   }
-  .progressbars {
+  .progressbars-wrapper {
      padding: 1em 0;
   }
 }
@@ -644,13 +615,11 @@ $$$$$$$$$$$$$$$$$$$*/
 .team h3 {
   font-weight: bold;
   color: #000;
-  letter-spacing: 0.08em;
   margin-top: 2em;
 }
 .team h4 {
   font-size: 0.75em;
   padding: 0.5em 0 1.5em 0;
-  letter-spacing: 0.05em;
 }
 .team p {
   margin: 1.5em 0;
@@ -659,31 +628,30 @@ $$$$$$$$$$$$$$$$$$$*/
   width: 80%;
   margin: 0 auto;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   font-weight: 100;
 }
 /* Clients slider */
-.clients {
+.clients-slider {
   padding-top: 1.5em;
 }
-.clients figure {
+.clients-slider figure {
   border: 1px solid rgb(124,131,135);
   border-radius: 1em;
   padding: 1.5em;
   margin: 0 0.5em;
 }
-.clients h3 {
+.clients-slider h3 {
   margin-top: 1em;
   padding: 0;
   color: #fd6632;
   line-height: 1;
 }
-.clients h4 {
+.clients-slider h4 {
   padding: 0;
   color: #000;
   line-height: 1;
 }
-.clients figcaption {
+.clients-slider figcaption {
   width: 100%;
 }
 .slider-button-L, .slider-button-R {
@@ -699,8 +667,6 @@ $$$$$$$$$$$$$$$$$$$*/
 }
 .icon-go-right:before, .icon-go-left:before  {
   display: block;
-  width: 1em;
-  height: 1em;
   border-radius: 50%;
   font-size: 1.777em;
   font-weight: 600;
@@ -724,10 +690,7 @@ $$$$$$$$$$$$$$$$$$$*/
 .icon-facebook:before, .icon-twitter:before, .icon-dribbble:before, .icon-linkedin:before, .icon-google-plus:before {
   background-color: #3B5998;
   color: #fff;
-  height: 1.4em;
-  width: 1.4em;
-  line-height: 1.4em;
-  padding: 3px;
+  padding: 0.25em 0.35em;
 }
 .icon-twitter:before {
   background-color: #00aced;
@@ -757,28 +720,27 @@ $$$$$$$$$$$$$$$$$$$*/
     margin-top: 0;
   }
   /* Clients slider */
-  .clients {
+  .clients-slider {
     clear: both;
     text-align: left;
   }
-  .clients h3, .clients h4 {
+  .clients-slider h3, .clients-slider h4 {
     display: inline;
   }
-  .clients p {
+  .clients-slider p {
     margin-top: 1em;
     line-height: none;
-    letter-spacing: none;
   }
-  .clients figure {
+  .clients-slider figure {
     border: none;
     border-radius: 0;
     padding-top: 2em;
   }
-  .clients img {
+  .clients-slider img {
     float: left;
     margin-left: 1em;
   }
-  .clients figcaption {
+  .clients-slider figcaption {
     float: left;
     margin-left: 2em;
     margin-right: 1em;
@@ -823,7 +785,7 @@ $$$$$$$$$$$$$$$$$$$*/
   width: 100%;
   display: inline-block;
 }
-.contact form input, .contact form textarea {
+.contact input, .contact textarea {
   box-sizing: border-box;
   background-color: rgba(126, 50, 24, 0.8);
   border: none;
@@ -832,11 +794,11 @@ $$$$$$$$$$$$$$$$$$$*/
   width: 100%;
   margin: 1em auto;
 }
-.contact form input:first-child {
+.contact input:first-child {
   margin-top: 0;
 }
-.contact form input::-webkit-input-placeholder,
-.contact form textarea::-webkit-input-placeholder {
+.contact input::-webkit-input-placeholder,
+.contact textarea::-webkit-input-placeholder {
   color: #fff;
 }
 .messageinput {
