@@ -28,5 +28,5 @@ Temporary Items
 **/node_modules/
 
 # Generated CSS
-css/**/*.css
+public/css/**/*.css
 node_modules/
