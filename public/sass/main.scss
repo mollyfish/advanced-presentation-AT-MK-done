@@ -930,10 +930,10 @@ $$$$$$$$$$$$$$$$$$$*/
 footer {
   text-align: center;
   padding: 3em 1em;
-}
-footer a {
-  color: #fd6632;
-}
-footer a:hover {
-  color: rgb(124,131,135);
+  a {
+    color: #fd6632;
+    &:hover {
+      color: rgb(124,131,135);
+    }
+  }
 }
