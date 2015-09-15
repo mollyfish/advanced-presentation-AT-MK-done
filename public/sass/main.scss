@@ -550,31 +550,40 @@ th strong {
   font-weight: 100;
   padding-bottom: 2.5em;
   padding-top: 2.5em;
-}
-.about h2 {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  font-size: 1.777em;
-  margin: 0 10% 1em 10%;
   @media screen and (min-width: 50em) {
-    font-size: 2.369em;
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
-}
-.about h3 {
-  padding: 1em 0 1.5em 0;
-}
-.about p {
-  margin: 1em 0;
-}
-.about figure {
-  padding: 1em auto;
-}
-.about figcaption {
-  text-align: left;
-}
-.about button {
-  padding: 1em 3em;
+  h2 {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.777em;
+    margin: 0 10% 1em 10%;
+    @media screen and (min-width: 50em) {
+      font-size: 2.369em;
+    }
+  }
+  h3 {
+    padding: 1em 0 1.5em 0;
+  }
+  p {
+    margin: 1em 0;
+  }
+  figure {
+    padding: 1em auto;
+  }
+  figcaption {
+    text-align: left;
+  }
+  button {
+    padding: 1em 3em;
+  }
+  @media screen and (min-width: 50em) {
+      .about .flex-paragraphs {
+      padding: 1em 0 2em 0;
+    }
+  }
 }
 progress {
   appearance: none;
@@ -583,28 +592,32 @@ progress {
   height: 1.5em;
   background: #3a3a3a;
   margin: 0 0 1.5em;
+  &::-moz-progress-bar {
+    background: #fd6632;
+  }
+  &::-webkit-progress-value {
+    background: #fd6632;
+  }
+  &::-webkit-progress-bar {
+    background-color: #3a3a3a;
+  }
 }
-/* for FIREFOX */
-progress::-moz-progress-bar {
-  background: #fd6632;
-}
-/* for SAFARI */
-progress::-webkit-progress-value {
-  background: #fd6632;
-}
-/* background for SAFARI & CHROME */
-progress::-webkit-progress-bar {
-  background-color: #3a3a3a;
-}
-/* About article desktop layout */
+
+// !!! ONLY DELETE AFTER WE'VE TESTED FIREFOX !!!
+// /* for FIREFOX */
+// progress::-moz-progress-bar {
+//   background: #fd6632;
+// }
+// /* for SAFARI */
+// progress::-webkit-progress-value {
+//   background: #fd6632;
+// }
+// /* background for SAFARI & CHROME */
+// progress::-webkit-progress-bar {
+//   background-color: #3a3a3a;
+// }
+
 @media screen and (min-width: 50em) {
-  .about {
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
-  .about .flex-paragraphs {
-    padding: 1em 0 2em 0;
-  }
   .progressbars-wrapper {
      padding: 1em 0;
   }
