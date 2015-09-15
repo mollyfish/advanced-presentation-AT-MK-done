@@ -266,28 +266,33 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
   color: #fff;
   text-align: center;
   font-weight: 100;
-}
-.services h1 {
-  margin-bottom: 1em;
-}
-.services h2 {
-  font-size: 1.777em;
-  margin-bottom: 1em;
-}
-.services h3 {
-  position: relative;
-  font-size: 1.777em;
-  overflow: hidden;
-  text-align: center;
-  font-size: 1.777em;
-  margin: 0 10% 1em 10%;
   @media screen and (min-width: 50em) {
-    font-size: 2.369em;
+      padding-top: 3em;
+      padding-bottom: 3em;
+  }
+  h1 {
+    margin-bottom: 1em;
+  }
+  h2 {
+    font-size: 1.777em;
+    margin-bottom: 1em;
+  }
+  h3 {
+    position: relative;
+    font-size: 1.777em;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.777em;
+    margin: 0 10% 1em 10%;
+      @media screen and (min-width: 50em) {
+      font-size: 2.369em;
+    }
+  }
+  p {
+    margin: 0em 0 2em 0;
   }
 }
-.services p {
-  margin: 0em 0 2em 0;
-}
+
  /* Services article flex paragraphs */
 .flex-paragraphs {
   -webkit-flex-direction: row; /* safari mobile needs -webkit- */
@@ -323,13 +328,21 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .team
   color: white;
   font-family: Helvetica;
   text-align: center;
+  @media screen and (min-width: 50em) {
+    display: inline-block;
+    width: 32%;
+  }
+  figcaption {
+    font-size: 0.75em;
+    line-height: 1.5;
+    width: 80%;
+    margin: 1em auto 2.5em auto;
+    @media screen and (min-width: 50em) {
+      font-size: 0.9em;
+    }
+  }
 }
-.figure-stack figcaption {
-  font-size: 0.75em;
-  line-height: 1.5;
-  width: 80%;
-  margin: 1em auto 2.5em auto;
-}
+
 .icon-quill:before, .icon-flask:before, .icon-gear:before  {
   display: inline-block;
   border-radius: 50%;
@@ -368,19 +381,8 @@ th strong {
 }
 /* Services article desktop layout */
 @media screen and (min-width: 50em) {
-  .services {
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
   .figure-wrapper {
     margin: 2em auto;
-  }
-  .figure-stack {
-    display: inline-block;
-    width: 32%;
-  }
-  .figure-stack figcaption {
-    font-size: 0.9em;
   }
   .price-tables-wrapper h3 {
     margin-bottom: 0.5em;
@@ -405,13 +407,13 @@ th strong {
   }
   figure {
     margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
-    @media screen and (min-width: 50em) { 
+    @media screen and (min-width: 50em) {
       margin: 0 0 1em 0;
     }
   }
   figcaption {
     margin-top: 1em;
-  } 
+  }
   figure a {
     display: inline-block;
     width: 300px;  /* dimensions of img */
