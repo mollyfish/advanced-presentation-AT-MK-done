@@ -197,7 +197,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
   -webkit-align-items: flex-start;
 }
 /* flex nav items - adapted from flexboxin5.com */
-.flex-nav-1, .flex-nav-2, .flex-nav-3, .flex-nav-4, .flex-nav-5, .flex-nav-6 {
+.flex-nav-item {
   -webkit-flex-grow: 1;
   -webkit-flex-shrink: 0;
   -webkit-flex-basis: 8em;
@@ -226,7 +226,7 @@ article h1:before, .services h3:before, .about h2:before, .team h1:before, .clie
     Header
 
 &&&&&&&&&&&&&&&&&&*/
-header {
+.header {
   clear: left;
   position: relative;
   background-image: url("../images/top-bkgrnd.jpg");
@@ -252,7 +252,7 @@ header {
   color: #fff;
   line-height: 1.5;
 }
-header h1 {
+.header h1 {
   padding: 1em .5em;
 }
 .headertext {
@@ -266,7 +266,7 @@ header h1 {
 }
 /* Header desktop layout */
 @media screen and (min-width: 50em) {
-  header {
+  .header {
     height: 25em;
   }
   .headertext {
@@ -292,7 +292,7 @@ header h1 {
   letter-spacing: 0.05em;
 }
 .services h1 {
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 .services h3 {
   margin: 0 10%;
@@ -330,13 +330,13 @@ header h1 {
   flex-basis: 48%;
   padding-right: 1em;
 }
-.strengths {
+.figure-stack {
   background-color: #fd6632;
   color: white;
   font-family: Helvetica;
   text-align: center;
 }
-.strengths figcaption {
+.figure-stack figcaption {
   font-size: 0.75em;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -387,17 +387,17 @@ th strong {
     padding-top: 3em;
     padding-bottom: 3em;
   }
-  .selling-points {
+  .figure-wrapper {
     margin: 2em auto;
   }
-  .strengths {
+  .figure-stack {
     display: inline-block;
     width: 32%;
   }
-  .strengths figcaption {
+  .figure-stack figcaption {
     font-size: 0.9em;
   }
-  .price-tables h3 {
+  .price-tables-wrapper h3 {
     margin-bottom: 0.5em;
   }
 
@@ -410,7 +410,7 @@ th strong {
 .portfolio {
   text-align: center;
   color: rgb(124,131,135);
-  padding-top: 2.5em; 
+  padding-top: 2.5em;
 }
 .portfolio > img {
   margin: 1em calc(50% - 470px); /* 470 is half the img width */
@@ -515,7 +515,7 @@ th strong {
     align-items: stretch;
   }
   /* secondary nav items */
-  .flex-secnav-item-1, .flex-secnav-item-2, .flex-secnav-item-3, .flex-secnav-item-4, .flex-secnav-item-5 {
+  .flex-secnav-item {
     -webkit-flex-grow: 1;
     -webkit-flex-shrink: 0;
     -webkit-flex-basis: 20em;
@@ -546,7 +546,7 @@ th strong {
     padding-bottom: 1em;
   }
   /* portfolio gallery items */
-  .gallery-item-flex-1, .gallery-item-flex-2, .gallery-item-flex-3, .gallery-item-flex-4, .gallery-item-flex-5, .gallery-item-flex-6, .gallery-item-flex-7, .gallery-item-flex-8, .gallery-item-flex-9 {
+  .gallery-flex-item {
     -webkit-flex-grow: 1;
     -webkit-flex-shrink: 0;
     -webkit-flex-basis: 300px;/* set to match img width of 300*/
@@ -616,7 +616,7 @@ progress::-webkit-progress-bar {
   .about .flex-paragraphs {
     padding: 1em 0 2em 0;
   }
-  .progressbars {
+  .progressbars-wrapper {
      padding: 1em 0;
   }
 }
