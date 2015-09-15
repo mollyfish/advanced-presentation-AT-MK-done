@@ -31,7 +31,7 @@ button {
 button:hover {
   cursor: pointer;
 }
-article h1, .services h3, .about h2, .clients h2 {
+article h1, .services h3, .about h2, .clients-slider h2 {
   position: relative;
   font-size: 1.777em;
   overflow: hidden;
@@ -65,7 +65,7 @@ article h1, .services h3, .about h2, .clients h2 {
   article {
     padding: 2em 8%;
   }
-  article h1, .services h3, .about h2, .clients h2 {
+  article h1, .services h3, .about h2, .clients-slider h2 {
     font-size: 2.369em;
   }
 }
@@ -74,7 +74,7 @@ article h1, .services h3, .about h2, .clients h2 {
     Mock strikethrough styles
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .clients h2:before, .clients h2:after {
+article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .team h2:before, .team h2:after {
   position: absolute;
   top: 51%;
   overflow: hidden;
@@ -83,10 +83,10 @@ article h1:before, article h1:after, .services h3:before, .services h3:after, .a
   content: '\a0';
   background-color: #fff;
 }
-.portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .clients h2:before, .clients h2:after {
+.portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .team h2:before, .team h2:after {
   background-color: rgb(124,131,135);
 }
-article h1:before, .services h3:before, .about h2:before, .team h1:before, .clients h2:before {
+article h1:before, .services h3:before, .about h2:before, .team h1:before, .team h2:before {
   margin-left: -50%;
   text-align: right;
 }
@@ -663,27 +663,27 @@ $$$$$$$$$$$$$$$$$$$*/
   font-weight: 100;
 }
 /* Clients slider */
-.clients {
+.clients-slider {
   padding-top: 1.5em;
 }
-.clients figure {
+.clients-slider figure {
   border: 1px solid rgb(124,131,135);
   border-radius: 1em;
   padding: 1.5em;
   margin: 0 0.5em;
 }
-.clients h3 {
+.clients-slider h3 {
   margin-top: 1em;
   padding: 0;
   color: #fd6632;
   line-height: 1;
 }
-.clients h4 {
+.clients-slider h4 {
   padding: 0;
   color: #000;
   line-height: 1;
 }
-.clients figcaption {
+.clients-slider figcaption {
   width: 100%;
 }
 .slider-button-L, .slider-button-R {
@@ -757,28 +757,28 @@ $$$$$$$$$$$$$$$$$$$*/
     margin-top: 0;
   }
   /* Clients slider */
-  .clients {
+  .clients-slider {
     clear: both;
     text-align: left;
   }
-  .clients h3, .clients h4 {
+  .clients-slider h3, .clients-slider h4 {
     display: inline;
   }
-  .clients p {
+  .clients-slider p {
     margin-top: 1em;
     line-height: none;
     letter-spacing: none;
   }
-  .clients figure {
+  .clients-slider figure {
     border: none;
     border-radius: 0;
     padding-top: 2em;
   }
-  .clients img {
+  .clients-slider img {
     float: left;
     margin-left: 1em;
   }
-  .clients figcaption {
+  .clients-slider figcaption {
     float: left;
     margin-left: 2em;
     margin-right: 1em;
