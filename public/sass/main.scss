@@ -381,7 +381,6 @@ th strong {
   .price-tables-wrapper h3 {
     margin-bottom: 0.5em;
   }
-
 }
 /*&&&&&&&&&&&&&&&&
 
@@ -401,7 +400,11 @@ th strong {
     padding-bottom: 0.5em;
   }
   figure {
-  margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
+    margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
+    @media screen and (min-width: 50em) {
+    .portfolio figure 
+      margin: 0 0 1em 0;
+    }
   }
   figcaption {
     margin-top: 1em;
@@ -427,26 +430,63 @@ th strong {
     }
   }
 }
-
-.secondary-nav ul {
-  list-style-type: none;
-  width: 100%;
+.secondary-nav {
+  ul {
+    list-style-type: none;
+    width: 100%;
+  }
+  li {
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    padding: .5em;
+    margin: 0.5em auto;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    @media screen and (min-width: 50em) {
+      padding: 0;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+    }
+  }
+  @media screen and (min-width: 50em) {
+    width: 90%;
+    margin: 0 auto;
+    a {
+      display: inline-block;
+      padding: 0.5em;
+      &:hover {
+        color: rgb(0,0,0);
+        background-color: #fd6632;
+      }
+    }
+    /* secondary nav wrapper */
+    .flex-secnav {
+      display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -ms-flexbox;      /* TWEENER - IE 10 */
+      display: -webkit-flex;     /* NEW - Chrome */
+      display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: flex-start;
+      align-items: stretch;
+    }
+    /* secondary nav items */
+    .flex-secnav-item {
+      -webkit-flex-grow: 1;
+      -webkit-flex-shrink: 0;
+      -webkit-flex-basis: 20em;
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 20em;
+    }
+    .thumbnail {
+      padding: 1em 0.5em;
+    }
+  }
 }
-.secondary-nav li {
-  box-sizing: border-box;
-  text-align: center;
-  width: 100%;
-  padding: .5em;
-  margin: 0.5em auto;
-  border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 0.5em;
-}
-
-
-
-
-
-
 /* changed to :after b/c :before is being used for
  the background change on hover */
 .icon-see-more:after {
@@ -464,54 +504,8 @@ th strong {
 .icon-see-more:hover:after {
   opacity: 1;
 }
-
 /* Portfolio article desktop layout */
 @media screen and (min-width: 50em) {
-  .portfolio figure {
-    margin: 0 0 1em 0;
-  }
-  .secondary-nav {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .secondary-nav li {
-    padding: 0;
-    margin: 0;
-    border: none;
-    border-radius: 0;
-  }
-  .secondary-nav a {
-    display: inline-block;
-    padding: 0.5em;
-  }
-  .secondary-nav a:hover {
-    color: rgb(0,0,0);
-    background-color: #fd6632;
-  }
-  /* secondary nav wrapper */
-  .flex-secnav {
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: stretch;
-  }
-  /* secondary nav items */
-  .flex-secnav-item {
-    -webkit-flex-grow: 1;
-    -webkit-flex-shrink: 0;
-    -webkit-flex-basis: 20em;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 20em;
-  }
-  .thumbnail {
-    padding: 1em 0.5em;
-  }
   /* portfolio gallery wrapper */
   .gallery-flex {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
