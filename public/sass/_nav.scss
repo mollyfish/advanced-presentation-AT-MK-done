@@ -10,6 +10,22 @@ li {
 
   }
 }
+@mixin flex_wrapper {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-flex-direction: row;
+  -webkit-justify-content: center;
+  -webkit-align-content: flex-start;
+}
+
+@mixin flex_item {
+  -webkit-flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
 
 .nav {
   a {
@@ -19,7 +35,6 @@ li {
     }
   }
 }
-
 
 .top-nav {
   padding: auto 0;
@@ -39,33 +54,13 @@ li {
   }
 }
 
-@mixin flex_wrapper {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  -webkit-flex-direction: row;
-  -webkit-justify-content: center;
-  -webkit-align-content: flex-start;
-}
-
-@mixin flex_item {
-  -webkit-flex-grow: 1;
-  -webkit-flex-shrink: 0;
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-
 .flex-navbar {
-
   @include flex_wrapper;
   -webkit-flex-wrap: wrap;
-
   -webkit-align-items: flex-start;
 }
 
 $flex_basis: 8em;
-
 .flex-nav-item {
 
   @include flex_item;
