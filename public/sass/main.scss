@@ -77,23 +77,114 @@ button {
     Mock strikethrough styles
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .team h2:before, .team h2:after {
+
+.horizontal-rules {
+  position: relative;
+}
+%rules {
+  display: inline-block;
+  border-top: 1px solid #ebe4d9;
   position: absolute;
-  top: 51%;
-  overflow: hidden;
-  width: 50%;
-  margin-left: 60%;
-  height: 1px;
-  content: '\a0';
-  background-color: #fff;
+  top: 50%;
 }
-.portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .team h2:before, .team h2:after {
-  background-color: rgb(124,131,135);
+// short word: services, team...
+.rule-L {
+  @extend %rules;
+  left: 0;
+  right: 70%;
+  @media screen and (min-width: 50em) {
+    left: 0;
+    right: 65%;
+  }
+  &.narrow-L {
+    left: 5%;
+    right: 70%;
+    @media screen and (min-width: 50em) {
+      left: 10%;
+      right: 65%;
+    }
+  }
 }
-article h1:before, .services h3:before, .about h2:before, .team h1:before, .team h2:before {
-  margin-left: -60%;
-  text-align: right;
+.rule-R {
+  @extend %rules;
+  left: 70%;
+  right: 0;
+  @media screen and (min-width: 50em) {
+    left: 65%;
+    right: 0;
+  }
+  &.narrow-R {
+    left: 70%;
+    right: 5%;
+    @media screen and (min-width: 50em) {
+      left: 65%;
+      right: 10%;
+    }
+  }
 }
+
+// long word: portfolio, pricing tables ...
+.rule-L-lg {
+  @extend %rules;
+  left: 0;
+  right: 75%;
+  @media screen and (min-width: 50em) {
+    left: 0;
+    right: 65%;
+  }
+  &.narrow-L-lg {
+    left: 5%;
+    right: 85%;
+    @media screen and (min-width: 50em) {
+      left: 10%;
+      right: 65%;
+    }
+  }
+}
+.rule-R-lg {
+  @extend %rules;
+  left: 75%;
+  right: 0;
+  @media screen and (min-width: 50em) {
+    left: 65%;
+    right: 0;
+  }
+  &.narrow-R-lg {
+    left: 85%;
+    right: 5%;
+    @media screen and (min-width: 50em) {
+      left: 65%;
+      right: 10%;
+    }
+  }
+}
+
+// .narrow-L {
+//   left: 5%;
+//   right: 85%;
+// }
+// .narrow-R {
+//   left: 85%;
+//   right: 5%;
+// }
+
+// article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .team h2:before, .team h2:after {
+//   position: absolute;
+//   top: 51%;
+//   overflow: hidden;
+//   width: 50%;
+//   margin-left: 60%;
+//   height: 1px;
+//   content: '\a0';
+//   background-color: #fff;
+// }
+// .portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .team h2:before, .team h2:after {
+//   background-color: rgb(124,131,135);
+// }
+// article h1:before, .services h3:before, .about h2:before, .team h1:before, .team h2:before {
+//   margin-left: -60%;
+//   text-align: right;
+// }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     Bottom-notch styles
