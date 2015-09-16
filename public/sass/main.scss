@@ -4,15 +4,14 @@
 @import "header";
 @import "price-tables";
 @import "social_link_styles";
+@import "gallery-items";
 @import "header_deco";
 @import "figure";
 @import "slider";
 @import "notch";
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
-
     General styles
-
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 html {
   font-family: Helvetica, sans-serif;
@@ -48,7 +47,6 @@ p {
 a {
   text-decoration: none;
 }
-
 .flex-container {
   /*adapted from flexboxin5.com*/
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -74,17 +72,12 @@ a {
     // display: inline-block;
   }
 }
-
-
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
-
     Top navigation bar
-
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 .top-nav {
   padding: auto 0;
   li {
-    
     border: 1px solid rgba(0,0,0,0.2);
     padding: .5em;
     font-weight: 300;
@@ -123,12 +116,8 @@ a {
     flex-basis: 4em;
   }
 }
-
-
 /*&&&&&&&&&&&&&&&&
-
     Services article
-
 &&&&&&&&&&&&&&&&&&*/
 .services {
   position: relative;
@@ -176,55 +165,14 @@ a {
   flex-basis: 48%;
   padding-right: 1em;
 }
-
-/*Pricing tables */
-
-/* Services article desktop layout */
-
 /*&&&&&&&&&&&&&&&&
-
     Portfolio article
-
 &&&&&&&&&&&&&&&&&&*/
 .portfolio {
   color: rgb(124,131,135);
   padding-top: 2.5em;
   > img {
     margin: 1em calc(50% - 470px); /* 470 is half the img width */
-  }
-  h4 {
-    font-weight: bold;
-    color: #000;
-    padding-bottom: 0.5em;
-  }
-  figure {
-    margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
-    @media screen and (min-width: 50em) {
-      margin: 0 0 1em 0;
-    }
-  }
-  figcaption {
-    margin-top: 1em;
-  }
-  figure a {
-    display: inline-block;
-    width: 300px;  /* dimensions of img */
-    height: 220px;
-    position: relative;
-    /* defines hover area for fadeout */
-    &:before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-    /* black fadeout over portfolio link img on hover */
-    &:hover:before {
-      background-color: rgba(0,0,0,0.5);
-    }
   }
 }
 .secondary-nav {
@@ -234,7 +182,6 @@ a {
   }
   li {
     box-sizing: border-box;
-    
     width: 100%;
     padding: .5em;
     margin: 0.5em auto;
@@ -279,61 +226,11 @@ a {
       flex-shrink: 0;
       flex-basis: 20em;
     }
-    .thumbnail {
-      padding: 1em 0.5em;
-    }
-  }
-}
-/* changed to :after b/c :before is being used for
- the background change on hover */
-.icon-see-more:after {
-  display: inline-block;
-  position: absolute;
-  top: calc(50% - 28px);
-  left: calc(50% - 28px);
-  border-radius: 50%;
-  background-color: #fd6632;
-  font-size: 2.369em;
-  color: #fff;
-  opacity: 0;
-  padding: 0.25em;
-}
-.icon-see-more:hover:after {
-  opacity: 1;
-}
-/* Portfolio article desktop layout */
-@media screen and (min-width: 50em) {
-  /* portfolio gallery wrapper */
-  .gallery-flex {
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-flex-direction: row; /*safari also required these to have -webkit*/
-    -webkit-flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -webkit-align-content: flex-start;
-    -webkit-align-items: stretch;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: stretch;
-    padding-bottom: 1em;
-  }
-  /* portfolio gallery items */
-  .gallery-flex-item {
-    -webkit-flex-grow: 1;
-    -webkit-flex-shrink: 0;
-    -webkit-flex-basis: 300px;/* set to match img width of 300*/
-    width: 300px; /*img dimensions*/
-    height: 250px;
+    
   }
 }
 /*&&&&&&&&&&&&&&&&&
-
     About article
-
 &&&&&&&&&&&&&&&&&*/
 .about {
   background-color: #2a2a2e;
@@ -394,30 +291,13 @@ progress {
     background-color: #3a3a3a;
   }
 }
-
-// !!! ONLY DELETE AFTER WE'VE TESTED FIREFOX !!!
-// /* for FIREFOX */
-// progress::-moz-progress-bar {
-//   background: #fd6632;
-// }
-// /* for SAFARI */
-// progress::-webkit-progress-value {
-//   background: #fd6632;
-// }
-// /* background for SAFARI & CHROME */
-// progress::-webkit-progress-bar {
-//   background-color: #3a3a3a;
-// }
-
 @media screen and (min-width: 50em) {
   .progressbars-wrapper {
      padding: 1em 0;
   }
 }
 /*$$$$$$$$$$$$$$$$$$
-
     Team article
-
 $$$$$$$$$$$$$$$$$$$*/
 .team {
   color: rgb(124,131,135);
@@ -429,14 +309,8 @@ $$$$$$$$$$$$$$$$$$$*/
   margin-bottom: 1em;
   font-weight: normal;
 }
-
-/* Clients slider */
-
-
 /*$$$$$$$$$$$$$$$$$$
-
     Contact article
-
 $$$$$$$$$$$$$$$$$$$*/
 .contact {
   color: #fff;
@@ -453,11 +327,9 @@ $$$$$$$$$$$$$$$$$$$*/
     position: relative;
   }
   p {
-    
     margin: 2em 0 1em 0;
     @media screen and (min-width: 50em) {
       margin: 2em 4% 1em 4%;
-
     }
   }
   form {
@@ -492,7 +364,6 @@ $$$$$$$$$$$$$$$$$$$*/
     &:first-child {
       margin-top: 0;
     }
-
   }
 }
 .messageinput {
@@ -543,10 +414,6 @@ $$$$$$$$$$$$$$$$$$$*/
     width: 100%;
   }
 }
-.icon-envelope:before, .icon-pushpin:before, .icon-mobile:before {
-  padding-right: 0.5em;
-  display: inline-block;
-}
 /* Contact article desktop layout */
 @media screen and (min-width: 50em) {
   /* Contact form */
@@ -557,12 +424,9 @@ $$$$$$$$$$$$$$$$$$$*/
   }
 }
 /*$$$$$$$$$$$$$$$$$$
-
     Footer
-
 $$$$$$$$$$$$$$$$$$$*/
 footer {
-  
   padding: 3em 1em;
   a {
     color: #fd6632;
