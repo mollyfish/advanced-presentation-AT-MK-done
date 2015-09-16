@@ -60,55 +60,10 @@ article h1, .services h3, .about h2, .clients-slider h2 {
   }
   article h1, .services h3, .about h2, .clients-slider h2 {
     font-size: 2.369em;
-    display: inline-block;
     // display: inline-block;
-    // position: relative;
   }
 }
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-    Mock strikethrough styles
-
-&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-.horizontal-rules {
-  position: relative;
-}
-%mock-strikethrough {
-  display: inline-block;
-  border-top: 1px solid #fff;
-  position: absolute;
-  font-size: 0;
-  top: 50%;
-}
-.mock-strikethrough-L {
-  @extend %mock-strikethrough;
-  // margin-left: -100%;
-  margin-right: 2em;
-  left: 0;
-  right: 0;
-}
-// .mock-strikethrough-R {
-//   @extend %mock-strikethrough;
-//   left: 60%;
-//   right: 0;
-// }
-// article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .team h2:before, .team h2:after {
-//   position: absolute;
-//   top: 51%;
-//   overflow: hidden;
-//   width: 50%;
-//   margin-left: 60%;
-//   height: 1px;
-//   content: '\a0';
-//   background-color: #fff;
-// }
-// .portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .team h2:before, .team h2:after {
-//   background-color: rgb(124,131,135);
-// }
-// article h1:before, .services h3:before, .about h2:before, .team h1:before, .team h2:before {
-//   margin-left: -60%;
-//   text-align: right;
-// }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     Bottom-notch styles
