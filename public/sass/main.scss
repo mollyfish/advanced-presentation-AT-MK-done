@@ -1,8 +1,13 @@
 @import "reset";
 @import "icon-styles";
+@import "button";
+@import "header";
+@import "price-tables";
 @import "social_link_styles";
 @import "header_deco";
 @import "figure";
+@import "slider";
+@import "notch";
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -43,16 +48,7 @@ p {
 a {
   text-decoration: none;
 }
-button {
-  border: none;
-  background-color: #fd6632;
-  color: white;
-  padding: 1em 1.5em;
-  font-size: 1em;
-  &:hover {
-    cursor: pointer;
-  }
-}
+
 .flex-container {
   /*adapted from flexboxin5.com*/
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -78,74 +74,8 @@ button {
     // display: inline-block;
   }
 }
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-    Bottom-notch styles
 
-&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-.header-notch:after, .header-notch:before {
-  position: absolute;
-  content: "";
-  width: calc(50% - 88px);
-  height: 0;
-  border-bottom: 20px solid #fd6632;
-  border-left: 85px solid transparent;
-  left: calc(50% + 3px);
-  bottom: 0;
-}
-.header-notch:before {
-  border-left: none;
-  border-right: 85px solid transparent;
-  left: 0;
-}
-.orange-notch, .white-notch, .black-notch {
-  position: relative;
-  bottom: 16px;
-}
-.orange-notch:before,
-.orange-notch:after, .white-notch:before,
-.white-notch:after, .black-notch:before,
-.black-notch:after {
-    position: absolute;
-    content: "";
-    left: calc(50% + 10px);
-    bottom: -41px;
-    width: 40px;
-    height: 100px;
-    background-color: #fd6632;
-    border-radius: 0 100px 50px 50px;
-    -webkit-transform: rotate(-75deg);
-        -ms-transform: rotate(-75deg);
-            transform: rotate(-75deg);
-    -webkit-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
-            transform-origin: 0 100%;
-}
-.orange-notch:after, .white-notch:after, .black-notch:after {
-    left: calc(50% - 55px);
-    border-radius: 100px 0 50px 50px;
-    -webkit-transform: rotate(75deg);
-        -ms-transform: rotate(75deg);
-            transform: rotate(75deg);
-    -webkit-transform-origin: 100% 100%;
-        -ms-transform-origin: 100% 100%;
-            transform-origin: 100% 100%;
-}
-.white-notch:before, .white-notch:after {
-  background-color: #fff;
-  z-index: 1;
-}
-.black-notch:before, .black-notch:after {
-  background-color: #2a2a2e;
-}
-@media screen and (min-width: 50em) {
-  .orange-notch:before,
-  .orange-notch:after, .white-notch:before,
-  .white-notch:after, .black-notch:before,
-  .black-notch:after {
-    bottom: -38px;
-  }
-}
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     Top navigation bar
@@ -193,50 +123,7 @@ button {
     flex-basis: 4em;
   }
 }
-/*&&&&&&&&&&&&&&&&
 
-    Header
-
-&&&&&&&&&&&&&&&&&&*/
-.header {
-  position: relative;
-  background-image: url("../images/top-bkgrnd.jpg");
-  /* TA Dale said a relative path like this, inside our css file, was fine */
-  background-position: top;
-  background-repeat: no-repeat;
-  height: 15em;
-  
-  padding-bottom: 1em;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  @media screen and (min-width: 50em) {
-    height: 25em;
-  }
-  h1 {
-    padding: 1em .5em;
-    width: 90%;
-    font-weight: 300;
-    line-height: 1.5;
-    @media screen and (min-width: 50em) {
-      max-width: 28em;
-      font-size: 1.618em;
-    }
-  }
-}
-.icon-droplet:before {
-  margin-bottom: .3em;
-  display: inline-block;
-  border-radius: 50%;
-  background-color: #fd6632;
-  font-size: 3.157em;
-  color: #fff;
-  padding: 0.25em;
-}
-.underline {
-  border-bottom: 1px solid #fd6632;
-}
 
 /*&&&&&&&&&&&&&&&&
 
@@ -247,7 +134,6 @@ button {
   position: relative;
   background-color: #fd6632;
   color: #fff;
-  
   font-weight: 100;
   @media screen and (min-width: 50em) {
       padding-top: 3em;
@@ -256,21 +142,6 @@ button {
   h1 {
     margin-bottom: 1em;
   }
-  // h2 {
-  //   font-size: 1.777em;
-  //   margin-bottom: 1em;
-  // }
-  // h3 {
-  //   position: relative;
-  //   font-size: 1.777em;
-  //   overflow: hidden;
-  //   
-  //   font-size: 1.777em;
-  //   margin: 0 10% 1em 10%;
-  //     @media screen and (min-width: 50em) {
-  //     font-size: 2.369em;
-  //   }
-  // }
   p {
     margin: 0em 0 2em 0;
   }
@@ -307,46 +178,15 @@ button {
 }
 
 /*Pricing tables */
-table {
-  
-  background-color: #fff;
-  display: inline-block;
-  margin: 1em;
-}
-caption {
-  background-color: #7f3319;
-  padding: 1em;
-}
-th, td {
-  color: #414141;
-  padding: 1em;
-  border-top: 1px solid #fd6632;
-  font-size: 0.75em;
-}
-th strong {
-  font-size: 1.333em;
-}
-.price {
-  color: #fd6632;
-}
-.signup {
-  background-color: #be4c25;
-  padding: 1.5em 4.157em;
-  border-top: 1px solid #fd6632;
-}
+
 /* Services article desktop layout */
-@media screen and (min-width: 50em) {
-  .price-tables-wrapper h3 {
-    margin-bottom: 0.5em;
-  }
-}
+
 /*&&&&&&&&&&&&&&&&
 
     Portfolio article
 
 &&&&&&&&&&&&&&&&&&*/
 .portfolio {
-  
   color: rgb(124,131,135);
   padding-top: 2.5em;
   > img {
@@ -591,105 +431,7 @@ $$$$$$$$$$$$$$$$$$$*/
 }
 
 /* Clients slider */
-.clients-slider {
-  padding-top: 1.5em;
-  @media screen and (min-width: 50em) {
-    clear: both;
-    text-align: left;
-  }
-  h2 {
-    position: relative;
-    font-size: 1.777em;
-    overflow: hidden;
-    @media screen and (min-width: 50em) {
-      font-size: 2.369em;
-      text-align: center;
-      color: #000;
-    }
-  }
-  h3 {
-    margin-top: 1em;
-    padding: 0;
-    color: #fd6632;
-    line-height: 1;
-    @media screen and (min-width: 50em) {
-      display: inline;
-      margin: 0 1em;
-    }
-  }
-  h4 {
-    padding: 0;
-    color: #000;
-    line-height: 1;
-    @media screen and (min-width: 50em) {
-      display: inline;
-      margin: 0 1em;
-    }
-  }
-  p {
-    @media screen and (min-width: 50em) {
-      margin-top: 1em;
-      line-height: none;
-    }
-  }
-  figure {
-    border: 1px solid rgb(124,131,135);
-    border-radius: 1em;
-    padding: 1.5em;
-    margin: 0 0.5em;
-    @media screen and (min-width: 50em) {
-      border: none;
-      border-radius: 0;
-      padding-top: 2em;
-    }
-  }
-  figcaption {
-    width: 100%;
-    @media screen and (min-width: 50em) {
-      float: left;
-      margin-left: 2em;
-      margin-right: 1em;
-      width: calc(90% - 8em - 82px); /*82px is the img dimension*/
-    }
-  }
-  img {
-    @media screen and (min-width: 50em) {
-      float: left;
-      margin-left: 1em;
-    }
-  }
-}
-%slider-button {
-  border: none;
-  padding: 0;
-  border-radius: 50%;
-  @media screen and (min-width: 50em) {
-    border: none;
-    padding: 0;
-    border-radius: 50%;
-    margin-top: 2em;
-  }
-}
-.slider-button-L {
-  @extend %slider-button;
-  float: left;
-}
-.slider-button-R {
-  @extend %slider-button;
-  float: right;
-}
-.icon-go-right:before, .icon-go-left:before  {
-  display: block;
-  border-radius: 50%;
-  font-size: 1.777em;
-  font-weight: 600;
-  color: #fff;
-  background-color: rgb(124,131,135);
-  @media screen and (min-width: 50em) {
-    font-size: 3.157em;
-    background-color: #fd6632;
-  }
-}
+
 
 /*$$$$$$$$$$$$$$$$$$
 
