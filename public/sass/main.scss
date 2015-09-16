@@ -70,100 +70,9 @@ button {
 @media screen and (min-width: 50em) {
   .services h3, .about h2, .clients-slider h2 {
     font-size: 2.369em;
+    // display: inline-block;
   }
 }
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&
-
-    Mock strikethrough styles
-
-&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-
-$full-width: 0;
-$narrow-width: 5%;
-
-.horizontal-rules {
-  position: relative;
-}
-%rules {
-  display: inline-block;
-  border-top: 1px solid #ebe4d9;
-  position: absolute;
-  top: 50%;
-}
-// short word: services, team...
-// short word -> long line >
-.rule-L {
-  @extend %rules;
-  left: $full-width;
-  right: 70%;
-  @media screen and (min-width: 50em) {
-    left: $full-width;
-    right: 65%;
-  }
-  &.narrow-L {
-    left: $narrow-width;
-    right: 70%;
-    @media screen and (min-width: 50em) {
-      left: $narrow-width + 5%;
-      right: 65%;
-    }
-  }
-}
-.rule-R {
-  @extend %rules;
-  left: 70%;
-  right: $full-width;
-  @media screen and (min-width: 50em) {
-    left: 65%;
-    right: $full-width;
-  }
-  &.narrow-R {
-    left: 70%;
-    right: $narrow-width;
-    @media screen and (min-width: 50em) {
-      left: 65%;
-      right: $narrow-width + 5%;
-    }
-  }
-}
-
-// long word: portfolio, pricing tables ...
-.rule-L-lg {
-  @extend %rules;
-  left: $full-width;
-  right: 75%;
-  @media screen and (min-width: 50em) {
-    left: $full-width;
-    right: 65%;
-  }
-  &.narrow-L-lg {
-    left: $narrow-width;
-    right: 85%;
-    @media screen and (min-width: 50em) {
-      left: $narrow-width + 5%;
-      right: 65%;
-    }
-  }
-}
-.rule-R-lg {
-  @extend %rules;
-  left: 75%;
-  right: $full-width;
-  @media screen and (min-width: 50em) {
-    left: 65%;
-    right: $full-width;
-  }
-  &.narrow-R-lg {
-    left: 85%;
-    right: $narrow-width;
-    @media screen and (min-width: 50em) {
-      left: 65%;
-      right: $narrow-width + 5%;
-    }
-  }
-}
-
-
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     Bottom-notch styles
@@ -362,7 +271,6 @@ $narrow-width: 5%;
     margin: 0em 0 2em 0;
   }
 }
-
  /* Services article flex paragraphs */
 .flex-paragraphs {
   -webkit-flex-direction: row; /* safari mobile needs -webkit- */
