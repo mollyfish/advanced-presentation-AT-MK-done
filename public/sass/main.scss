@@ -78,6 +78,9 @@ button {
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
+$full-width: 0;
+$narrow-width: 5%;
+
 .horizontal-rules {
   position: relative;
 }
@@ -88,19 +91,20 @@ button {
   top: 50%;
 }
 // short word: services, team...
+// short word -> long line >
 .rule-L {
   @extend %rules;
-  left: 0;
+  left: $full-width;
   right: 70%;
   @media screen and (min-width: 50em) {
-    left: 0;
+    left: $full-width;
     right: 65%;
   }
   &.narrow-L {
-    left: 5%;
+    left: $narrow-width;
     right: 70%;
     @media screen and (min-width: 50em) {
-      left: 10%;
+      left: $narrow-width + 5%;
       right: 65%;
     }
   }
@@ -108,17 +112,17 @@ button {
 .rule-R {
   @extend %rules;
   left: 70%;
-  right: 0;
+  right: $full-width;
   @media screen and (min-width: 50em) {
     left: 65%;
-    right: 0;
+    right: $full-width;
   }
   &.narrow-R {
     left: 70%;
-    right: 5%;
+    right: $narrow-width;
     @media screen and (min-width: 50em) {
       left: 65%;
-      right: 10%;
+      right: $narrow-width + 5%;
     }
   }
 }
@@ -126,17 +130,17 @@ button {
 // long word: portfolio, pricing tables ...
 .rule-L-lg {
   @extend %rules;
-  left: 0;
+  left: $full-width;
   right: 75%;
   @media screen and (min-width: 50em) {
-    left: 0;
+    left: $full-width;
     right: 65%;
   }
   &.narrow-L-lg {
-    left: 5%;
+    left: $narrow-width;
     right: 85%;
     @media screen and (min-width: 50em) {
-      left: 10%;
+      left: $narrow-width + 5%;
       right: 65%;
     }
   }
@@ -144,47 +148,22 @@ button {
 .rule-R-lg {
   @extend %rules;
   left: 75%;
-  right: 0;
+  right: $full-width;
   @media screen and (min-width: 50em) {
     left: 65%;
-    right: 0;
+    right: $full-width;
   }
   &.narrow-R-lg {
     left: 85%;
-    right: 5%;
+    right: $narrow-width;
     @media screen and (min-width: 50em) {
       left: 65%;
-      right: 10%;
+      right: $narrow-width + 5%;
     }
   }
 }
 
-// .narrow-L {
-//   left: 5%;
-//   right: 85%;
-// }
-// .narrow-R {
-//   left: 85%;
-//   right: 5%;
-// }
 
-// article h1:before, article h1:after, .services h3:before, .services h3:after, .about h2:before, .about h2:after, .team h2:before, .team h2:after {
-//   position: absolute;
-//   top: 51%;
-//   overflow: hidden;
-//   width: 50%;
-//   margin-left: 60%;
-//   height: 1px;
-//   content: '\a0';
-//   background-color: #fff;
-// }
-// .portfolio h1:before, .portfolio h1:after, .team h1:before, .team h1:after, .team h2:before, .team h2:after {
-//   background-color: rgb(124,131,135);
-// }
-// article h1:before, .services h3:before, .about h2:before, .team h1:before, .team h2:before {
-//   margin-left: -60%;
-//   text-align: right;
-// }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     Bottom-notch styles
