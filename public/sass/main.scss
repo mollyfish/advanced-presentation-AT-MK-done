@@ -580,7 +580,6 @@ progress {
 
 $$$$$$$$$$$$$$$$$$$*/
 .team {
-  
   color: rgb(124,131,135);
   padding-top: 2.5em;
   padding-bottom: 2.5em;
@@ -594,45 +593,89 @@ $$$$$$$$$$$$$$$$$$$*/
 /* Clients slider */
 .clients-slider {
   padding-top: 1.5em;
-}
-.clients-slider h2 {
-  position: relative;
-  font-size: 1.777em;
-  overflow: hidden;
-  
   @media screen and (min-width: 50em) {
-    font-size: 2.369em;
+    clear: both;
+    text-align: left;
+  }
+  h2 {
+    position: relative;
+    font-size: 1.777em;
+    overflow: hidden;
+    @media screen and (min-width: 50em) {
+      font-size: 2.369em;
+      text-align: center;
+      color: #000;
+    }
+  }
+  h3 {
+    margin-top: 1em;
+    padding: 0;
+    color: #fd6632;
+    line-height: 1;
+    @media screen and (min-width: 50em) {
+      display: inline;
+      margin: 0 1em;
+    }
+  }
+  h4 {
+    padding: 0;
+    color: #000;
+    line-height: 1;
+    @media screen and (min-width: 50em) {
+      display: inline;
+      margin: 0 1em;
+    }
+  }
+  p {
+    @media screen and (min-width: 50em) {
+      margin-top: 1em;
+      line-height: none;
+    }
+  }
+  figure {
+    border: 1px solid rgb(124,131,135);
+    border-radius: 1em;
+    padding: 1.5em;
+    margin: 0 0.5em;
+    @media screen and (min-width: 50em) {
+      border: none;
+      border-radius: 0;
+      padding-top: 2em;
+    }
+  }
+  figcaption {
+    width: 100%;
+    @media screen and (min-width: 50em) {
+      float: left;
+      margin-left: 2em;
+      margin-right: 1em;
+      width: calc(90% - 8em - 82px); /*82px is the img dimension*/
+    }
+  }
+  img {
+    @media screen and (min-width: 50em) {
+      float: left;
+      margin-left: 1em;
+    }
   }
 }
-.clients-slider h3 {
-  margin-top: 1em;
-  padding: 0;
-  color: #fd6632;
-  line-height: 1;
-}
-.clients-slider h4 {
-  padding: 0;
-  color: #000;
-  line-height: 1;
-}
-.clients-slider figure {
-  border: 1px solid rgb(124,131,135);
-  border-radius: 1em;
-  padding: 1.5em;
-  margin: 0 0.5em;
-}
-.clients-slider figcaption {
-  width: 100%;
-}
-.slider-button-L, .slider-button-R {
+%slider-button {
   border: none;
   padding: 0;
   border-radius: 50%;
+  @media screen and (min-width: 50em) {
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    margin-top: 2em;
+  }
 }
 .slider-button-L {
+  @extend %slider-button;
   float: left;
 }
 .slider-button-R {
+  @extend %slider-button;
   float: right;
 }
 .icon-go-right:before, .icon-go-left:before  {
@@ -642,58 +685,12 @@ $$$$$$$$$$$$$$$$$$$*/
   font-weight: 600;
   color: #fff;
   background-color: rgb(124,131,135);
-}
-
-/* Clients slider desktop layout */
-@media screen and (min-width: 50em) {
-  .clients-slider {
-    clear: both;
-    text-align: left;
-    & h2 {
-      text-align: center;
-      color: #000;
-    }
-  }
-  .clients-slider h3, .clients-slider h4 {
-    display: inline;
-    margin: 0 1em;
-  }
-  .clients-slider p {
-    margin-top: 1em;
-    line-height: none;
-  }
-  .clients-slider figure {
-    border: none;
-    border-radius: 0;
-    padding-top: 2em;
-  }
-  .clients-slider img {
-    float: left;
-    margin-left: 1em;
-  }
-  .clients-slider figcaption {
-    float: left;
-    margin-left: 2em;
-    margin-right: 1em;
-    width: calc(90% - 8em - 82px); /*82px is the img dimension*/
-  }
-  .slider-button-L, .slider-button-R {
-    border: none;
-    padding: 0;
-    border-radius: 50%;
-    margin-top: 2em;
-  }
-  .slider-button-L {
-    float: left;
-  }
-  .slider-button-R {
-    float: right;
-  }
-  .icon-go-right:before, .icon-go-left:before {
+  @media screen and (min-width: 50em) {
     font-size: 3.157em;
     background-color: #fd6632;
   }
 }
+
 /*$$$$$$$$$$$$$$$$$$
 
     Contact article
