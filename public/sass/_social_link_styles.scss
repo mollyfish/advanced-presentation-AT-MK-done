@@ -1,0 +1,27 @@
+.social-icons {
+  list-style-type: none;
+  margin: 1.5em 0 1em 0;
+}
+.social-icons li {
+  display: inline;
+}
+.icon-facebook:before, .icon-twitter:before, .icon-dribbble:before, .icon-linkedin:before, .icon-google-plus:before {
+  background-color: #3B5998;
+  color: #fff;
+  padding: 0.25em 0.35em;
+}
+.icon-twitter:before {
+  background-color: #00aced;
+}
+.icon-dribbble:before {
+  background-color: #ea4c89;
+}
+.icon-linkedin:before {
+  background-color: #007bb6;
+}
+.icon-google-plus:before {
+  background-color: #ecbb0a;
+}
+.icon-facebook:hover:before, .icon-twitter:hover:before, .icon-dribbble:hover:before, .icon-linkedin:hover:before, .icon-google-plus:hover:before {
+  background-color: #fd6632;
+}

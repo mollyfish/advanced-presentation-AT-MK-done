@@ -1,7 +1,6 @@
 @import "reset";
-
 @import "icon-styles";
-
+@import "social_link_styles";
 @import "header_deco";
 @import "figure";
 
@@ -12,6 +11,7 @@
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 html {
   font-family: Helvetica, sans-serif;
+  text-align: center;
 }
 @media screen and (min-width: 50em) {
   body {
@@ -24,19 +24,21 @@ article {
   padding: 2em 2em 1em 2em;
   h1 {
     position: relative;
-    font-size: 1.777em;
-    overflow: hidden;
-    text-align: center;
+    font-size: 1.777em; 
   }
   @media screen and (min-width: 50em) {
-    padding: 2em 8%;
+    padding: 2em 5%;
     h1 {
       font-size: 2.369em;
     }
   }
+  h2 {
+    font-size: 1.777em;
+  }
 }
 p {
   line-height: 1.5;
+  margin: 0 1em;
 }
 a {
   text-decoration: none;
@@ -98,7 +100,6 @@ button {
 }
 .orange-notch, .white-notch, .black-notch {
   position: relative;
-  left: 50%;
   bottom: 16px;
 }
 .orange-notch:before,
@@ -153,7 +154,7 @@ button {
 .top-nav {
   padding: auto 0;
   li {
-    text-align: center;
+    
     border: 1px solid rgba(0,0,0,0.2);
     padding: .5em;
     font-weight: 300;
@@ -204,7 +205,7 @@ button {
   background-position: top;
   background-repeat: no-repeat;
   height: 15em;
-  text-align: center;
+  
   padding-bottom: 1em;
   -webkit-align-items: center;
           align-items: center;
@@ -246,7 +247,7 @@ button {
   position: relative;
   background-color: #fd6632;
   color: #fff;
-  text-align: center;
+  
   font-weight: 100;
   @media screen and (min-width: 50em) {
       padding-top: 3em;
@@ -255,21 +256,21 @@ button {
   h1 {
     margin-bottom: 1em;
   }
-  h2 {
-    font-size: 1.777em;
-    margin-bottom: 1em;
-  }
-  h3 {
-    position: relative;
-    font-size: 1.777em;
-    overflow: hidden;
-    text-align: center;
-    font-size: 1.777em;
-    margin: 0 10% 1em 10%;
-      @media screen and (min-width: 50em) {
-      font-size: 2.369em;
-    }
-  }
+  // h2 {
+  //   font-size: 1.777em;
+  //   margin-bottom: 1em;
+  // }
+  // h3 {
+  //   position: relative;
+  //   font-size: 1.777em;
+  //   overflow: hidden;
+  //   
+  //   font-size: 1.777em;
+  //   margin: 0 10% 1em 10%;
+  //     @media screen and (min-width: 50em) {
+  //     font-size: 2.369em;
+  //   }
+  // }
   p {
     margin: 0em 0 2em 0;
   }
@@ -307,7 +308,7 @@ button {
 
 /*Pricing tables */
 table {
-  text-align: center;
+  
   background-color: #fff;
   display: inline-block;
   margin: 1em;
@@ -345,7 +346,7 @@ th strong {
 
 &&&&&&&&&&&&&&&&&&*/
 .portfolio {
-  text-align: center;
+  
   color: rgb(124,131,135);
   padding-top: 2.5em;
   > img {
@@ -393,7 +394,7 @@ th strong {
   }
   li {
     box-sizing: border-box;
-    text-align: center;
+    
     width: 100%;
     padding: .5em;
     margin: 0.5em auto;
@@ -497,7 +498,7 @@ th strong {
 .about {
   background-color: #2a2a2e;
   color: white;
-  text-align: center;
+  
   font-weight: 100;
   padding-bottom: 2.5em;
   padding-top: 2.5em;
@@ -508,7 +509,7 @@ th strong {
   h2 {
     position: relative;
     overflow: hidden;
-    text-align: center;
+    
     font-size: 1.777em;
     margin: 0 10% 1em 10%;
     @media screen and (min-width: 50em) {
@@ -579,7 +580,7 @@ progress {
 
 $$$$$$$$$$$$$$$$$$$*/
 .team {
-  text-align: center;
+  
   color: rgb(124,131,135);
   padding-top: 2.5em;
   padding-bottom: 2.5em;
@@ -598,7 +599,7 @@ $$$$$$$$$$$$$$$$$$$*/
   position: relative;
   font-size: 1.777em;
   overflow: hidden;
-  text-align: center;
+  
   @media screen and (min-width: 50em) {
     font-size: 2.369em;
   }
@@ -642,59 +643,20 @@ $$$$$$$$$$$$$$$$$$$*/
   color: #fff;
   background-color: rgb(124,131,135);
 }
+
+/* Clients slider desktop layout */
 @media screen and (min-width: 50em) {
-  .icon-go-right:before, .icon-go-left:before {
-    font-size: 3.157em;
-    background-color: #fd6632;
-  }
-}
-/* Social media icons */
-.social-icons {
-  list-style-type: none;
-  margin: 1.5em 0 1em 0;
-}
-.social-icons li {
-  display: inline;
-}
-.icon-facebook:before, .icon-twitter:before, .icon-dribbble:before, .icon-linkedin:before, .icon-google-plus:before {
-  background-color: #3B5998;
-  color: #fff;
-  padding: 0.25em 0.35em;
-}
-.icon-twitter:before {
-  background-color: #00aced;
-}
-.icon-dribbble:before {
-  background-color: #ea4c89;
-}
-.icon-linkedin:before {
-  background-color: #007bb6;
-}
-.icon-google-plus:before {
-  background-color: #ecbb0a;
-}
-.icon-facebook:hover:before, .icon-twitter:hover:before, .icon-dribbble:hover:before, .icon-linkedin:hover:before, .icon-google-plus:hover:before {
-  background-color: #fd6632;
-}
-/* Team article desktop layout */
-@media screen and (min-width: 50em) {
-  /* Team article */
-  .team-member {
-    box-sizing: border-box;
-    float: left;
-    width: 25%;
-    padding: .5em;
-  }
-  .team h3 {
-    margin-top: 0;
-  }
-  /* Clients slider */
   .clients-slider {
     clear: both;
     text-align: left;
+    & h2 {
+      text-align: center;
+      color: #000;
+    }
   }
   .clients-slider h3, .clients-slider h4 {
     display: inline;
+    margin: 0 1em;
   }
   .clients-slider p {
     margin-top: 1em;
@@ -727,6 +689,10 @@ $$$$$$$$$$$$$$$$$$$*/
   .slider-button-R {
     float: right;
   }
+  .icon-go-right:before, .icon-go-left:before {
+    font-size: 3.157em;
+    background-color: #fd6632;
+  }
 }
 /*$$$$$$$$$$$$$$$$$$
 
@@ -748,7 +714,7 @@ $$$$$$$$$$$$$$$$$$$*/
     position: relative;
   }
   p {
-    text-align: center;
+    
     margin: 2em 0 1em 0;
     @media screen and (min-width: 50em) {
       margin: 2em 4% 1em 4%;
@@ -857,7 +823,7 @@ $$$$$$$$$$$$$$$$$$$*/
 
 $$$$$$$$$$$$$$$$$$$*/
 footer {
-  text-align: center;
+  
   padding: 3em 1em;
   a {
     color: #fd6632;
