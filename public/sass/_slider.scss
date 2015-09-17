@@ -59,7 +59,7 @@
       width: calc(90% - 8em - 82px); /*82px is the img dimension*/
     }
   }
-  img {
+  & .client {
     @media screen and (min-width: 50em) {
       float: left;
       margin-left: 1em;
@@ -97,6 +97,31 @@
   background-color: $text-color-3;
   @media screen and (min-width: 50em) {
     font-size: 3.157em;
+    background-color: $theme-color;
+  }
+}
+.carousel { 
+  padding-bottom: 1.5em;
+  position: relative; 
+  overflow: auto; 
+  max-width: 100%;
+}
+.carousel li { 
+  list-style-type: none;
+}
+.carousel ul li { 
+  float: left; 
+}
+.carousel ol li {
+  &.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 0.5em;
+    border-radius: 50%;
+    background-color: $med-dark-background;
+  } 
+  &.dot.active {
     background-color: $theme-color;
   }
 }
