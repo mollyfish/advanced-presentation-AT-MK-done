@@ -59,8 +59,8 @@ a {
 &&&&&&&&&&&&&&&&&&*/
 .services {
   position: relative;
-  background-color: #fd6632;
-  color: #fff;
+  background-color: $theme-color;
+  color: $text-color-1;
   font-weight: 100;
   @media screen and (min-width: 50em) {
       padding-top: 3em;
@@ -107,7 +107,7 @@ a {
     Portfolio article
 &&&&&&&&&&&&&&&&&&*/
 .portfolio {
-  color: rgb(124,131,135);
+  color: $text-color-3;
   padding-top: 2.5em;
 
   // MAYBE NOT GLOBAL !!!
@@ -120,8 +120,8 @@ a {
     About article
 &&&&&&&&&&&&&&&&&*/
 .about {
-  background-color: #2a2a2e;
-  color: white;
+  background-color: $dark-background;
+  color: $text-color-1;
 
   font-weight: 100;
   padding-bottom: 2.5em;
@@ -171,16 +171,16 @@ progress {
   border: none;
   width: 100%;
   height: 1.5em;
-  background: #3a3a3a;
+  background: $med-dark-background;
   margin: 0 0 1.5em;
   &::-moz-progress-bar {
-    background: #fd6632;
+    background: $theme-color;
   }
   &::-webkit-progress-value {
-    background: #fd6632;
+    background: $theme-color;
   }
   &::-webkit-progress-bar {
-    background-color: #3a3a3a;
+    background-color: $med-dark-background;
   }
 }
 @media screen and (min-width: 50em) {
@@ -188,31 +188,25 @@ progress {
      padding: 1em 0;
   }
 }
-/*$$$$$$$$$$$$$$$$$$
-    Team article
-$$$$$$$$$$$$$$$$$$$*/
 .team {
-  color: rgb(124,131,135);
+  color: $text-color-3;
   padding-top: 2.5em;
   padding-bottom: 2.5em;
 }
 .team h1 {
-  color: #000;
+  color: $text-color-2;
   margin-bottom: 1em;
   font-weight: normal;
 }
-/*$$$$$$$$$$$$$$$$$$
-    Contact article
-$$$$$$$$$$$$$$$$$$$*/
 .contact {
-  color: #fff;
+  color: $text-color-1;
   font-weight: 100;
   padding-top: 2.5em;
   /*below is background to show map thru orange*/
   background:
     linear-gradient(
-      rgba(253, 102, 50, 0.92),
-      rgba(253, 102, 50, 0.92)
+      $hover-mask,
+      $hover-mask
     ),
     url('../images/bkgrnd-map.png');
   @media screen and (min-width: 50em) {
@@ -232,8 +226,8 @@ $$$$$$$$$$$$$$$$$$$*/
     button {
       width: 100%;
       padding: 1em 0;
-      color: #fd6632;
-      background-color: white;
+      color: $theme-color;
+      background-color: $light-background;
       margin-bottom: 2em;
       font-size: 0.75em;
       @media screen and (min-width: 50em) {
@@ -244,14 +238,14 @@ $$$$$$$$$$$$$$$$$$$*/
   }
   input, textarea {
     box-sizing: border-box;
-    background-color: rgba(126, 50, 24, 0.8);
+    background-color: $input_background;
     border: none;
     display: block;
     padding: 1.5em;
     width: 100%;
     margin: 1em auto;
     &::-webkit-input-placeholder {
-      color: #fff;
+      color: $text-color-1;
     }
   }
   input {
@@ -279,13 +273,13 @@ $$$$$$$$$$$$$$$$$$$*/
     }
   }
   ul {
-    background-color: rgba(77,77,77,0.8);
+    background-color: $hover-mask;
     position: absolute;
     top: 0;
     left: 0;
     padding-bottom: 1em;
     @media screen and (min-width: 50em) {
-      background-color: rgba(77,77,77,0.8);
+      background-color: $hover-mask;
       position: absolute;
       top: 0;
       padding-bottom: 1em;
@@ -304,7 +298,7 @@ $$$$$$$$$$$$$$$$$$$*/
     }
   }
   a {
-    color: #fff; /* phone number on mobile */
+    color: $text-color-1; /* phone number on mobile */
   }
   img {
     width: 100%;
@@ -322,15 +316,13 @@ $$$$$$$$$$$$$$$$$$$*/
 
 
 /// PUT FOOTER IN GLOBAL!!!!!
-/*$$$$$$$$$$$$$$$$$$
-    Footer
-$$$$$$$$$$$$$$$$$$$*/
+
 footer {
   padding: 3em 1em;
   a {
-    color: #fd6632;
+    color: $theme-color;
     &:hover {
-      color: rgb(124,131,135);
+      color: $text-color-3;
     }
   }
 }
