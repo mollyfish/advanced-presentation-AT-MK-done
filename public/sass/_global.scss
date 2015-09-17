@@ -2,20 +2,20 @@
     General styles
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
-$theme-color: #fd6632; /* orange */
-$med-theme-color: darken($theme-color, 40%);
-$dk-theme-color: darken($theme-color, 20%);
+// $theme-color: #fd6632; /* orange */
+// $med-theme-color: darken($theme-color, 40%);
+// $dk-theme-color: darken($theme-color, 20%);
 
-$lightest: #fff;
-$darkest: #2a2a2e;
+// $lightest: #fff;
+// $darkest: #2a2a2e;
 
-$text-color-1: $lightest;
-$text-color-2: $darkest;
-$text-color-3: rgba(124, 131, 135, 1);  //dark text
+// $text-color-1: $lightest;
+// $text-color-2: $darkest;
+// $text-color-3: rgba(124, 131, 135, 1);  //dark text
 
-$light-background: $lightest;
-$dark-background: $darkest;
-$hover-mask: rgba(0, 0, 0, 0.6);
+// $light-background: $lightest;
+// $dark-background: $darkest;
+// $hover-mask: rgba(0, 0, 0, 0.6);
 
 // font sizes and padding
 $small_font: 1.777em;
@@ -99,7 +99,7 @@ h1 {
     margin-bottom: 1em;
   }
   .team & {
-    color: #000;
+    color: $text-color-2;
     margin-bottom: 1em;
     font-weight: normal;
   }
