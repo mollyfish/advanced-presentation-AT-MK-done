@@ -11,14 +11,14 @@
     }
   }
   ul {
-    background-color: rgba(77,77,77,0.8);
+    background-color: $hover-mask;
     position: absolute;
     top: 0;
     left: 0;
     padding-bottom: 1em;
     text-align: left;
     @media screen and (min-width: 50em) {
-      background-color: rgba(77,77,77,0.9);
+      background-color: $hover-mask;
       position: absolute;
       top: 0;
       padding-bottom: 1em;
@@ -37,7 +37,7 @@
     }
   }
   a {
-    color: #fff; /* phone number on mobile */
+    color: $text-color-1; /* phone number on mobile */
   }
   iframe {
     width: 100%;
