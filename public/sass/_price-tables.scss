@@ -1,28 +1,28 @@
 table {
-  background-color: #fff;
+  background-color: $light-background;
   display: inline-block;
   margin: 1em;
 }
 caption {
-  background-color: #7f3319;
+  background-color: $med-theme-color;
   padding: 1em;
 }
 th, td {
-  color: #414141;
+  color: $text-color-2;
   padding: 1em;
-  border-top: 1px solid #fd6632;
+  border-top: 1px solid $theme-color;
   font-size: 0.75em;
 }
 th strong {
   font-size: 1.333em;
 }
 .price {
-  color: #fd6632;
+  color: $theme-color;
 }
 .signup {
-  background-color: #be4c25;
+  background-color: $dk-theme-color;
   padding: 1.5em 4.157em;
-  border-top: 1px solid #fd6632;
+  border-top: 1px solid $theme-color;
 }
 @media screen and (min-width: 50em) {
   .price-tables-wrapper h3 {

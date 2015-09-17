@@ -5,23 +5,30 @@
 .social-icons li {
   display: inline;
 }
-.icon-facebook:before, .icon-twitter:before, .icon-dribbble:before, .icon-linkedin:before, .icon-google-plus:before {
-  background-color: #3B5998;
-  color: #fff;
+%icons {
+  color: $text-color-1;
   padding: 0.25em 0.35em;
+  &:hover {
+    background-color: $theme-color;
+  }
+}
+.icon-facebook:before {
+  @extend %icons;
+  background-color: $facebook-background;
 }
 .icon-twitter:before {
-  background-color: #00aced;
+  @extend %icons;
+  background-color: $twitter-background;
 }
 .icon-dribbble:before {
-  background-color: #ea4c89;
+  @extend %icons;
+  background-color: $dribbble-background;
 }
 .icon-linkedin:before {
-  background-color: #007bb6;
+  @extend %icons;
+  background-color: $linkedin-background;
 }
 .icon-google-plus:before {
-  background-color: #ecbb0a;
-}
-.icon-facebook:hover:before, .icon-twitter:hover:before, .icon-dribbble:hover:before, .icon-linkedin:hover:before, .icon-google-plus:hover:before {
-  background-color: #fd6632;
+  @extend %icons;
+  background-color: $google-plus-background;
 }

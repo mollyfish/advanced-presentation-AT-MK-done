@@ -29,11 +29,12 @@
   margin-bottom: .3em;
   display: inline-block;
   border-radius: 50%;
-  background-color: #fd6632;
+  background-color: $theme-color;
   font-size: 3.157em;
-  color: #fff;
+  color: $text-color-1
+  ;
   padding: 0.25em;
 }
 .underline {
-  border-bottom: 1px solid #fd6632;
+  border-bottom: 1px solid $theme-color;
 }

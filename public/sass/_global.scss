@@ -59,8 +59,8 @@ a {
 &&&&&&&&&&&&&&&&&&*/
 .services {
   position: relative;
-  background-color: #fd6632;
-  color: #fff;
+  background-color: $theme-color;
+  color: $text-color-1;
   font-weight: 100;
   @media screen and (min-width: 50em) {
       padding-top: 3em;
@@ -109,7 +109,7 @@ a {
 
 
 .portfolio {
-  color: rgb(124,131,135);
+  color: $text-color-3;
   padding-top: 2.5em;
 }
 
@@ -117,8 +117,8 @@ a {
     About article
 &&&&&&&&&&&&&&&&&*/
 .about {
-  background-color: #2a2a2e;
-  color: white;
+  background-color: $dark-background;
+  color: $text-color-1;
 
   font-weight: 100;
   padding-bottom: 2.5em;
@@ -153,31 +153,30 @@ a {
 
 // MAKE SEPARATE PROGRESS FILE
 
+
 /*$$$$$$$$$$$$$$$$$$
     Team article
 $$$$$$$$$$$$$$$$$$$*/
+
 .team {
-  color: rgb(124,131,135);
+  color: $text-color-3;
   padding-top: 2.5em;
   padding-bottom: 2.5em;
 }
 .team h1 {
-  color: #000;
+  color: $text-color-2;
   margin-bottom: 1em;
   font-weight: normal;
 }
-/*$$$$$$$$$$$$$$$$$$
-    Contact article
-$$$$$$$$$$$$$$$$$$$*/
 .contact {
-  color: #fff;
+  color: $text-color-1;
   font-weight: 100;
   padding-top: 2.5em;
   /*below is background to show map thru orange*/
   background:
     linear-gradient(
-      rgba(253, 102, 50, 0.92),
-      rgba(253, 102, 50, 0.92)
+      $hover-mask,
+      $hover-mask
     ),
     url('../images/bkgrnd-map.png');
   @media screen and (min-width: 50em) {
@@ -189,19 +188,17 @@ $$$$$$$$$$$$$$$$$$$*/
       margin: 2em 4% 1em 4%;
     }
   }
-}
+
 
 
 /// PUT FOOTER IN GLOBAL!!!!!
-/*$$$$$$$$$$$$$$$$$$
-    Footer
-$$$$$$$$$$$$$$$$$$$*/
+
 footer {
   padding: 3em 1em;
   a {
-    color: #fd6632;
+    color: $theme-color;
     &:hover {
-      color: rgb(124,131,135);
+      color: $text-color-3;
     }
   }
 }
