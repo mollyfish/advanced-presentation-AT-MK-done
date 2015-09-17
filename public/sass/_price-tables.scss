@@ -21,8 +21,18 @@ th strong {
 }
 .signup {
   background-color: $dk-theme-color;
-  padding: 1.5em 4.157em;
+  padding: 2.6em 4.157em;
   border-top: 1px solid $theme-color;
+  a {
+    border: none;
+    background-color: $theme-color;
+    color: $text-color-1;
+    padding: 1em 1.5em;
+    font-size: 0.75em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 @media screen and (min-width: 50em) {
   .price-tables-wrapper h3 {
