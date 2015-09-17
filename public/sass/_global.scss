@@ -3,6 +3,8 @@
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 $light_text: #fff;
 $dark_text: rgb(124,131,135);
+$small_font: 1.777em;
+$large_font: 2.369em;
 
 html {
   font-family: Helvetica, sans-serif;
@@ -72,9 +74,9 @@ article {
 h1 {
   article & {
     position: relative;
-    font-size: 1.777em;
+    font-size: $small_font;
     @media screen and (min-width: 50em) {
-      font-size: 2.369em;
+      font-size: $large_font;
     }
   }
   .services & {
@@ -88,20 +90,20 @@ h1 {
 }
 h2 {
   article & {
-    font-size: 1.777em;
+    font-size: $small_font;
   }
   .about & {
     position: relative;
     overflow: hidden;
-    font-size: 1.777em;
+    font-size: $small_font;
     margin: 0 10% 1em 10%;
     @media screen and (min-width: 50em) {
-      font-size: 2.369em;
+      font-size: $large_font;
     }
   }
   .clients-slider h2 {
     @media screen and (min-width: 50em) {
-      font-size: 2.369em;
+      font-size: $large_font;
     }
   }
 }
