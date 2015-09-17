@@ -5,8 +5,8 @@ html {
   font-family: Helvetica, sans-serif;
   text-align: center;
 }
-@media screen and (min-width: 50em) {
-  body {
+body {
+  @media screen and (min-width: 50em) {
     max-width: 80em;
     width: 90%;
     margin: 0 auto;
@@ -31,7 +31,6 @@ article {
     color: rgb(124,131,135);
     padding-top: 2.5em;
   }
-
   &.about {
     background-color: #2a2a2e;
     color: white;
@@ -46,13 +45,11 @@ article {
       }
     }
   }
-
   &.team {
     color: rgb(124,131,135);
     padding-top: 2.5em;
     padding-bottom: 2.5em;
   }
-
   &.contact {
     color: #fff;
     font-weight: 100;
@@ -67,12 +64,6 @@ article {
     @media screen and (min-width: 50em) {
       position: relative;
     }
-  }
-}
-@media screen and (min-width: 50em) {
-  .services h3, .about h2, .clients-slider h2 {
-    font-size: 2.369em;
-    // display: inline-block;
   }
 }
 h1 {
@@ -91,9 +82,7 @@ h1 {
     margin-bottom: 1em;
     font-weight: normal;
   }
-
 }
-
 h2 {
   article & {
     font-size: 1.777em;
@@ -107,15 +96,17 @@ h2 {
       font-size: 2.369em;
     }
   }
-
+  .clients-slider h2 {
+    @media screen and (min-width: 50em) {
+      font-size: 2.369em;
+    }
+  }
 }
 h3 {
   .about & {
     padding: 1em 0 1.5em 0;
   }
-
 }
-
 p {
   line-height: 1.5;
   margin: 0 1em;
@@ -125,7 +116,6 @@ p {
   .about & {
     margin: 1em 0;
   }
-
   .contact & {
     margin: 2em 0 1em 0;
     @media screen and (min-width: 50em) {
@@ -133,11 +123,9 @@ p {
     }
   }
 }
-
 a {
   text-decoration: none;
 }
-
 footer {
   padding: 3em 1em;
   a {
@@ -147,7 +135,6 @@ footer {
     }
   }
 }
-
 .flex-container {
   /*adapted from flexboxin5.com*/
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -155,20 +142,6 @@ footer {
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
-
-/* General styles desktop layout */
-
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&
-    Top navigation bar
-&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-
-/*&&&&&&&&&&&&&&&&
-    Services article
-&&&&&&&&&&&&&&&&&&*/
-
-
-
- /* Services article flex paragraphs */
 .flex-paragraphs {
   -webkit-flex-direction: row; /* safari mobile needs -webkit- */
   -webkit-flex-wrap: wrap;
@@ -181,28 +154,34 @@ footer {
   align-content: flex-start;
   align-items: stretch;
 }
-.flex-paragraph-1 {
+@mixin flex_paragraph($flex_basis_paragraph) {
   -webkit-flex-grow: 1;
   -webkit-flex-shrink: 0;
-  -webkit-flex-basis: 98%;
   flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: 98%;
+  -webkit-flex-basis: $flex_basis_paragraph;
+  flex-basis: $flex_basis_paragraph;
+}
+.flex-paragraph-1 {
+  @include flex_paragraph(98%);
 }
 .flex-paragraph-2, .flex-paragraph-3 {
-  -webkit-flex-grow: 1;
-  -webkit-flex-shrink: 0;
-  -webkit-flex-basis: 48%;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 48%;
+  @include flex_paragraph(48%);
   padding-right: 1em;
 }
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&
+    Top navigation bar
+&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+/*&&&&&&&&&&&&&&&&
+    Services article
+&&&&&&&&&&&&&&&&&&*/
+
 /*&&&&&&&&&&&&&&&&
     Portfolio article
 &&&&&&&&&&&&&&&&&&*/
 .portfolio {
-
   // MAYBE NOT GLOBAL !!!
   > img {
     margin: 1em calc(50% - 470px); /* 470 is half the img width */
@@ -213,7 +192,6 @@ footer {
     About article
 &&&&&&&&&&&&&&&&&*/
 .about {
-
   // FIGURES ARE GLOBAL OR NOT???!!!
   figure {
     padding: 1em auto;
@@ -221,22 +199,15 @@ footer {
   figcaption {
     text-align: left;
   }
-  // BUTTON MAYBE IN SEPARATE FILE?!?!?!
-  button {
-    padding: 1em 3em;
-  }
-
 }
 
 /*$$$$$$$$$$$$$$$$$$
     Team article
 $$$$$$$$$$$$$$$$$$$*/
 
-
 /*$$$$$$$$$$$$$$$$$$
     Contact article
 $$$$$$$$$$$$$$$$$$$*/
-
 
 // /*$$$$$$$$$$$$$$$$$$
 //     Footer

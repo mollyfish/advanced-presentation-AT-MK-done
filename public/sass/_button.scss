@@ -7,4 +7,7 @@ button {
   &:hover {
     cursor: pointer;
   }
+  .about & {
+    padding: 1em 3em;
+  }
 }
