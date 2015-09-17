@@ -1,6 +1,7 @@
 .gallery-flex {
   @media screen and (min-width: 50em) {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -webkit-flex;     /* Safari needs this one */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     -webkit-flex-direction: row; /*safari also required these to have -webkit*/
