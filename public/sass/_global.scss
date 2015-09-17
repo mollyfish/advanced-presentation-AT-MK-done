@@ -106,14 +106,11 @@ a {
 /*&&&&&&&&&&&&&&&&
     Portfolio article
 &&&&&&&&&&&&&&&&&&*/
+
+
 .portfolio {
   color: rgb(124,131,135);
   padding-top: 2.5em;
-
-  // MAYBE NOT GLOBAL !!!
-  > img {
-    margin: 1em calc(50% - 470px); /* 470 is half the img width */
-  }
 }
 
 /*&&&&&&&&&&&&&&&&&
@@ -147,17 +144,6 @@ a {
     margin: 1em 0;
   }
 
-  // FIGURES ARE GLOBAL OR NOT???!!!
-  figure {
-    padding: 1em auto;
-  }
-  figcaption {
-    text-align: left;
-  }
-  // BUTTON MAYBE IN SEPARATE FILE?!?!?!
-  button {
-    padding: 1em 3em;
-  }
   @media screen and (min-width: 50em) {
       .about .flex-paragraphs {
       padding: 1em 0 2em 0;
@@ -166,28 +152,7 @@ a {
 }
 
 // MAKE SEPARATE PROGRESS FILE
-progress {
-  appearance: none;
-  border: none;
-  width: 100%;
-  height: 1.5em;
-  background: #3a3a3a;
-  margin: 0 0 1.5em;
-  &::-moz-progress-bar {
-    background: #fd6632;
-  }
-  &::-webkit-progress-value {
-    background: #fd6632;
-  }
-  &::-webkit-progress-bar {
-    background-color: #3a3a3a;
-  }
-}
-@media screen and (min-width: 50em) {
-  .progressbars-wrapper {
-     padding: 1em 0;
-  }
-}
+
 /*$$$$$$$$$$$$$$$$$$
     Team article
 $$$$$$$$$$$$$$$$$$$*/
@@ -223,100 +188,6 @@ $$$$$$$$$$$$$$$$$$$*/
     @media screen and (min-width: 50em) {
       margin: 2em 4% 1em 4%;
     }
-  }
-
-  // FORM IN SEPARATE FILE
-  form {
-    width: 100%;
-    display: inline-block;
-    button {
-      width: 100%;
-      padding: 1em 0;
-      color: #fd6632;
-      background-color: white;
-      margin-bottom: 2em;
-      font-size: 0.75em;
-      @media screen and (min-width: 50em) {
-        width: 40%;
-        float: right;
-      }
-    }
-  }
-  input, textarea {
-    box-sizing: border-box;
-    background-color: rgba(126, 50, 24, 0.8);
-    border: none;
-    display: block;
-    padding: 1.5em;
-    width: 100%;
-    margin: 1em auto;
-    &::-webkit-input-placeholder {
-      color: #fff;
-    }
-  }
-  input {
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-}
-.messageinput {
-  height: 10em;
-}
-
-/// MAKE SEPARATE FILE FOR MAP STUFF
-/* Location map */
-.contactmap {
-  @media screen and (min-width: 50em) {
-    margin: 1em 0 0 0.5em;
-    width: calc(50% - 0.5em);
-    float: left;
-  }
-  figure {
-    position: relative;
-    @media screen and (min-width: 50em) {
-      position: relative;
-    }
-  }
-  ul {
-    background-color: rgba(77,77,77,0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-bottom: 1em;
-    @media screen and (min-width: 50em) {
-      background-color: rgba(77,77,77,0.8);
-      position: absolute;
-      top: 0;
-      padding-bottom: 1em;
-    }
-  }
-  li {
-    margin-top: 1.5em;
-    padding-left: 0.8em;
-    display: inline-block;
-    font-size: 0.75em;
-    @media screen and (min-width: 50em) {
-      margin-top: 1.5em;
-      padding-left: 0.5em;
-      display: inline-block;
-      font-size: 0.75em;
-    }
-  }
-  a {
-    color: #fff; /* phone number on mobile */
-  }
-  img {
-    width: 100%;
-  }
-}
-/* Contact article desktop layout */
-@media screen and (min-width: 50em) {
-  /* Contact form */
-  .contactform {
-    width: calc(50% - 0.5em);
-    float: left;
-    margin: 1em 0.5em 0 0;
   }
 }
 
