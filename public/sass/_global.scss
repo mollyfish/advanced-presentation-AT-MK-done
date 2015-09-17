@@ -1,10 +1,15 @@
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
     General styles
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+// TO DO //
+// margin sizes?
+
 $light_text: #fff;
 $dark_text: rgb(124,131,135);
 $small_font: 1.777em;
 $large_font: 2.369em;
+$article_padding: 2.5em;
 
 html {
   font-family: Helvetica, sans-serif;
@@ -28,23 +33,23 @@ article {
     color: $light_text;
     font-weight: 100;
     @media screen and (min-width: 50em) {
-      padding-top: 3em;
-      padding-bottom: 3em;
+      padding-top: $article_padding + 0.5em;
+      padding-bottom: $article_padding + 0.5em;
     }
   }
   &.portfolio {
     color: $dark_text;
-    padding-top: 2.5em;
+    padding-top: $article_padding;
   }
   &.about {
     background-color: #2a2a2e;
     color: $light_text;
     font-weight: 100;
-    padding-bottom: 2.5em;
-    padding-top: 2.5em;
+    padding-bottom: $article_padding;
+    padding-top: $article_padding;
     @media screen and (min-width: 50em) {
-      padding-top: 3em;
-      padding-bottom: 3em;
+      padding-top: $article_padding + 0.5em;
+      padding-bottom: $article_padding + 0.5em;
       .about .flex-paragraphs {
         padding: 1em 0 2em 0;
       }
@@ -52,13 +57,13 @@ article {
   }
   &.team {
     color: $dark_text;
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
+    padding-top: $article_padding;
+    padding-bottom: $article_padding;
   }
   &.contact {
     color: $light_text;
     font-weight: 100;
-    padding-top: 2.5em;
+    padding-top: $article_padding;
     /*below is background to show map thru orange*/
     background:
       linear-gradient(
