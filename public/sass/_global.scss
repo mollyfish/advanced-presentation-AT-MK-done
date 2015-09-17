@@ -1,6 +1,9 @@
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
     General styles
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+$light_text: #fff;
+$dark_text: rgb(124,131,135);
+
 html {
   font-family: Helvetica, sans-serif;
   text-align: center;
@@ -20,7 +23,7 @@ article {
   &.services {
     position: relative;
     background-color: #fd6632;
-    color: #fff;
+    color: $light_text;
     font-weight: 100;
     @media screen and (min-width: 50em) {
       padding-top: 3em;
@@ -28,12 +31,12 @@ article {
     }
   }
   &.portfolio {
-    color: rgb(124,131,135);
+    color: $dark_text;
     padding-top: 2.5em;
   }
   &.about {
     background-color: #2a2a2e;
-    color: white;
+    color: $light_text;
     font-weight: 100;
     padding-bottom: 2.5em;
     padding-top: 2.5em;
@@ -46,12 +49,12 @@ article {
     }
   }
   &.team {
-    color: rgb(124,131,135);
+    color: $dark_text;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
   }
   &.contact {
-    color: #fff;
+    color: $light_text;
     font-weight: 100;
     padding-top: 2.5em;
     /*below is background to show map thru orange*/
@@ -131,7 +134,7 @@ footer {
   a {
     color: #fd6632;
     &:hover {
-      color: rgb(124,131,135);
+      color: $dark_text;
     }
   }
 }
