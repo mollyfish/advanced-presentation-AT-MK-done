@@ -175,8 +175,8 @@ $$$$$$$$$$$$$$$$$$$*/
   /*below is background to show map thru orange*/
   background:
     linear-gradient(
-      $hover-mask,
-      $hover-mask
+      rgba($theme-color, 0.9),
+      rgba($theme-color, 0.9)
     ),
     url('../images/bkgrnd-map.png');
   @media screen and (min-width: 50em) {
