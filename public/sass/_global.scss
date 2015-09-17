@@ -14,27 +14,140 @@ html {
 }
 article {
   padding: 2em 2em 1em 2em;
-  h1 {
-    position: relative;
-    font-size: 1.777em;
-  }
   @media screen and (min-width: 50em) {
     padding: 2em 5%;
-    h1 {
+  }
+  &.services {
+    position: relative;
+    background-color: #fd6632;
+    color: #fff;
+    font-weight: 100;
+    @media screen and (min-width: 50em) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+  }
+  &.portfolio {
+    color: rgb(124,131,135);
+    padding-top: 2.5em;
+  }
+
+  &.about {
+    background-color: #2a2a2e;
+    color: white;
+    font-weight: 100;
+    padding-bottom: 2.5em;
+    padding-top: 2.5em;
+    @media screen and (min-width: 50em) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+      .about .flex-paragraphs {
+        padding: 1em 0 2em 0;
+      }
+    }
+  }
+
+  &.team {
+    color: rgb(124,131,135);
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+  }
+
+  &.contact {
+    color: #fff;
+    font-weight: 100;
+    padding-top: 2.5em;
+    /*below is background to show map thru orange*/
+    background:
+      linear-gradient(
+        rgba(253, 102, 50, 0.92),
+        rgba(253, 102, 50, 0.92)
+      ),
+      url('../images/bkgrnd-map.png');
+    @media screen and (min-width: 50em) {
+      position: relative;
+    }
+  }
+}
+@media screen and (min-width: 50em) {
+  .services h3, .about h2, .clients-slider h2 {
+    font-size: 2.369em;
+    // display: inline-block;
+  }
+}
+h1 {
+  article & {
+    position: relative;
+    font-size: 1.777em;
+    @media screen and (min-width: 50em) {
       font-size: 2.369em;
     }
   }
-  h2 {
+  .services & {
+    margin-bottom: 1em;
+  }
+  .team & {
+    color: #000;
+    margin-bottom: 1em;
+    font-weight: normal;
+  }
+
+}
+
+h2 {
+  article & {
     font-size: 1.777em;
   }
+  .about & {
+    position: relative;
+    overflow: hidden;
+    font-size: 1.777em;
+    margin: 0 10% 1em 10%;
+    @media screen and (min-width: 50em) {
+      font-size: 2.369em;
+    }
+  }
+
 }
+h3 {
+  .about & {
+    padding: 1em 0 1.5em 0;
+  }
+
+}
+
 p {
   line-height: 1.5;
   margin: 0 1em;
+  .services & {
+    margin: 0em 0 2em 0;
+  }
+  .about & {
+    margin: 1em 0;
+  }
+
+  .contact & {
+    margin: 2em 0 1em 0;
+    @media screen and (min-width: 50em) {
+      margin: 2em 4% 1em 4%;
+    }
+  }
 }
+
 a {
   text-decoration: none;
 }
+
+footer {
+  padding: 3em 1em;
+  a {
+    color: #fd6632;
+    &:hover {
+      color: rgb(124,131,135);
+    }
+  }
+}
+
 .flex-container {
   /*adapted from flexboxin5.com*/
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -44,12 +157,7 @@ a {
 }
 
 /* General styles desktop layout */
-@media screen and (min-width: 50em) {
-  .services h3, .about h2, .clients-slider h2 {
-    font-size: 2.369em;
-    // display: inline-block;
-  }
-}
+
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&
     Top navigation bar
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
@@ -57,22 +165,9 @@ a {
 /*&&&&&&&&&&&&&&&&
     Services article
 &&&&&&&&&&&&&&&&&&*/
-.services {
-  position: relative;
-  background-color: #fd6632;
-  color: #fff;
-  font-weight: 100;
-  @media screen and (min-width: 50em) {
-      padding-top: 3em;
-      padding-bottom: 3em;
-  }
-  h1 {
-    margin-bottom: 1em;
-  }
-  p {
-    margin: 0em 0 2em 0;
-  }
-}
+
+
+
  /* Services article flex paragraphs */
 .flex-paragraphs {
   -webkit-flex-direction: row; /* safari mobile needs -webkit- */
@@ -107,8 +202,6 @@ a {
     Portfolio article
 &&&&&&&&&&&&&&&&&&*/
 .portfolio {
-  color: rgb(124,131,135);
-  padding-top: 2.5em;
 
   // MAYBE NOT GLOBAL !!!
   > img {
@@ -120,32 +213,6 @@ a {
     About article
 &&&&&&&&&&&&&&&&&*/
 .about {
-  background-color: #2a2a2e;
-  color: white;
-
-  font-weight: 100;
-  padding-bottom: 2.5em;
-  padding-top: 2.5em;
-  @media screen and (min-width: 50em) {
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
-  h2 {
-    position: relative;
-    overflow: hidden;
-
-    font-size: 1.777em;
-    margin: 0 10% 1em 10%;
-    @media screen and (min-width: 50em) {
-      font-size: 2.369em;
-    }
-  }
-  h3 {
-    padding: 1em 0 1.5em 0;
-  }
-  p {
-    margin: 1em 0;
-  }
 
   // FIGURES ARE GLOBAL OR NOT???!!!
   figure {
@@ -158,179 +225,19 @@ a {
   button {
     padding: 1em 3em;
   }
-  @media screen and (min-width: 50em) {
-      .about .flex-paragraphs {
-      padding: 1em 0 2em 0;
-    }
-  }
+
 }
 
-// MAKE SEPARATE PROGRESS FILE
-progress {
-  appearance: none;
-  border: none;
-  width: 100%;
-  height: 1.5em;
-  background: #3a3a3a;
-  margin: 0 0 1.5em;
-  &::-moz-progress-bar {
-    background: #fd6632;
-  }
-  &::-webkit-progress-value {
-    background: #fd6632;
-  }
-  &::-webkit-progress-bar {
-    background-color: #3a3a3a;
-  }
-}
-@media screen and (min-width: 50em) {
-  .progressbars-wrapper {
-     padding: 1em 0;
-  }
-}
 /*$$$$$$$$$$$$$$$$$$
     Team article
 $$$$$$$$$$$$$$$$$$$*/
-.team {
-  color: rgb(124,131,135);
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
-}
-.team h1 {
-  color: #000;
-  margin-bottom: 1em;
-  font-weight: normal;
-}
+
+
 /*$$$$$$$$$$$$$$$$$$
     Contact article
 $$$$$$$$$$$$$$$$$$$*/
-.contact {
-  color: #fff;
-  font-weight: 100;
-  padding-top: 2.5em;
-  /*below is background to show map thru orange*/
-  background:
-    linear-gradient(
-      rgba(253, 102, 50, 0.92),
-      rgba(253, 102, 50, 0.92)
-    ),
-    url('../images/bkgrnd-map.png');
-  @media screen and (min-width: 50em) {
-    position: relative;
-  }
-  p {
-    margin: 2em 0 1em 0;
-    @media screen and (min-width: 50em) {
-      margin: 2em 4% 1em 4%;
-    }
-  }
-
-  // FORM IN SEPARATE FILE
-  form {
-    width: 100%;
-    display: inline-block;
-    button {
-      width: 100%;
-      padding: 1em 0;
-      color: #fd6632;
-      background-color: white;
-      margin-bottom: 2em;
-      font-size: 0.75em;
-      @media screen and (min-width: 50em) {
-        width: 40%;
-        float: right;
-      }
-    }
-  }
-  input, textarea {
-    box-sizing: border-box;
-    background-color: rgba(126, 50, 24, 0.8);
-    border: none;
-    display: block;
-    padding: 1.5em;
-    width: 100%;
-    margin: 1em auto;
-    &::-webkit-input-placeholder {
-      color: #fff;
-    }
-  }
-  input {
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-}
-.messageinput {
-  height: 10em;
-}
-
-/// MAKE SEPARATE FILE FOR MAP STUFF
-/* Location map */
-.contactmap {
-  @media screen and (min-width: 50em) {
-    margin: 1em 0 0 0.5em;
-    width: calc(50% - 0.5em);
-    float: left;
-  }
-  figure {
-    position: relative;
-    @media screen and (min-width: 50em) {
-      position: relative;
-    }
-  }
-  ul {
-    background-color: rgba(77,77,77,0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-bottom: 1em;
-    @media screen and (min-width: 50em) {
-      background-color: rgba(77,77,77,0.8);
-      position: absolute;
-      top: 0;
-      padding-bottom: 1em;
-    }
-  }
-  li {
-    margin-top: 1.5em;
-    padding-left: 0.8em;
-    display: inline-block;
-    font-size: 0.75em;
-    @media screen and (min-width: 50em) {
-      margin-top: 1.5em;
-      padding-left: 0.5em;
-      display: inline-block;
-      font-size: 0.75em;
-    }
-  }
-  a {
-    color: #fff; /* phone number on mobile */
-  }
-  img {
-    width: 100%;
-  }
-}
-/* Contact article desktop layout */
-@media screen and (min-width: 50em) {
-  /* Contact form */
-  .contactform {
-    width: calc(50% - 0.5em);
-    float: left;
-    margin: 1em 0.5em 0 0;
-  }
-}
 
 
-/// PUT FOOTER IN GLOBAL!!!!!
-/*$$$$$$$$$$$$$$$$$$
-    Footer
-$$$$$$$$$$$$$$$$$$$*/
-footer {
-  padding: 3em 1em;
-  a {
-    color: #fd6632;
-    &:hover {
-      color: rgb(124,131,135);
-    }
-  }
-}
+// /*$$$$$$$$$$$$$$$$$$
+//     Footer
+// $$$$$$$$$$$$$$$$$$$*/

@@ -1,0 +1,48 @@
+.contact {
+// FORM IN SEPARATE FILE
+  form {
+    width: 100%;
+    display: inline-block;
+    button {
+      width: 100%;
+      padding: 1em 0;
+      color: #fd6632;
+      background-color: white;
+      margin-bottom: 2em;
+      font-size: 0.75em;
+      @media screen and (min-width: 50em) {
+        width: 40%;
+        float: right;
+      }
+    }
+  }
+  input, textarea {
+    box-sizing: border-box;
+    background-color: rgba(126, 50, 24, 0.8);
+    border: none;
+    display: block;
+    padding: 1.5em;
+    width: 100%;
+    margin: 1em auto;
+    &::-webkit-input-placeholder {
+      color: #fff;
+    }
+  }
+  input {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+@media screen and (min-width: 50em) {
+  /* Contact form */
+  .contactform {
+    width: calc(50% - 0.5em);
+    float: left;
+    margin: 1em 0.5em 0 0;
+  }
+}
+
+.messageinput {
+  height: 10em;
+}
