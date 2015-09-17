@@ -1,17 +1,15 @@
 form {
-  width: 100%;
   display: inline-block;
+  width: 100%;
   @media screen and (min-width: 50em) {
-    width: calc(50% - 0.5em);
     float: left;
     margin: 1em 0.5em 0 0;
-  }
-  button {
-    margin: 1em 0 2em 0;
+    width: calc(50% - 0.5em);   
   }
   textarea {
     margin: 0.5em auto;
   }
+  button {
+    margin: 1em 0 2em 0;
+  }
 }
-
-
