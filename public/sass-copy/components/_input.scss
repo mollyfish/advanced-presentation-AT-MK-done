@@ -1,0 +1,7 @@
+input {
+  @extend textarea;
+  height: 2em;
+  &:first-child {
+    margin-top: 0;
+  }
+}

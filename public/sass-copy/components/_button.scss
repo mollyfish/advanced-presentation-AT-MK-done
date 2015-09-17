@@ -1,0 +1,11 @@
+button {
+  padding: 1em 1.5em;
+  border: none;
+  width: 100%;
+  color: $theme-color;
+  background-color: $light-background;
+  @media screen and (min-width: 50em) {
+    width: 40%;
+    float: right;
+  }
+}

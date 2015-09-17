@@ -1,9 +1,15 @@
 @import "reset";
-@import "colors";
+
+@import "base/colors";
+
+@import "components/button";
+@import "components/textarea";
+@import "components/input";
+
 @import "global";
 @import "icon-styles";
 @import "nav";
-@import "button";
+
 @import "header";
 @import "price-tables";
 @import "social_link_styles";
