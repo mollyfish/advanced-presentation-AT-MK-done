@@ -2,11 +2,22 @@
     General styles
 &&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
-// TO DO //
-// margin sizes?
+$theme-color: #fd6632; /* orange */
+$med-theme-color: darken($theme-color, 40%);
+$dk-theme-color: darken($theme-color, 20%);
 
-$light_text: #fff;
-$dark_text: rgb(124,131,135);
+$lightest: #fff;
+$darkest: #2a2a2e;
+
+$text-color-1: $lightest;
+$text-color-2: $darkest;
+$text-color-3: rgba(124, 131, 135, 1);  //dark text
+
+$light-background: $lightest;
+$dark-background: $darkest;
+$hover-mask: rgba(0, 0, 0, 0.6);
+
+// font sizes and padding
 $small_font: 1.777em;
 $large_font: 2.369em;
 $article_padding: 2.5em;
@@ -29,8 +40,8 @@ article {
   }
   &.services {
     position: relative;
-    background-color: #fd6632;
-    color: $light_text;
+    background-color: $theme-color;
+    color: $text-color-1;
     font-weight: 100;
     @media screen and (min-width: 50em) {
       padding-top: $article_padding + 0.5em;
@@ -38,12 +49,12 @@ article {
     }
   }
   &.portfolio {
-    color: $dark_text;
+    color: $text-color-3;
     padding-top: $article_padding;
   }
   &.about {
-    background-color: #2a2a2e;
-    color: $light_text;
+    background-color: $dark-background;
+    color: $text-color-1;
     font-weight: 100;
     padding-bottom: $article_padding;
     padding-top: $article_padding;
@@ -56,12 +67,12 @@ article {
     }
   }
   &.team {
-    color: $dark_text;
+    color: $text-color-3;
     padding-top: $article_padding;
     padding-bottom: $article_padding;
   }
   &.contact {
-    color: $light_text;
+    color: $text-color-1;
     font-weight: 100;
     padding-top: $article_padding;
     /*below is background to show map thru orange*/
@@ -139,9 +150,9 @@ a {
 footer {
   padding: 3em 1em;
   a {
-    color: #fd6632;
+    color: $theme-color;
     &:hover {
-      color: $dark_text;
+      color: $text-color-3;
     }
   }
 }
