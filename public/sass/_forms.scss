@@ -8,8 +8,8 @@ form {
   }
   button {
     width: 100%;
-    color: #fd6632;
-    background-color: white;
+    color: $theme-color;
+    background-color: $light-background;
     margin-bottom: 2em;
     @media screen and (min-width: 50em) {
       width: 40%;
@@ -19,13 +19,13 @@ form {
 }
 textarea {
   box-sizing: border-box;
-  background-color: rgba(126, 50, 24, 0.8);
+  background-color: $input_background;
   border: none;
   padding: 1.5em;
   width: 100%;
   margin: 0.5em auto;
   &::-webkit-input-placeholder {
-    color: #efefef;
+    color: $text-color-1;
   }
 }
 input {
