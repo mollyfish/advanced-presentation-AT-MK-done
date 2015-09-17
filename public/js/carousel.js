@@ -17,7 +17,17 @@ $(function() {
     keys: true,              //  Enable keyboard arrow shortcuts
     dots: false             //  Display dot navigation - done manually below
   });
-  var slidey2 = $('.fig-carousel').unslider(),
-    data = slidey2.data('unslider');
-    data.dots();
+    var unslider = $('.fig-carousel').unslider();
+
+    $('.prev').click(function(e) {
+      e.preventDefault();
+      unslider.data('unslider').prev();
+    });
+
+    $('.next').click(function(e) {
+      e.preventDefault();
+      unslider.data('unslider').next();
+    });
+    return false;
+
 });
