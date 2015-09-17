@@ -36,6 +36,9 @@ article {
   &.portfolio {
     color: $text-color-3;
     padding-top: $article_padding;
+    h1 {
+      color: $text-color-2;
+    }
   }
   &.about {
     background-color: $dark-background;
