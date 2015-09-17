@@ -2,7 +2,6 @@
   @media screen and (min-width: 50em) {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     -webkit-flex-direction: row; /*safari also required these to have -webkit*/
     -webkit-flex-wrap: wrap;
@@ -29,6 +28,7 @@
   }
   figcaption {
     margin-top: 1em;
+    text-align: center;
   }
   figure a {
     display: inline-block;
