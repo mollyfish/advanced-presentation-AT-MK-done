@@ -15,6 +15,13 @@
     }
   }
 }
+.carousel-wrap {
+  border: 1px solid $accent-border-2;
+  border-radius: 1.5em;
+  @media screen and (min-width: 50em) {
+    border: none;
+  }
+}
 .img-carousel { 
   padding-bottom: 1.5em;
   position: relative; 
@@ -47,8 +54,8 @@
   @extend .img-carousel;
   width: 80%;
   margin: 0 auto;
-  border: 1px solid $accent-border-2;
-  border-radius: 1em;
+  // border: 1px solid $accent-border-2;
+  // border-radius: 1em;
   @media screen and (min-width: 50em) {
     border: none;
     p {
@@ -77,12 +84,11 @@
     }
   }
   figure {
-    padding: 1.5em;
     margin: 0 0.5em;
     @media screen and (min-width: 50em) {
       border: none;
       border-radius: 0;
-      padding-top: 2em;
+      padding: 1.5em;
     }
   }
   figcaption {
@@ -99,6 +105,31 @@
       float: left;
       margin-left: 1em;
     }
+  }
+}
+%slider-button {
+  margin: 1em;
+  @media screen and (min-width: 50em) {
+    margin-top: 3em;
+  }
+}
+.prev {
+  @extend %slider-button;
+  float: left;
+}
+.next {
+  @extend %slider-button;
+  float: right;
+}
+.icon-go-right:before, .icon-go-left:before  {
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 1.777em;
+  font-weight: 600;
+  color: $text-color-3;
+  @media screen and (min-width: 50em) {
+    font-size: 2.369em;
+    color: $theme-color;
   }
 }
 
