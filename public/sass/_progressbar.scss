@@ -1,0 +1,28 @@
+.progressbars-wrapper {
+  figure {
+    padding: 1em auto;
+  }
+  figcaption {
+    text-align: left;
+  }
+  progress {
+    appearance: none;
+    border: none;
+    width: 100%;
+    height: 1.5em;
+    background: #3a3a3a;
+    margin: 0 0 1.5em;
+    &::-moz-progress-bar {
+      background: #fd6632;
+    }
+    &::-webkit-progress-value {
+      background: #fd6632;
+    }
+    &::-webkit-progress-bar {
+      background-color: #3a3a3a;
+    }
+  }
+  @media screen and (min-width: 50em) {
+    padding: 1em 0;
+  }
+}
