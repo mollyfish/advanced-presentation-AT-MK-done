@@ -78,8 +78,8 @@ article {
     /*below is background to show map thru orange*/
     background:
       linear-gradient(
-        rgba(253, 102, 50, 0.92),
-        rgba(253, 102, 50, 0.92)
+        rgba($theme-color, 0.92),
+        rgba($theme-color, 0.92)
       ),
       url('../images/bkgrnd-map.png');
     @media screen and (min-width: 50em) {
@@ -191,45 +191,3 @@ footer {
   padding-right: 1em;
 }
 
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&
-    Top navigation bar
-&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-
-/*&&&&&&&&&&&&&&&&
-    Services article
-&&&&&&&&&&&&&&&&&&*/
-
-/*&&&&&&&&&&&&&&&&
-    Portfolio article
-&&&&&&&&&&&&&&&&&&*/
-.portfolio {
-  // MAYBE NOT GLOBAL !!!
-  > img {
-    margin: 1em calc(50% - 470px); /* 470 is half the img width */
-  }
-}
-
-/*&&&&&&&&&&&&&&&&&
-    About article
-&&&&&&&&&&&&&&&&&*/
-.about {
-  // FIGURES ARE GLOBAL OR NOT???!!!
-  figure {
-    padding: 1em auto;
-  }
-  figcaption {
-    text-align: left;
-  }
-}
-
-/*$$$$$$$$$$$$$$$$$$
-    Team article
-$$$$$$$$$$$$$$$$$$$*/
-
-/*$$$$$$$$$$$$$$$$$$
-    Contact article
-$$$$$$$$$$$$$$$$$$$*/
-
-// /*$$$$$$$$$$$$$$$$$$
-//     Footer
-// $$$$$$$$$$$$$$$$$$$*/

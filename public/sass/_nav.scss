@@ -1,6 +1,5 @@
 // --- Nav Sass Component --- //
 
-$hover_link_color: rgb(0,0,0);
 $flex_basis_topnav: 8em;
 
 @mixin flex_wrapper {
@@ -54,9 +53,9 @@ li {
 }
 a {
   .nav & {
-    color: rgb(124,131,135);
+    color: $text-color-3;
     &:hover {
-      color: $hover_link_color;
+      color: $text-color-2;
     }
   }
   .secondary-nav & {
@@ -64,8 +63,8 @@ a {
       display: inline-block;
       padding: 0.5em;
       &:hover {
-        color: $hover_link_color;
-        background-color: #fd6632;
+        color: $text-color-2;
+        background-color: $theme-color;
       }
     }
   }
@@ -75,7 +74,7 @@ a {
   @media screen and (min-width: 50em) {
     padding-left: 5em;
     padding-right: 5em;
-    border-bottom: 1px solid rgba(124,131,135,0.5);
+    border-bottom: 1px solid $accent-border-2;
   }
 }
 

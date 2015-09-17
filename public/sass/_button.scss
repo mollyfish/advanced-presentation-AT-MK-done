@@ -1,9 +1,9 @@
 button {
   border: none;
-  background-color: #fd6632;
-  color: white;
+  background-color: $theme-color;
+  color: $text-color-1;
   padding: 1em 1.5em;
-  font-size: 1em;
+  font-size: 0.75em;
   &:hover {
     cursor: pointer;
   }

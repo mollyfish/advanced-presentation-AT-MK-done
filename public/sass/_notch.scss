@@ -1,18 +1,22 @@
-.header-notch:after, .header-notch:before {
+%header-notch {
   position: absolute;
   content: "";
   width: calc(50% - 88px);
   height: 0;
-  border-bottom: 20px solid #fd6632;
-  border-left: 85px solid transparent;
-  left: calc(50% + 3px);
+  border-bottom: 20px solid $theme-color;
   bottom: 0;
 }
+.header-notch:after {
+  @extend %header-notch;
+  border-left: 85px solid transparent;
+  left: calc(50% + 3px);
+}
 .header-notch:before {
-  border-left: none;
+  @extend %header-notch;
   border-right: 85px solid transparent;
   left: 0;
 }
+//all other notches
 .orange-notch, .white-notch, .black-notch {
   position: relative;
   bottom: 16px;
@@ -27,7 +31,7 @@
     bottom: -41px;
     width: 40px;
     height: 100px;
-    background-color: #fd6632;
+    background-color: $theme-color;
     border-radius: 0 100px 50px 50px;
     -webkit-transform: rotate(-75deg);
         -ms-transform: rotate(-75deg);
@@ -47,11 +51,11 @@
             transform-origin: 100% 100%;
 }
 .white-notch:before, .white-notch:after {
-  background-color: #fff;
+  background-color: $light-background;
   z-index: 1;
 }
 .black-notch:before, .black-notch:after {
-  background-color: #2a2a2e;
+  background-color: $dark-background;
 }
 @media screen and (min-width: 50em) {
   .orange-notch:before,

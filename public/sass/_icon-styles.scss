@@ -40,9 +40,9 @@ a.icon-see-more:after {
 .icon-quill:before, .icon-flask:before, .icon-gear:before  {
   display: inline-block;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: $light-background;
   font-size: 4em;
-  color: #fd6632;
+  color: $theme-color;
   padding: 0.25em;
 }
 /* changed to :after b/c :before is being used for
@@ -53,9 +53,9 @@ a.icon-see-more:after {
   top: calc(50% - 28px);
   left: calc(50% - 28px);
   border-radius: 50%;
-  background-color: #fd6632;
+  background-color: $theme-color;
   font-size: 2.369em;
-  color: #fff;
+  color: $text-color-1;
   opacity: 0;
   padding: 0.25em;
 }

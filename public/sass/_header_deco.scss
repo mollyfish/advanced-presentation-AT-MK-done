@@ -9,11 +9,11 @@ $short: 88%;
 }
 %rules {
   display: inline-block;
-  border-top: 1px solid #fff;
+  border-top: 1px solid $accent-border-1;
   position: absolute;
   top: 50%;
   &.on-white {
-    border-color: #7c8387;
+    border-color: $text-color-3;
   }
 }
 @mixin line-L($line-start, $line-end) {
