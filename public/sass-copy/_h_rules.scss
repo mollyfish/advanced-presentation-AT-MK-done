@@ -3,15 +3,11 @@ $narrow: 5%;
 $long: 80%;
 $short: 88%;
 
-.horizontal-rules {
-  position: relative;
-  margin-bottom: 1em;
-}
-%rules {
+%rules {  
   display: inline-block;
-  border-top: 1px solid $accent-border-1;
   position: absolute;
   top: 50%;
+  border-top: 1px solid $accent-border-1;
   &.on-white {
     border-color: $text-color-3;
   }

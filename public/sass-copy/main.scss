@@ -1,13 +1,19 @@
 @import "reset";
 
 @import "base/colors";
+@import "base/text";
 @import "article";
+
 @import "components/button";
 @import "components/textarea";
 @import "components/input";
-@import "figure";
+@import "components/img";
+@import "components/progressbar";
+@import "components/figcaption";
+@import "components/figure";
+@import "h_rules";
 
-@import "links";
+@import "base/links";
 
 @import "global";
 @import "icon-styles";
@@ -16,11 +22,12 @@
 @import "header";
 @import "price-tables";
 @import "social_link_styles";
-@import "progressbar";
+
 @import "forms";
 @import "map-embed";
 @import "gallery-items";
-@import "h_rules";
 
-@import "slider";
+
+@import "carousel";
 @import "notch";
+@import "fostercare";

@@ -16,11 +16,6 @@
     align-items: stretch;
     padding-bottom: 1em;
   }
-  h4 {
-    font-weight: bold;
-    color: $text-color-2;
-    padding-bottom: 0.5em;
-  }
   figure {
     margin: 0.5em calc(50% - 150px) 0 calc(50% - 150px); /* 150px is half the img width */
     @media screen and (min-width: 50em) {

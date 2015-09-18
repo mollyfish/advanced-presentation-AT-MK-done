@@ -1,0 +1,93 @@
+$small_font: 1.777em;
+$large_font: 2.369em;
+$article_padding: 2.5em;
+
+h1 {
+  article & {
+    position: relative;                   //needs to move
+    font-size: $small_font;
+    @media screen and (min-width: 50em) {
+      font-size: $large_font;
+    }
+  }
+  .services & {
+    margin-bottom: 1em;                   //needs to move
+  }
+  .team & {
+    color: $text-color-2;
+    margin-bottom: 1em;                   //needs to move
+    font-weight: normal;
+  }
+}
+h2 {
+  article & {
+    font-size: $small_font;
+  }
+  .about & {
+    position: relative;                       //needs to move
+    overflow: hidden;                         //needs to moves
+    font-size: $small_font;
+    margin: 0 10% 1em 10%;                      //needs to move
+    @media screen and (min-width: 50em) {
+      font-size: $large_font;
+    }
+  }
+  .team & {
+    font-size: $small-font;
+    @media screen and (min-width: 50em) {
+      font-size: $large_font;
+      text-align: center;
+      color: $text-color-2;
+    }
+  }
+}
+h3 {
+  .about & {
+    padding: 1em 0 1.5em 0;
+  }
+  .team & {
+    color: $text-color-2;
+  }
+  .client & {
+    padding: 0;
+    color: $theme-color;
+    line-height: 1;
+    @media screen and (min-width: 50em) {
+      display: inline;
+    }
+  }
+}
+h4 {
+  .portfolio-label & {
+    padding-bottom: 0.5em;
+    font-weight: bold;
+    color: $text-color-2;  
+  }
+  .figure-stack & {
+    padding-bottom: 1em;
+    font-size: 0.75em;
+    color: $text-color-3;
+  }
+  .client & {
+    padding: 0.5em 0;
+    line-height: 1; 
+    @media screen and (min-width: 50em) {
+      padding: 0;
+    }
+  }
+}
+p {
+  line-height: 1.5;
+  .services & {
+    margin: 0em 0 2em 0;                          //needs to move
+  }
+  .team & {
+    color: $text-color-3;
+  }
+  .contact & {
+    margin: 2em 0 1em 0;                         //needs to move
+    @media screen and (min-width: 50em) {
+      margin: 2em 4% 1em 4%;                    //needs to move
+    }
+  }
+}

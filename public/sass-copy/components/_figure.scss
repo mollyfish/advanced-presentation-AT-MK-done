@@ -1,0 +1,28 @@
+figure {
+  box-sizing: border-box;
+  display: inline-block;
+  &.skill {
+    display: block;
+    progress {
+      margin: 0 0 1.5em 0;
+      padding: 0;
+    }
+    figcaption {
+      margin: 0;
+    }
+  } 
+  &.client {
+    figcaption {
+      margin-top: 2em;
+    }
+    img {
+      @media screen and (min-width: 50em) {
+        float: left;
+        margin: 1em 1em;
+      }
+    }
+  }
+  figcaption {
+    margin: 1em auto 2em auto;
+  }
+}

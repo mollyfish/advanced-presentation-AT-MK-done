@@ -9,13 +9,17 @@ $article_padding: 2.5em;
 
 html {
   font-family: Helvetica, sans-serif;
-  text-align: center;
+  @media screen and (min-width: 50em) {
+    body {
+      margin: 0 auto;
+    }
+  }
 }
 body {
+  text-align: center;
   @media screen and (min-width: 50em) {
     max-width: 80em;
     width: 90%;
-    margin: 0 auto;
   }
 }
 article {
@@ -24,7 +28,7 @@ article {
     padding: 2em 5%;
   }
   &.services {
-    position: relative;
+    position: relative;                                //needs to move
     background-color: $theme-color;
     color: $text-color-1;
     font-weight: 100;
@@ -55,7 +59,7 @@ article {
     }
   }
   &.team {
-    color: $text-color-3;
+    // color: $text-color-3;
     padding-top: $article_padding;
     padding-bottom: $article_padding;
   }
@@ -71,67 +75,14 @@ article {
       ),
       url('../images/bkgrnd-map.png');
     @media screen and (min-width: 50em) {
-      position: relative;
+      position: relative;                        //needs to move
     }
   }
 }
-h1 {
-  article & {
-    position: relative;
-    font-size: $small_font;
-    @media screen and (min-width: 50em) {
-      font-size: $large_font;
-    }
-  }
-  .services & {
-    margin-bottom: 1em;
-  }
-  .team & {
-    color: $text-color-2;
-    margin-bottom: 1em;
-    font-weight: normal;
-  }
-}
-h2 {
-  article & {
-    font-size: $small_font;
-  }
-  .about & {
-    position: relative;
-    overflow: hidden;
-    font-size: $small_font;
-    margin: 0 10% 1em 10%;
-    @media screen and (min-width: 50em) {
-      font-size: $large_font;
-    }
-  }
-  .clients-slider h2 {
-    @media screen and (min-width: 50em) {
-      font-size: $large_font;
-    }
-  }
-}
-h3 {
-  .about & {
-    padding: 1em 0 1.5em 0;
-  }
-}
-p {
-  line-height: 1.5;
-  margin: 0 1em;
-  .services & {
-    margin: 0em 0 2em 0;
-  }
-  .about & {
-    margin: 1em 0;
-  }
-  .contact & {
-    margin: 2em 0 1em 0;
-    @media screen and (min-width: 50em) {
-      margin: 2em 4% 1em 4%;
-    }
-  }
-}
+
+
+
+
 a {
   text-decoration: none;
   &.mock-button {

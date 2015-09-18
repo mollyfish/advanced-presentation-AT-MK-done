@@ -66,3 +66,15 @@ a.icon-see-more:after {
   padding-right: 0.5em;
   display: inline-block;
 }
+
+// everything below this has been refactored Sept 18
+.icon-go-right:before, .icon-go-left:before  {
+  border-radius: 50%;
+  font-size: 1.777em;
+  font-weight: 600;
+  color: $text-color-3;
+  @media screen and (min-width: 50em) {
+    font-size: 2.369em;
+    color: $theme-color;
+  }
+}

@@ -1,3 +1,32 @@
+// HORIZONTAL RULES
+// clients - oddball: inside div.clients
+
+.horizontal-rules {
+  position: relative;
+  margin-bottom: 1em;
+}
+.clients {
+  @media screen and (min-width: 50em) {
+    clear: both;  //
+  }
+  h2 {
+    position: relative; //
+    overflow: hidden;  //
+  }
+}
+.img-carousel {
+  position: relative;
+  overflow: auto;
+  ul li { 
+    float: left;
+  }
+  ol li {
+    &.dot {
+      display: inline-block;
+      margin: 0 0.5em;
+    } 
+  }
+}
 .figure-stack {
   box-sizing: border-box;
   display: inline-block;
@@ -9,11 +38,10 @@
   .team & {
     padding-top: 1em;
     h3 {
-      margin: 1em 0;
-      color: $text-color-2;  // this is in the wrong place
+      margin: 1em 0 0 0;
     }
     h4 {
-      margin: 1em 0;
+      margin: 0.5em 0;
     }
   }
   @media screen and (min-width: 50em) {

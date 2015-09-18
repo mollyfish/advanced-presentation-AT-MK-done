@@ -1,0 +1,38 @@
+figcaption {
+  width: 90%;
+  font-size: 0.75em;
+  line-height: 1.5;
+  .skill & {
+    color: $text-color-1;
+    padding: 0;
+    text-align: left;
+  }
+  .team & {
+    color: $text-color-3;
+  }
+  .client & {
+    @media screen and (min-width: 50em) {
+      text-align: left;
+    }
+    h3 {
+      margin-top: 1em;
+      @media screen and (min-width: 50em) {
+        display: inline;
+        margin: 0 1em; 
+        margin-left: 0;                        
+      }
+    }
+    h4 {
+      @media screen and (min-width: 50em) {
+        display: inline;
+        margin: 0 1em;
+      }
+    }
+    p {
+      margin: 0 1em;
+    }
+  }
+  @media screen and (min-width: 50em) {
+    font-size: 0.9em;
+  }
+}
