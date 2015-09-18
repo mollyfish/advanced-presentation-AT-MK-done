@@ -2,6 +2,7 @@
   @media screen and (min-width: 50em) {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     -webkit-flex-direction: row; /*safari also required these to have -webkit*/
     -webkit-flex-wrap: wrap;
@@ -21,14 +22,15 @@
     padding-bottom: 0.5em;
   }
   figure {
-    margin: 2em calc(50% - 150px) 1em calc(50% - 150px); /* 150px is half the img width */
+    margin: 0.5em calc(50% - 150px) 0 calc(50% - 150px); /* 150px is half the img width */
     @media screen and (min-width: 50em) {
-      margin: 0 0 1em 0;
+      margin: 0 0 3.5em 0;
     }
   }
   figcaption {
     margin-top: 1em;
     text-align: center;
+    font-size: 1em;
   }
   figure a {
     display: inline-block;

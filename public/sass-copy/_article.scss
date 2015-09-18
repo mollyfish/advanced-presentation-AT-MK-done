@@ -1,12 +1,27 @@
 .figure-stack {
   box-sizing: border-box;
   display: inline-block;
+  .services & {
+    h2 {
+      margin: 0.5em 0 0.5em 0;
+    }
+  }
+  .team & {
+    padding-top: 1em;
+    h3 {
+      margin: 1em 0;
+      color: $text-color-2;  // this is in the wrong place
+    }
+    h4 {
+      margin: 1em 0;
+    }
+  }
   @media screen and (min-width: 50em) {
     .services & {
-      width: 32%;  //specialty style for Services
+      width: 32%;
     }
     .team & {
-      width: 24%;    // specialty style for Team 
+      width: 24%;
     }
   }
 }
