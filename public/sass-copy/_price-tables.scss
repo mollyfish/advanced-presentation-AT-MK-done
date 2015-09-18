@@ -1,41 +1,38 @@
 table {
-  background-color: $light-background;
   display: inline-block;
-  margin: 1em;
-}
-caption {
-  background-color: $med-theme-color;
-  padding: 1em;
-}
-th, td {
-  color: $text-color-2;
-  padding: 1em;
-  border-top: 1px solid $theme-color;
-  font-size: 0.75em;
-}
-th strong {
-  font-size: 1.333em;
-}
-.price {
-  color: $theme-color;
-}
-.signup {
-  background-color: $dk-theme-color;
-  padding: 2.6em 4.157em;
-  border-top: 1px solid $theme-color;
-  a {
-    border: none;
-    background-color: $theme-color;
-    color: $text-color-1;
-    padding: 1em 1.5em;
+  background-color: $light-background;
+  caption {
+    background-color: $med-theme-color;
+    padding: 1em;
+  }
+  th {
+    color: $text-color-2;
+    padding: 1em;
+    border-top: 1px solid $theme-color;
     font-size: 0.75em;
-    &:hover {
-      cursor: pointer;
+    strong {
+      font-size: 1.333em;
+    }
+    &.price { 
+      color: $theme-color;
     }
   }
-}
-@media screen and (min-width: 50em) {
-  .price-tables-wrapper h3 {
-    margin-bottom: 0.5em;
+  td {
+    @extend th;
+    &.signup {
+      border-top: 1px solid $theme-color;
+      padding: 2.6em 4.157em;
+      background-color: $dk-theme-color;
+      a {
+        border: none;
+        padding: 1em 1.5em;
+        background-color: $theme-color;
+        font-size: 0.75em;
+        color: $text-color-1;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

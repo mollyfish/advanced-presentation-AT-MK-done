@@ -1,0 +1,20 @@
+.figure-stack {
+  box-sizing: border-box;
+  display: inline-block;
+  @media screen and (min-width: 50em) {
+    .services & {
+      width: 32%;  //specialty style for Services
+    }
+    .team & {
+      width: 24%;    // specialty style for Team 
+    }
+  }
+}
+table {
+  margin: 1em;
+}
+figure {
+  @media screen and (min-width: 50em) {
+    margin: 0 auto;    
+  }
+}

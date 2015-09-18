@@ -1,10 +1,13 @@
 @import "reset";
 
 @import "base/colors";
-
+@import "article";
 @import "components/button";
 @import "components/textarea";
 @import "components/input";
+@import "figure";
+
+@import "links";
 
 @import "global";
 @import "icon-styles";
@@ -18,7 +21,6 @@
 @import "map-embed";
 @import "gallery-items";
 @import "h_rules";
-@import "figure";
+
 @import "slider";
 @import "notch";
-
