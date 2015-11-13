@@ -1,4 +1,5 @@
-# Week THREE! - Advanced Presentation - Molly Kent & Alina To
+# Avengers Front-End Prototype
+## Week THREE! - Advanced Presentation - Molly Kent & Alina To
 
 This project focused heavily on HTML semantics, document architecture (HTML and CSS), presentation, and most importantly responsive web design. We created a responsive and clickable prototype with a mobile-first approach, then scaled our presentation to perform equally well in a desktop browser.
 
