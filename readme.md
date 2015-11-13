@@ -6,6 +6,8 @@ Since the comp was provided as a desktop view, we applied our own ideas to addre
 
 To test our prototype, we created and ran it through a Node Express server.
 
+Live demo [here](https://damp-inlet-7251.herokuapp.com/).
+
 ## The Comp
 
 The view we completed was based on [this](https://dl.dropboxusercontent.com/u/5658310/cf-project-2/the-comp.psd). It was provided as a Photoshop format and as a desktop view.
